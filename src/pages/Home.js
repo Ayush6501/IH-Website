@@ -11,8 +11,6 @@ import state from "../store/store"
 import "../styles/landing.css"
 import Bulb from "../components/three/Bulb";
 
-console.log(state.sections);
-
 function Startup() {
     const ref = useRef()
     useFrame(() => (ref.current.material.opacity = lerp(ref.current.material.opacity, 0, 0.025)))
