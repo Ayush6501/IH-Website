@@ -1,11 +1,41 @@
 .ideas {
-    height: 100vh;
+    
+    height: 183.36vh;
     width: 100vw;
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
-    margin: 0;
+    margin-top: 60px;
     overflow: scroll;
 }
+
+@media (max-width: 720px) {
+    .ideas {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 200vh;
+        width: 100vw;
+        overflow: scroll;
+        align-items: inherit;
+    }
+    .ideas::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    .ideas__model {
+        flex: 0.5 !important;
+        
+    }
+}
+@media (max-width: 720px) {
+    .ideas__form {
+        flex: 0.5 !important;
+        
+    }
+}
+
 
 .ideas::-webkit-scrollbar {
     display: none;
@@ -15,6 +45,7 @@
     flex: 0.5;
     background-color: #f0f0f0;
     height: 100%;
+    width: 100%;
     font-family: 'Poppins', sans-serif;
     
 }
@@ -24,8 +55,18 @@
     background-color: #474444;
     flex: 0.5;
     height: 100%;
+    width: 100%;
     font-family: 'Poppins', sans-serif;
+    /* background-image: url('https://wallpaperaccess.com/full/1140482.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1; */
 }
+/* .ideas__model {
+    image-rendering: pixelated;
+} */
+
 .ideas__model > h1 {
     text-align: center;
     color: #c4c4c4;

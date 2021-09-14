@@ -1,0 +1,54 @@
+.sidedrawer {
+  position: fixed;
+  width: 280px;
+  max-width: 70%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  background-color: #ede75a;
+  padding: 32px 16px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* background: rgba(21, 19, 19, 0.65);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18); */
+}
+
+@media (min-width: 720px) {
+  .sidedrawer {
+    display: none;
+  }
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.close {
+  transform: translateX(-100%);
+}
+
+.sidedrawer__name {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex: 0.2;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.sidedrawer__links {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex: 0.75;
+  width: 100%;
+}
