@@ -8,15 +8,15 @@ const Navbar = (props) => {
   return (
     <header class="header">
       <div className="logo">
-        <Link to="/ideas">
+        <Link to="/">
           <img src={Logo} alt="IH logo" />
         </Link>
       </div>
       <div className="navigation__items">
         <div className="navigation__item">
-          <Link to="/">Our Team</Link>
-          <Link to="/">Achievements</Link>
-          <Link to="/">About Us</Link>
+          <Link to="/ideas">Our Team</Link>
+          <Link to="/ideas">Achievements</Link>
+          <Link to="/about">About Us</Link>
         </div>
       </div>
       <Hamburger clicked = {props.hamburgerClicked} />
