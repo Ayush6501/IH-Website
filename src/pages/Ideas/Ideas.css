@@ -67,8 +67,8 @@
     image-rendering: pixelated;
 } */
 
-.ideas__model > h1 {
+.ideas__form > h1 {
     text-align: center;
-    color: #c4c4c4;
+    color: black;
     
 }
