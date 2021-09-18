@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hamburger.css";
-import HamburgerLogo from "../../../../public/assets/images/Hamburger.png";
+import HamburgerLogo from "../../../assets/images/Hamburger.png";
 
 
 const Hamburger = (props) => {

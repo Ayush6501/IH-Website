@@ -1,11 +1,11 @@
 import * as THREE from "three";
 import { useRef, useState, useMemo, useEffect } from "react";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
-import { Text, TrackballControls } from "@react-three/drei";
+import { Text, TrackballControls, Ht } from "@react-three/drei";
 /* import randomWord from "random-words"; */
 import Poppins from "../../assets/fonts/Poppins Medium_Regular.json";
-import Bg from "../../assets/images/Logo-white.png";
-import { Suspense } from "react";
+/* import Bg from "../../assets/images/Logo-white.png";
+import { Suspense } from "react"; */
 import './IdeasModel.css';
 
 const ideaWords = [
@@ -55,14 +55,14 @@ const ideaWords = [
 
 const font = new THREE.FontLoader().parse(Poppins);
 
-const textOptions = {
+/* const textOptions = {
   font,
   size: 1,
   height: 1,
   letterSpacing: -0.05,
   curveSegments: 20,
   bevelEnabled: false,
-};
+}; */
 
 function Word({ children, ...props }) {
   const color = new THREE.Color();
@@ -144,6 +144,7 @@ export default function IdeasModel() {
         <textGeometry attach='geometry' args={['SCROLL IN TO ZOOM!', textOptions]} />
         <meshStandardMaterial attach='material' />
       </mesh> */}
+      {/* <Html></Html> */}
       </Canvas>
     </div>
   );
