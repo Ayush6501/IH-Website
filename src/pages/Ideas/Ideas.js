@@ -17,9 +17,9 @@ const Ideas = () => {
     setShowSideDrawer(!showSideDrawer);
   };
 
-  const radioSelectionHandler = (event) => {
+  /* const radioSelectionHandler = (event) => {
     console.log(event.target.value);
-  }
+  } */
 
   return (
     <>
