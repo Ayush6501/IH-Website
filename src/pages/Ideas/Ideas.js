@@ -4,7 +4,7 @@ import SideDrawer from "../../components/Navbar/SideDrawer/SideDrawer";
 import "./Ideas.css";
 import IdeasModel from "./IdeasModel";
 import { RadioGroup, RadioButton } from "react-radio-buttons";
-import { Player } from '@lottiefiles/react-lottie-player';
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const Ideas = () => {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
@@ -23,8 +23,8 @@ const Ideas = () => {
   } */
 
   const scrollClickHandler = (event) => {
-    formRef.current.scrollIntoView({ behavior: 'smooth' })
-  }
+    formRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <>
@@ -34,18 +34,18 @@ const Ideas = () => {
         <div className="ideas__model">
           <IdeasModel scroll={scrollClickHandler} />
         </div>
-        <div className="ideas">
-          <div ref={formRef} className="ideas__form">
+        <div className="ideas" ref={formRef}>
+          <div className="ideas__form">
             <div className="ideas__form__container">
               <h1>Pitch us your idea!</h1>
               <div className="ideas__division">
                 <div className="ideas__division__image">
                   <Player
-                      autoplay
-                      loop
-                      src="https://assets6.lottiefiles.com/packages/lf20_jJ7Djd.json"
-                      speed={0.3}
-                      style={{ height: '400px', width: '400px' }}
+                    autoplay
+                    loop
+                    src="https://assets6.lottiefiles.com/packages/lf20_jJ7Djd.json"
+                    speed={0.3}
+                    style={{ height: "600px", width: "600px" }}
                   />
                 </div>
 
@@ -87,40 +87,40 @@ const Ideas = () => {
                         4. Your Project is related to which field of Study?
                       </label>
                       <br />
-                      {/*<RadioGroup style={{ width: "75%" }} >*/}
-                      {/*  <RadioButton*/}
-                      {/*    value="AppWeb"*/}
-                      {/*    rootColor="#474444"*/}
-                      {/*    iconSize="20px"*/}
-                      {/*    padding="20px"*/}
-                      {/*  >*/}
-                      {/*    App/Web Development*/}
-                      {/*  </RadioButton>*/}
-                      {/*  <RadioButton*/}
-                      {/*    value="AIMLDL"*/}
-                      {/*    rootColor="#474444"*/}
-                      {/*    iconSize="20px"*/}
-                      {/*    padding="20px"*/}
-                      {/*  >*/}
-                      {/*    AI/ML/DL*/}
-                      {/*  </RadioButton>*/}
-                      {/*  <RadioButton*/}
-                      {/*    value="Blockchain"*/}
-                      {/*    rootColor="#474444"*/}
-                      {/*    iconSize="20px"*/}
-                      {/*    padding="20px"*/}
-                      {/*  >*/}
-                      {/*    Blockchain*/}
-                      {/*  </RadioButton>*/}
-                      {/*  <RadioButton*/}
-                      {/*    value="cybersecurity"*/}
-                      {/*    rootColor="#474444"*/}
-                      {/*    iconSize="20px"*/}
-                      {/*    padding="20px"*/}
-                      {/*  >*/}
-                      {/*    Cyber Security*/}
-                      {/*  </RadioButton>*/}
-                      {/*</RadioGroup>*/}
+                      <RadioGroup style={{ width: "75%" }}>
+                        <RadioButton
+                          value="AppWeb"
+                          rootColor="#474444"
+                          iconSize="20px"
+                          padding="20px"
+                        >
+                          App/Web Development
+                        </RadioButton>
+                        <RadioButton
+                          value="AIMLDL"
+                          rootColor="#474444"
+                          iconSize="20px"
+                          padding="20px"
+                        >
+                          AI/ML/DL
+                        </RadioButton>
+                        <RadioButton
+                          value="Blockchain"
+                          rootColor="#474444"
+                          iconSize="20px"
+                          padding="20px"
+                        >
+                          Blockchain
+                        </RadioButton>
+                        <RadioButton
+                          value="cybersecurity"
+                          rootColor="#474444"
+                          iconSize="20px"
+                          padding="20px"
+                        >
+                          Cyber Security
+                        </RadioButton>
+                      </RadioGroup>
                       {/* <ul>
                         <li>
                           <input type="radio" id="f-option" name="selector" />
