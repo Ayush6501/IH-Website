@@ -10,6 +10,7 @@ import { Block, useBlock } from "../hooks/blocks"
 import state from "../store/store"
 import "../styles/landing.css"
 import Bulb from "../components/three/Bulb";
+import styled from "styled-components";
 
 function Startup() {
     const ref = useRef()
@@ -33,7 +34,8 @@ function Paragraph({ image, index, offset, factor, header, aspect, text }) {
                     position={[left || mobile ? (-w * size) / 2 : 0, (-w * size) / 2 / aspect - 0.4, 1]}>
                     <div tabIndex={index}>
                         {text}
-                        {/*<button>Click Here</button>*/}
+                        <br />
+                        <CTAButton>Know more</CTAButton>
                     </div>
                 </Html>
                 <Text left={left} right={!left} size={w * 0.04} color={color} top position={[((left ? -w : w) * size) / 2, (w * size) / aspect / 2 + 0.5, -1]}>
@@ -114,10 +116,12 @@ function HomePage() {
     const scrollArea = useRef()
     const onScroll = (e) => (state.top.current = e.target.scrollTop)
     useEffect(() => void onScroll({ target: scrollArea.current }), [])
+
     return (
         <div style={{ width: "100vw", height: "100vh"}}>
             <Canvas linear dpr={[1, 2]} orthographic camera={{ zoom: 75, position: [0, 0, 500] }}>
                 <Suspense fallback={<Html center className="loading" children="Loading..." />}>
+                    {/*<Suspense fallback={<Html center className="loading" children={<Spinner />} />}>*/}
                     <Content />
                     <Diamonds />
                     <Startup />
@@ -133,3 +137,23 @@ function HomePage() {
     )
 }
 export default HomePage;
+
+const CTAButton = styled.button`
+  padding: 7px 18px;
+  background: transparent;
+  border: 2px solid #ffee00;
+  border-radius: 5em;
+  color: #ffee00;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 550;
+  margin-top: 5px;
+  
+  &:hover {
+    cursor: pointer;
+    color: black;
+    background: #ffee00;
+    font-weight: 600;
+  }
+  
+`;

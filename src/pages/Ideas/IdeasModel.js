@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { useRef, useState, useMemo, useEffect } from "react";
 import { Canvas, useFrame} from "@react-three/fiber";
-import { Text, TrackballControls } from "@react-three/drei";
+import { Text, TrackballControls, Html } from "@react-three/drei";
 /* import randomWord from "random-words"; */
 /* import Poppins from "../../fonts/Poppins Medium_Regular.json"; */
 /* import Bg from "../../assets/images/Logo-white.png";
@@ -127,7 +127,7 @@ function Cloud({ count = 4, radius = 20 }) {
   ));
 }
 
-export default function IdeasModel() {
+export default function IdeasModel(props) {
   /* const texture = useLoader(THREE.TextureLoader, Bg); */
   return (
     <div className="model">
@@ -144,7 +144,19 @@ export default function IdeasModel() {
         <textGeometry attach='geometry' args={['SCROLL IN TO ZOOM!', textOptions]} />
         <meshStandardMaterial attach='material' />
       </mesh> */}
-      {/* <Html></Html> */}
+       <Html >
+         <div style={{
+           position: "absolute",
+           bottom: 0,
+           left: 0,
+           width: "100%",
+           top: 300,
+           right: 30,
+           cursor: 'pointer',
+         }}>
+           <h3 onClick={props.scroll}>Scroll</h3>
+         </div>
+       </Html>
       </Canvas>
     </div>
   );
