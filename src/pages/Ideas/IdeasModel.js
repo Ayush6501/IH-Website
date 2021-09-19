@@ -153,8 +153,9 @@ export default function IdeasModel(props) {
            top: 300,
            right: 30,
            cursor: 'pointer',
+           display: 'flex'
          }}>
-           <h3 onClick={props.scroll}>Scroll</h3>
+           <h3 onClick={props.scroll} style={{color: 'white'}}>Scroll</h3>
          </div>
        </Html>
       </Canvas>
