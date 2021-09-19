@@ -1,9 +1,9 @@
 import * as THREE from "three";
 import { useRef, useState, useMemo, useEffect } from "react";
-import { Canvas, useFrame, useLoader } from "@react-three/fiber";
-import { Text, TrackballControls, Ht } from "@react-three/drei";
+import { Canvas, useFrame} from "@react-three/fiber";
+import { Text, TrackballControls } from "@react-three/drei";
 /* import randomWord from "random-words"; */
-import Poppins from "../../assets/fonts/Poppins Medium_Regular.json";
+/* import Poppins from "../../fonts/Poppins Medium_Regular.json"; */
 /* import Bg from "../../assets/images/Logo-white.png";
 import { Suspense } from "react"; */
 import './IdeasModel.css';
@@ -53,7 +53,7 @@ const ideaWords = [
   "sophisticated",
 ];
 
-const font = new THREE.FontLoader().parse(Poppins);
+/* const font = new THREE.FontLoader().parse(Poppins); */
 
 /* const textOptions = {
   font,

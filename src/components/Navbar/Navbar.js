@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import Logo from "../../assets/images/Logo-white.png";
+
 import Hamburger from "./Hamburger/Hamburger";
 
 const Navbar = (props) => {
@@ -9,7 +9,7 @@ const Navbar = (props) => {
     <header class="header">
       <div className="logo">
         <Link to="/">
-          <img src={Logo} alt="IH logo" />
+          <img src="/assets/images/Logo-white.png" alt="IH logo" />
         </Link>
       </div>
       <div className="navigation__items">
