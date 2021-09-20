@@ -54,7 +54,13 @@ class TeamCollage extends React.Component {
       <div className={styles.DepartmentButtonContainer}>
         <span className={styles.DepartmentButton} onClick={() => { this.setState({ clicked: !this.state.clicked }) }}>
           {this.title}
+        <span className={styles.DepartmentButtonStyle1}></span>
+        <span className={styles.DepartmentButtonStyle2}></span>
+        <span className={styles.DepartmentButtonStyle3}></span>
+        <span className={styles.DepartmentButtonStyle4}></span>
         </span>
+
+
       </div>
       {collage}
     </div>);

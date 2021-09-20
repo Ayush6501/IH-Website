@@ -44,8 +44,10 @@
 }
 
 .DepartmentButton{
-  color:white;
-   text-align: center;
+    color:white;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
     display: flex;
     flex-direction:column;
     font-weight: bold;
@@ -58,10 +60,77 @@
 }
 
 .DepartmentButton:hover{
-    background-color: #eee513;
     color:black;
 }
 
+.DepartmentButtonStyle1
+{
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: #ffee00;
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((1 - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((1 - 1) * 0.05s);
+    z-index: -1;
+}
+
+.DepartmentButtonStyle2
+{
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: #ffee00;
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((2 - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((2 - 1) * 0.05s);
+    z-index: -1;
+}
+
+.DepartmentButtonStyle3
+{
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: #ffee00;
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((3 - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((3 - 1) * 0.05s);
+    z-index: -1;
+}
+
+.DepartmentButtonStyle4
+{
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: #ffee00;
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((4 - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((4 - 1) * 0.05s);
+    z-index: -1;
+}
+
+.DepartmentButton:hover .DepartmentButtonStyle1{
+    transform: translateY(0) scale(2);
+}
+.DepartmentButton:hover .DepartmentButtonStyle2{
+    transform: translateY(0) scale(2);
+}
+.DepartmentButton:hover .DepartmentButtonStyle3{
+    transform: translateY(0) scale(2);
+}
+.DepartmentButton:hover .DepartmentButtonStyle4{
+    transform: translateY(0) scale(2);
+}
 
 .TeamWrapper{
   font-size: 0;
