@@ -19,7 +19,6 @@ function App() {
               </Route>
               <Route path='/about' exact>
                   <AboutPage />
-      
               </Route>
               <Route path='/ourteam' exact>
                   <OurTeam />
