@@ -94,7 +94,7 @@ const Ideas = () => {
                           iconSize="20px"
                           padding="20px"
                         >
-                          App/Web Development
+                          App/Web Dev
                         </RadioButton>
                         <RadioButton
                           value="AIMLDL"

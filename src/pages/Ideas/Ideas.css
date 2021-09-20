@@ -33,7 +33,7 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    margin-left: 10px
+    
   }
 }
 @media (max-width: 720px) {
@@ -68,7 +68,7 @@
   align-items: center;
   height: 100%;
   justify-content: center;
-  margin-left: 10px;
+  
 }
 .ideas__division__image {
   flex: 0.5;
