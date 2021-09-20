@@ -1,0 +1,168 @@
+.TitleContainer{
+  color:#FFFFFF;
+  display: flex;
+  flex-direction:column;
+  margin-top: 6rem;
+  text-align: center;
+  height:10%;
+  padding: 10px 25px;
+  font-size: 40px;
+  margin-bottom: 3rem;
+}
+
+.Title {
+    color:#fff;
+    display: flex;
+    flex-direction:column;
+    border: 3px solid #eee513;
+    padding: 10px 25px;
+    width: 60%;
+    align-self: center; 
+}
+
+.subheading
+{
+  display: flex;
+  flex-direction:column;
+  color:white;
+  text-align: center;
+  vertical-align: top;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+
+.DepartmentButtonContainer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items:center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-height: 20%;
+  font-size: 40px;
+}
+
+.DepartmentButton{
+  color:white;
+   text-align: center;
+    display: flex;
+    flex-direction:column;
+    font-weight: bold;
+    border: 5px solid #eee513;
+    border-radius: 5px;
+    padding: 5px 5px;
+    min-width: 30%;
+    cursor: pointer;
+    transition: .1s ease;
+}
+
+.DepartmentButton:hover{
+    background-color: #eee513;
+    color:black;
+}
+
+
+.TeamWrapper{
+  font-size: 0;
+  border: 0;
+  outline: 0;
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items:center;
+  animation: slide-up .3s ease;
+}
+
+.TeamWrapper .TeamCard{
+  float:left;
+  position: relative;
+}
+
+.TeamCard .MemberImage
+{
+  height: 300px;
+  width: 300px;
+  object-fit: fill;
+}
+
+.TeamCard .MemberOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .2s ease;
+  background-color: rgba(255,255,255,0.8);
+}
+
+.TeamCard .MemberName{
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  position:absolute;
+  font-family:Arial, Helvetica, sans-serif;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.TeamCard .MemberRank{
+  color:black;
+  font-size: 15px;
+  position:absolute;
+  font-family:Arial, Helvetica, sans-serif;
+  top: 57%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.TeamCard .MemberBreak
+{
+  position: absolute;
+  top: 66%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 2px;
+  border: 0;
+  background-color: #111010;
+}
+
+.TeamCard .MemberIcon{
+  position: relative;
+  height: 30px;
+  width: 30px;
+  top: 74%;
+  left: 44%;
+  margin-right: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: 0.2s;
+}
+
+.MemberIcon:hover{
+  height: 35px;
+  width: 35px;
+}
+
+.TeamCard:hover .MemberOverlay{
+  opacity: 1;
+}
+
+.TeamCard:hover .MemberName{
+  color:black;
+}

@@ -88,7 +88,7 @@ function Content() {
                                 lineHeight: 1,
                                 fontWeight: 900,
                                 color: "white"
-                            }}>Innovator's{mobile ? <br/> : " "}Hub</h1>
+                            }}>Innovators{mobile ? <br/> : " "}Hub</h1>
                         }
                     </Html>
                 </Block>

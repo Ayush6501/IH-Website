@@ -129,32 +129,26 @@ const Ideas = () => {
                         <RadioButton
                             rootColor="#474444"
                             pointColor="#ffee00"
-                            iconSize="20px"
-                            padding="20px"
+                            
                             value="webapp">
                           App Development
                         </RadioButton>
                         <RadioButton
                             rootColor="#474444"
                             pointColor="#ffee00"
-                            iconSize="20px"
-                            padding="20px"
                             value="ai">
                           Artificial Intelligence
                         </RadioButton>
                         <RadioButton
                             rootColor="#474444"
                             pointColor="#ffee00"
-                            iconSize="20px"
-                            padding="20px"
+                            
                             value="crypto">
                           Blockchain
                         </RadioButton>
                         <RadioButton
                             rootColor="#474444"
                             pointColor="#ffee00"
-                            iconSize="20px"
-                            padding="20px"
                             value="cybersec">
                           Cyber Security
                         </RadioButton>
