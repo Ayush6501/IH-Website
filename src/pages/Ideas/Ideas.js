@@ -18,9 +18,9 @@ const Ideas = () => {
     setShowSideDrawer(!showSideDrawer);
   };
 
-  /* const radioSelectionHandler = (event) => {
-    console.log(event.target.value);
-  } */
+  const radioSelectionHandler = (val) => {
+    console.log(val);
+  }
 
   const scrollClickHandler = (event) => {
     formRef.current.scrollIntoView({ behavior: "smooth" });
@@ -87,66 +87,70 @@ const Ideas = () => {
                         4. Your Project is related to which field of Study?
                       </label>
                       <br />
-                      <RadioGroup style={{ width: "75%" }}>
+                      {/*<RadioGroup*/}
+                      {/*    onChange={radioSelectionHandler}*/}
+                      {/*    style={{ width: "75%" }}>*/}
+                      {/*  <RadioButton*/}
+                      {/*    value="AppWeb"*/}
+                      {/*    rootColor="#474444"*/}
+                      {/*    iconSize="20px"*/}
+                      {/*    padding="20px"*/}
+                      {/*  >*/}
+                      {/*    App/Web Development*/}
+                      {/*  </RadioButton>*/}
+                      {/*  <RadioButton*/}
+                      {/*    value="AIMLDL"*/}
+                      {/*    rootColor="#474444"*/}
+                      {/*    iconSize="20px"*/}
+                      {/*    padding="20px"*/}
+                      {/*  >*/}
+                      {/*    AI/ML/DL*/}
+                      {/*  </RadioButton>*/}
+                      {/*  <RadioButton*/}
+                      {/*    value="Blockchain"*/}
+                      {/*    rootColor="#474444"*/}
+                      {/*    iconSize="20px"*/}
+                      {/*    padding="20px"*/}
+                      {/*  >*/}
+                      {/*    Blockchain*/}
+                      {/*  </RadioButton>*/}
+                      {/*  <RadioButton*/}
+                      {/*    value="cybersecurity"*/}
+                      {/*    rootColor="#474444"*/}
+                      {/*    iconSize="20px"*/}
+                      {/*    padding="20px"*/}
+                      {/*  >*/}
+                      {/*    Cyber Security*/}
+                      {/*  </RadioButton>*/}
+                      {/*</RadioGroup>*/}
+                      <RadioGroup
+                          style={{ width: "75%" }}
+                          onChange={ radioSelectionHandler }>
                         <RadioButton
-                          value="AppWeb"
-                          rootColor="#474444"
-                          iconSize="20px"
-                          padding="20px"
-                        >
-                          App/Web Dev
+                            rootColor="#474444"
+                            pointColor="#ffee00"
+                            value="webapp">
+                          App Development
                         </RadioButton>
                         <RadioButton
-                          value="AIMLDL"
-                          rootColor="#474444"
-                          iconSize="20px"
-                          padding="20px"
-                        >
-                          AI/ML/DL
+                            rootColor="#474444"
+                            pointColor="#ffee00"
+                            value="ai">
+                          Artificial Intelligence
                         </RadioButton>
                         <RadioButton
-                          value="Blockchain"
-                          rootColor="#474444"
-                          iconSize="20px"
-                          padding="20px"
-                        >
+                            rootColor="#474444"
+                            pointColor="#ffee00"
+                            value="crypto">
                           Blockchain
                         </RadioButton>
                         <RadioButton
-                          value="cybersecurity"
-                          rootColor="#474444"
-                          iconSize="20px"
-                          padding="20px"
-                        >
+                            rootColor="#474444"
+                            pointColor="#ffee00"
+                            value="cybersec">
                           Cyber Security
                         </RadioButton>
                       </RadioGroup>
-                      {/* <ul>
-                        <li>
-                          <input type="radio" id="f-option" name="selector" />
-                          <label for="f-option">App/Web Development</label>
-
-                          <div class="check"></div>
-                        </li>
-
-                        <li>
-                          <input type="radio" id="s-option" name="selector" />
-                          <label for="s-option">AI/ML/DL</label>
-
-                          <div class="check">
-                            <div class="inside"></div>
-                          </div>
-                        </li>
-
-                        <li>
-                          <input type="radio" id="t-option" name="selector" />
-                          <label for="t-option">Blockchain</label>
-
-                          <div class="check">
-                            <div class="inside"></div>
-                          </div>
-                        </li>
-                      </ul> */}
                     </form>
                   </div>
                 </div>
