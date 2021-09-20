@@ -11,6 +11,7 @@ import state from "../store/store"
 import "../styles/landing.css"
 import Bulb from "../components/three/Bulb";
 import styled from "styled-components";
+import HeaderItems from "../components/HeaderItems"
 
 function Startup() {
     const ref = useRef()
@@ -20,7 +21,7 @@ function Startup() {
 
 function Paragraph({ image, index, offset, factor, header, aspect, text }) {
     const { contentMaxWidth: w, canvasWidth, margin, mobile } = useBlock()
-    const size = aspect < 1 && !mobile ? 0.65 : 1
+    const size = aspect < 1 && !mobile ? 0.55 : 1
     const alignRight = (canvasWidth - w * size - margin) / 2
     const pixelWidth = w * state.zoom * size
     const left = !(index % 2)
@@ -80,7 +81,7 @@ function Content() {
                                 lineHeight: 1,
                                 fontWeight: 900,
                                 color: "white"
-                            }}>Innovator's{mobile ? <br/> : " "}Hub</h1>
+                            }}>Innovators{mobile ? <br/> : " "}Hub</h1>
                             :
                             <h1 style={{
                                 fontSize: 45,
@@ -104,8 +105,25 @@ function Content() {
                 </Block>
             ))}
             <Block factor={1.25} offset={8}>
-                <Html style={{ color: "white" }} className="bottom-left" position={[-canvasWidth / 2, -canvasHeight / 2, 0]}>
-                    Culture is not your friend.
+                <Html
+                    style={{
+                        position: "absolute",
+                        bottom: 0,
+                        left: 0,
+                        width: "100%",
+                        top: 300,
+                        right: 200,
+                        cursor: 'pointer',
+                        display: 'flex'
+                    }}>
+                    <nav>
+                        <ul>
+                            <li><HeaderItems title="Home"/></li>
+                            <li><HeaderItems title="About Us"/></li>
+                            <li><HeaderItems title="Recruitment"/></li>
+                            <li><HeaderItems title="Gallery"/></li>
+                        </ul>
+                    </nav>
                 </Html>
             </Block>
         </>
@@ -130,7 +148,13 @@ function HomePage() {
             </Canvas>
             <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
                 {new Array(state.sections).fill().map((_, index) => (
-                    <div key={index} id={"0" + index} style={{ height: `${(state.pages / state.sections) * 100}vh` }} />
+                    <div
+                        key={index}
+                        id={"0" + index}
+                        style={{
+                            height: `${(state.pages / state.sections) * 100}vh`
+                        }}
+                    />
                 ))}
             </div>
         </div>

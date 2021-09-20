@@ -80,7 +80,7 @@ const state = {
     { x: 0, offset: 3.2, pos: new Vector3(), scale: 1.8, factor: 1.75 },
     { x: 0, offset: 4, pos: new Vector3(), scale: 1.8, factor: 2.5 },
     { x: 2, offset: 5.5, pos: new Vector3(), scale: 2.25, factor: 0.85 },
-    { x: -5, offset: 7, pos: new Vector3(), scale: 12, factor: 2 },
+    // { x: -5, offset: 7, pos: new Vector3(), scale: 12, factor: 2 },
     { x: 0, offset: 8, pos: new Vector3(), scale: 1.5, factor: 6 }
   ],
   top: createRef()
