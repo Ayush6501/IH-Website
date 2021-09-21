@@ -1,7 +1,6 @@
 import React from 'react'
 import "./Events.css"
 import Events_item from "./Events_item.js";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Events() {
     return (
