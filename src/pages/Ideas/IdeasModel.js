@@ -150,11 +150,11 @@ export default function IdeasModel(props) {
        <Html >
          <div style={{
            position: "absolute",
-           bottom: 0,
-           left: 0,
+           /* bottom: 0,
+           left: 0, */
            width: "100%",
-           top: 300,
-           right: 30,
+           top: "300px",
+           right: "30px",
            cursor: 'pointer',
            display: 'flex'
          }}>
