@@ -20,7 +20,7 @@ const Ideas = () => {
 
   const radioSelectionHandler = (val) => {
     console.log(val);
-  }
+  };
 
   const scrollClickHandler = (event) => {
     formRef.current.scrollIntoView({ behavior: "smooth" });
@@ -55,27 +55,27 @@ const Ideas = () => {
                     <form className="formcontent__LI">
                       <label
                         for="name"
-                        style={{ color: "#474444", fontWeight: 500 }}
+                        style={{ color: "#474444", fontWeight: 800 }}
                       >
-                        1. Your Name
+                        Your Name
                       </label>
                       <br />
                       <input type="text" placeholder="Type your Name" />
                       <br />
                       <label
                         for="email"
-                        style={{ color: "#474444", fontWeight: 500 }}
+                        style={{ color: "#474444", fontWeight: 800 }}
                       >
-                        2. Your Email
+                        Your Email
                       </label>
                       <br />
                       <input type="text" placeholder="Type your Email" />
                       <br />
                       <label
                         for="email"
-                        style={{ color: "#474444", fontWeight: 500 }}
+                        style={{ color: "#474444", fontWeight: 800 }}
                       >
-                        3. Your Project Idea
+                        Your Project Idea
                       </label>
                       <br />
                       <input
@@ -83,47 +83,12 @@ const Ideas = () => {
                         placeholder="Tell us about your project"
                       />
                       <br />
-                      <label style={{ color: "#474444", fontWeight: 500 }}>
-                        4. Your Project is related to which field of Study?
+                      <label style={{ color: "#474444", fontWeight: 800 }}>
+                        Your Phone Number
                       </label>
                       <br />
-                      {/*<RadioGroup*/}
-                      {/*    onChange={radioSelectionHandler}*/}
-                      {/*    style={{ width: "75%" }}>*/}
-                      {/*  <RadioButton*/}
-                      {/*    value="AppWeb"*/}
-                      {/*    rootColor="#474444"*/}
-                      {/*    iconSize="20px"*/}
-                      {/*    padding="20px"*/}
-                      {/*  >*/}
-                      {/*    App/Web Development*/}
-                      {/*  </RadioButton>*/}
-                      {/*  <RadioButton*/}
-                      {/*    value="AIMLDL"*/}
-                      {/*    rootColor="#474444"*/}
-                      {/*    iconSize="20px"*/}
-                      {/*    padding="20px"*/}
-                      {/*  >*/}
-                      {/*    AI/ML/DL*/}
-                      {/*  </RadioButton>*/}
-                      {/*  <RadioButton*/}
-                      {/*    value="Blockchain"*/}
-                      {/*    rootColor="#474444"*/}
-                      {/*    iconSize="20px"*/}
-                      {/*    padding="20px"*/}
-                      {/*  >*/}
-                      {/*    Blockchain*/}
-                      {/*  </RadioButton>*/}
-                      {/*  <RadioButton*/}
-                      {/*    value="cybersecurity"*/}
-                      {/*    rootColor="#474444"*/}
-                      {/*    iconSize="20px"*/}
-                      {/*    padding="20px"*/}
-                      {/*  >*/}
-                      {/*    Cyber Security*/}
-                      {/*  </RadioButton>*/}
-                      {/*</RadioGroup>*/}
-                      <RadioGroup
+                      <input type="text" placeholder="Phone Number" />
+                      {/* <RadioGroup
                           style={{ width: "75%" }}
                           onChange={ radioSelectionHandler }>
                         <RadioButton
@@ -152,7 +117,75 @@ const Ideas = () => {
                             value="cybersec">
                           Cyber Security
                         </RadioButton>
-                      </RadioGroup>
+                      </RadioGroup> */}
+                      <br />
+                      <label style={{ color: "#474444", fontWeight: 800 }}>
+                        Rate your expertise on a scale of 1 to 5
+                      </label>
+                      <br/>
+                      {/* <label className="radiolabel">
+                        <input type="radio" name="radio" defaultChecked className="radioinput"/>
+                        <span className="radiospan">HTML</span>
+                      </label>
+                      <label className="radiolabel">
+                        <input type="radio" name="radio" className="radioinput"/>
+                        <span className="radiospan">CSS</span>
+                      </label>
+                      <label className="radiolabel">
+                        <input type="radio" name="radio" className="radioinput"/>
+                        <span className="radiospan">Javascript</span>
+                      </label> */}
+                      <div className="radioselection">
+                        <div className="options">
+                          <input
+                            type="radio"
+                            id="1"
+                            name="level"
+                            value="1"
+                          />
+                          <label for="1">1</label>
+                        </div>
+
+                        <div className="options">
+                          <input
+                            type="radio"
+                            id="2"
+                            name="level"
+                            value="2"
+                          />
+                          <label for="2">2</label>
+                        </div>
+
+                        <div className="options">
+                          <input
+                            type="radio"
+                            id="3"
+                            name="level"
+                            value="3"
+                          />
+                          <label for="3">3</label>
+                        </div>
+                        <div className="options">
+                          <input
+                            type="radio"
+                            id="4"
+                            name="level"
+                            value="4"
+                          />
+                          <label for="4">4</label>
+                        </div>
+                        <div className="options">
+                          <input
+                            type="radio"
+                            id="5"
+                            name="level"
+                            value="5"
+                          />
+                          <label for="5">5</label>
+                        </div>
+                      </div>
+                      <br/>
+                      <br/>
                     </form>
                   </div>
                 </div>
