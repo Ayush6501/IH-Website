@@ -94,7 +94,7 @@ const Ideas = () => {
                         <RadioButton
                             rootColor="#474444"
                             pointColor="#ffee00"
-                            
+
                             value="webapp">
                           App Development
                         </RadioButton>
@@ -107,7 +107,6 @@ const Ideas = () => {
                         <RadioButton
                             rootColor="#474444"
                             pointColor="#ffee00"
-                            
                             value="crypto">
                           Blockchain
                         </RadioButton>
