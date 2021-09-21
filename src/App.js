@@ -1,7 +1,6 @@
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import HomePage from "./pages/Home";
 import Ideas from "./pages/Ideas/Ideas";
-import Events from "./pages/Events/Events.js";
 import AboutPage from "./pages/About";
 import OurTeam from './pages/OurTeam/OurTeam';
 import SiteFooter from './components/Footer/footer';
@@ -24,7 +23,6 @@ function App() {
               <Route path='/ourteam' exact>
                   <OurTeam />
               </Route>
-              <Route exact path="/Events" component={Events} />
           </Switch>
       </Router>
     </div>
