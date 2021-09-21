@@ -20,9 +20,11 @@ class TeamMember extends React.Component {
           <p className={styles.MemberRank}>{this.desig}</p>
           <hr className={styles.MemberBreak} />
 
-          <img className={styles.MemberIcon} alt="Error" src="/assets/images/linkedin.svg" onClick={() => { window.open(this.linkedin) }} />
+          <div className={styles.MemberIconContainer}>
+            <img className={styles.MemberIcon} alt="Error" src="/assets/images/linkedin.svg" onClick={() => { window.open(this.linkedin) }} />
 
-          <img className={styles.MemberIcon} alt="Error" src="/assets/images/github.svg" onClick={() => { window.open(this.github) }} />
+            <img className={styles.MemberIcon} alt="Error" src="/assets/images/github.svg" onClick={() => { window.open(this.github) }} />
+          </div>
         </div>
 
         <div className={styles.MemberName}>{this.name}</div>
