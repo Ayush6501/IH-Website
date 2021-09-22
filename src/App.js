@@ -3,7 +3,7 @@ import HomePage from "./pages/Home";
 import Ideas from "./pages/Ideas/Ideas";
 import AboutPage from "./pages/About";
 import OurTeam from './pages/OurTeam/OurTeam';
-import SiteFooter from './components/Footer/footer';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -15,13 +15,14 @@ function App() {
               </Route>
               <Route path='/ideas' exact>
                   <Ideas />
-                  <SiteFooter/>
+                  <Footer />
               </Route>
               <Route path='/about' exact>
                   <AboutPage />
               </Route>
               <Route path='/ourteam' exact>
                   <OurTeam />
+                  <Footer />
               </Route>
           </Switch>
       </Router>

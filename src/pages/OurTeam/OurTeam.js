@@ -22,7 +22,7 @@ class Ourteam extends React.Component{
       {OurteamData.map((i) => <TeamCollage data={i.data} title={i.department} />)}
 
 
-      <SiteFooter />
+      {/*<SiteFooter />*/}
     </div>);
   }
 };

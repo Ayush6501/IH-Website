@@ -2,7 +2,7 @@ import { createRef } from "react"
 import { Vector3 } from "three"
 
 const state = {
-  sections: 9,
+  sections: 8,
   pages: 8,
   zoom: 75,
   paragraphs: [
@@ -60,7 +60,7 @@ const state = {
       factor: 1.05,
       header: "Gallery/Achievements",
       image: "/assets/images/us.jpg",
-      aspect: 1.77,
+      aspect: 2.4,
       text:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula rutrum dapibus. Vestibulum aliquam, " +
           "est id accumsan condimentum, nisi nibh luctus elit, vitae feugiat dolor. "
@@ -81,7 +81,7 @@ const state = {
     { x: 0, offset: 4, pos: new Vector3(), scale: 1.8, factor: 2.5 },
     { x: 2, offset: 5.5, pos: new Vector3(), scale: 2.25, factor: 0.85 },
     // { x: -5, offset: 7, pos: new Vector3(), scale: 12, factor: 2 },
-    { x: 0, offset: 8, pos: new Vector3(), scale: 1.5, factor: 6 }
+    // { x: 0, offset: 8, pos: new Vector3(), scale: 1.5, factor: 6 }
   ],
   top: createRef()
 }
