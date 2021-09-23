@@ -1,14 +1,34 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import SideDrawer from "../../components/Navbar/SideDrawer/SideDrawer";
 import "./Ideas.css";
 import IdeasModel from "./IdeasModel";
-import { RadioGroup, RadioButton } from "react-radio-buttons";
+/* import { RadioGroup, RadioButton } from "react-radio-buttons"; */
 import { Player } from "@lottiefiles/react-lottie-player";
 
 const Ideas = () => {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
+  const [radioValue, setRadioValue] = useState('');
+  const [inputName, setInputName] = useState('');
+  const [inputEmail, setInputEmail] = useState('');
+  const [inputIdea, setInputIdea] = useState('');
+  const [inputPhone, setInputPhone] = useState('');
+  const [inputNameIsValid, setInputNameIsValid] = useState(false);
+  const [inputEmailIsValid, setInputEmailIsValid] = useState(false);
+  const [inputIdeaIsValid, setInputIdeaIsValid] = useState(false);
+  const [inputPhoneIsValid, setInputPhoneIsValid] = useState(false);
+  const [inputNameTouched, setInputNameTouched] = useState(false);
+  const [inputEmailTouched, setInputEmailTouched] = useState(false);
+  const [inputIdeaTouched, setInputIdeaTouched] = useState(false);
+  const [inputPhoneTouched, setInputPhoneTouched] = useState(false);
+  
   const formRef = useRef();
+  
+
+  /* useEffect(() => {
+    console.log("Current State is, " + radioValue);
+    console.log("Current Name is, " + inputName);
+  }, [radioValue, inputName]) */
 
   const sideDrawerClosedHandler = () => {
     setShowSideDrawer(false);
@@ -18,13 +38,77 @@ const Ideas = () => {
     setShowSideDrawer(!showSideDrawer);
   };
 
-  const radioSelectionHandler = (val) => {
-    console.log(val);
+  const formSubmitHandler = (event) => {
+    event.preventDefault();
+
+    setInputNameTouched(true);
+    setInputEmailTouched(true);
+    setInputIdeaTouched(true);
+    setInputPhoneTouched(true);
+
+    if (inputName.trim() === '') {
+      setInputNameIsValid(false);
+      return;
+    }
+    setInputNameIsValid(true);
+
+    if (!inputEmail.trim().includes('@')) {
+      setInputEmailIsValid(false);
+      return;
+    }
+    setInputEmailIsValid(true);
+
+    if (inputIdea.trim() === '') {
+      setInputIdeaIsValid(false);
+      return;
+    }
+    setInputIdeaIsValid(true);
+
+    if (inputPhone.trim().length !== 10) {
+      setInputPhoneIsValid(false);
+      return;
+    }
+    setInputPhoneIsValid(true);
+    
+    console.log("Name is: ",inputName);
+    console.log("Email is: ",inputEmail);
+    console.log("Idea is: ",inputIdea);
+    console.log("Phone is: ",inputPhone);
+    console.log("Level of expertise is: ",radioValue);
+    setInputName('');
+    setInputEmail('');
+    setInputIdea('');
+    setInputPhone('');
+    
+  }
+  const nameChangedHandler = (event) => {
+    setInputName(event.target.value)
+  }
+
+  const emailChangedHandler = (event) => {
+    setInputEmail(event.target.value)
+  }
+
+  const ideaChangedHandler = (event) => {
+    setInputIdea(event.target.value)
+  }
+
+  const phoneChangedHandler = (event) => {
+    setInputPhone(event.target.value)
+  }
+
+  const radioChangedHandler = (event) => {
+    setRadioValue(event.target.value);
   };
 
   const scrollClickHandler = (event) => {
     formRef.current.scrollIntoView({ behavior: "smooth" });
   };
+
+  const inputNameIsInvalid = !inputNameIsValid && inputNameTouched;
+  const inputEmailIsInvalid = !inputEmailIsValid && inputEmailTouched;
+  const inputIdeaIsInvalid = !inputIdeaIsValid && inputIdeaTouched;
+  const inputPhoneIsInvalid = !inputPhoneIsValid && inputPhoneTouched;
 
   return (
     <>
@@ -52,7 +136,7 @@ const Ideas = () => {
                 <div className="ideas__division__form">
                   <h2>Fill in the form</h2>
                   <div className="ideas__division_formcontent">
-                    <form className="formcontent__LI">
+                    <form className="formcontent__LI" onSubmit={formSubmitHandler}>
                       <label
                         for="name"
                         style={{ color: "#474444", fontWeight: 800 }}
@@ -60,8 +144,10 @@ const Ideas = () => {
                         Your Name
                       </label>
                       <br />
-                      <input type="text" placeholder="Type your Name" />
+                      <input type="text" placeholder="Type your Name" onChange={nameChangedHandler} value={inputName}/>
+                      {inputNameIsInvalid && <h4 style={{fontWeight: 'bolder', color: 'red'}}>Please provide a valid Name.</h4>}
                       <br />
+                      
                       <label
                         for="email"
                         style={{ color: "#474444", fontWeight: 800 }}
@@ -69,7 +155,8 @@ const Ideas = () => {
                         Your Email
                       </label>
                       <br />
-                      <input type="text" placeholder="Type your Email" />
+                      <input type="text" placeholder="Type your Email" onChange={emailChangedHandler} value={inputEmail}/>
+                      {inputEmailIsInvalid && <h4 style={{fontWeight: 'bolder', color: 'red'}}>Please provide a valid Email Id.</h4>}
                       <br />
                       <label
                         for="email"
@@ -81,47 +168,22 @@ const Ideas = () => {
                       <input
                         type="text"
                         placeholder="Tell us about your project"
+                        onChange={ideaChangedHandler}
+                        value={inputIdea}
                       />
+                      {inputIdeaIsInvalid && <h4 style={{fontWeight: 'bolder', color: 'red'}}>Please provide an Idea.</h4>}
                       <br />
                       <label style={{ color: "#474444", fontWeight: 800 }}>
                         Your Phone Number
                       </label>
                       <br />
-                      <input type="text" placeholder="Phone Number" />
-                      {/* <RadioGroup
-                          style={{ width: "75%" }}
-                          onChange={ radioSelectionHandler }>
-                        <RadioButton
-                            rootColor="#474444"
-                            pointColor="#ffee00"
-
-                            value="webapp">
-                          App Development
-                        </RadioButton>
-                        <RadioButton
-                            rootColor="#474444"
-                            pointColor="#ffee00"
-                            value="ai">
-                          Artificial Intelligence
-                        </RadioButton>
-                        <RadioButton
-                            rootColor="#474444"
-                            pointColor="#ffee00"
-                            value="crypto">
-                          Blockchain
-                        </RadioButton>
-                        <RadioButton
-                            rootColor="#474444"
-                            pointColor="#ffee00"
-                            value="cybersec">
-                          Cyber Security
-                        </RadioButton>
-                      </RadioGroup> */}
+                      <input type="text" placeholder="Phone Number" onChange={phoneChangedHandler} value={inputPhone}/>
+                      {inputPhoneIsInvalid && <h4 style={{fontWeight: 'bolder', color: 'red'}}>Please provide a valid Phone Number.</h4>}
                       <br />
                       <label style={{ color: "#474444", fontWeight: 800 }}>
-                        Rate your expertise on a scale of 1 to 5
+                        Rate your expertise on a scale of 1 to 5 (1 Lowest, 5 Highest)
                       </label>
-                      <br/>
+                      <br />
                       {/* <label className="radiolabel">
                         <input type="radio" name="radio" defaultChecked className="radioinput"/>
                         <span className="radiospan">HTML</span>
@@ -135,56 +197,39 @@ const Ideas = () => {
                         <span className="radiospan">Javascript</span>
                       </label> */}
                       <div className="radioselection">
-                        <div className="options">
-                          <input
-                            type="radio"
-                            id="1"
-                            name="level"
-                            value="1"
-                          />
-                          <label for="1">1</label>
-                        </div>
+                        <label class="rad-label">
+                          <input type="radio" class="rad-input" name="rad" value="1" onChange={radioChangedHandler}/>
+                          <div class="rad-design"></div>
+                          <div class="rad-text">1</div>
+                        </label>
 
-                        <div className="options">
-                          <input
-                            type="radio"
-                            id="2"
-                            name="level"
-                            value="2"
-                          />
-                          <label for="2">2</label>
-                        </div>
+                        <label class="rad-label">
+                          <input type="radio" class="rad-input" name="rad" value="2" onChange={radioChangedHandler}/>
+                          <div class="rad-design"></div>
+                          <div class="rad-text">2</div>
+                        </label>
 
-                        <div className="options">
-                          <input
-                            type="radio"
-                            id="3"
-                            name="level"
-                            value="3"
-                          />
-                          <label for="3">3</label>
-                        </div>
-                        <div className="options">
-                          <input
-                            type="radio"
-                            id="4"
-                            name="level"
-                            value="4"
-                          />
-                          <label for="4">4</label>
-                        </div>
-                        <div className="options">
-                          <input
-                            type="radio"
-                            id="5"
-                            name="level"
-                            value="5"
-                          />
-                          <label for="5">5</label>
-                        </div>
+                        <label class="rad-label">
+                          <input type="radio" class="rad-input" name="rad" value="3" onChange={radioChangedHandler}/>
+                          <div class="rad-design"></div>
+                          <div class="rad-text">3</div>
+                        </label>
+
+                        <label class="rad-label">
+                          <input type="radio" class="rad-input" name="rad" value="4" onChange={radioChangedHandler}/>
+                          <div class="rad-design"></div>
+                          <div class="rad-text">4</div>
+                        </label>
+                        <label class="rad-label">
+                          <input type="radio" class="rad-input" name="rad" value="5" onChange={radioChangedHandler}/>
+                          <div class="rad-design"></div>
+                          <div class="rad-text">5</div>
+                        </label>
+                        
                       </div>
-                      <br/>
-                      <br/>
+                      <br />
+                      <button type="submit" className="form__submit__button">Submit</button>
+                      <br />
                     </form>
                   </div>
                 </div>
