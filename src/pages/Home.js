@@ -11,7 +11,8 @@ import state from "../store/store"
 import "../styles/landing.css"
 import Bulb from "../components/three/Bulb";
 import styled from "styled-components";
-import HeaderItems from "../components/HeaderItems"
+import HeaderItems from "../components/HeaderItems";
+import Footer from '../components/Footer';
 
 function Startup() {
     const ref = useRef()
@@ -104,28 +105,28 @@ function Content() {
                     <Plane args={[50, height, 32, 32]} shift={-4} color={color} rotation={[0, 0, Math.PI / 8]} position={[0, 0, -10]} />
                 </Block>
             ))}
-            <Block factor={1.25} offset={8}>
-                <Html
-                    style={{
-                        position: "absolute",
-                        bottom: 0,
-                        left: 0,
-                        width: "100%",
-                        top: 300,
-                        right: 200,
-                        cursor: 'pointer',
-                        display: 'flex'
-                    }}>
-                    <nav>
-                        <ul>
-                            <li><HeaderItems title="Home"/></li>
-                            <li><HeaderItems title="About Us"/></li>
-                            <li><HeaderItems title="Recruitment"/></li>
-                            <li><HeaderItems title="Gallery"/></li>
-                        </ul>
-                    </nav>
-                </Html>
-            </Block>
+            {/*<Block factor={1.25} offset={8}>*/}
+            {/*    <Html*/}
+            {/*        style={{*/}
+            {/*            position: "absolute",*/}
+            {/*            bottom: 0,*/}
+            {/*            left: 0,*/}
+            {/*            width: "100%",*/}
+            {/*            top: 300,*/}
+            {/*            right: 200,*/}
+            {/*            cursor: 'pointer',*/}
+            {/*            display: 'flex'*/}
+            {/*        }}>*/}
+            {/*        <nav>*/}
+            {/*            <ul>*/}
+            {/*                <li><HeaderItems title="Home"/></li>*/}
+            {/*                <li><HeaderItems title="About Us"/></li>*/}
+            {/*                <li><HeaderItems title="Recruitment"/></li>*/}
+            {/*                <li><HeaderItems title="Gallery"/></li>*/}
+            {/*            </ul>*/}
+            {/*        </nav>*/}
+            {/*    </Html>*/}
+            {/*</Block>*/}
         </>
     )
 }
@@ -156,6 +157,7 @@ function HomePage() {
                         }}
                     />
                 ))}
+                <Footer />
             </div>
         </div>
     )

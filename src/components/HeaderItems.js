@@ -46,16 +46,18 @@ const NavItems = styled.div`
         width: auto;
       }
     }
-    
-    &:hover {
-      transform: scale(1.1);
-      color: #ffee00;
-      
-      span:before{
-        transform: scale(1);
-        visibility: visible;
-        opacity: 1 !important;
-        cursor: pointer;
+
+    @media only screen and (min-width: 968px) {
+      &:hover {
+        transform: scale(1.1);
+        color: #ffee00;
+
+        span:before{
+          transform: scale(1);
+          visibility: visible;
+          opacity: 1 !important;
+          cursor: pointer;
+        }
       }
     }
   }

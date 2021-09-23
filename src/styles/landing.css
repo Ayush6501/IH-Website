@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap");
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
 :root {
   font-size: 20px;
 }
