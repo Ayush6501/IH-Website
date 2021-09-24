@@ -299,6 +299,12 @@ input[type=radio]:checked ~ label{
   flex-wrap: wrap;
 }
 
+@media (max-width: 720px) {
+  .radioselection {
+    flex-direction: column;
+    align-items: normal;
+  }
+}
 
 .rad-label {
   display: flex;
