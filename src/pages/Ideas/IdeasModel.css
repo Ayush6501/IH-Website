@@ -10,3 +10,19 @@
 .model {
 
 }
+
+.scrollClicker {
+    position: absolute;
+    width: 250px;
+    top: 300px;
+    right: -160px;
+    cursor: pointer;
+    display: flex;
+}
+
+@media (max-width: 968px) {
+    .scrollClicker {
+        top: 200px;
+        right: -150px;
+    }
+}

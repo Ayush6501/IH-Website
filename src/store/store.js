@@ -39,8 +39,8 @@ const state = {
       offset: 4,
       factor: 2.0,
       header: "Pitch us your Idea",
-      image: "/assets/images/idea.jpg",
-      aspect: 0.665,
+      image: "/assets/images/project.jpg",
+      aspect: 1.55,
       text:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula rutrum dapibus. Vestibulum aliquam, " +
           "est id accumsan condimentum, nisi nibh luctus elit, vitae feugiat dolor. "

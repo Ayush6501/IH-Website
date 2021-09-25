@@ -13,6 +13,8 @@ import Bulb from "../components/three/Bulb";
 import styled from "styled-components";
 import HeaderItems from "../components/HeaderItems";
 import Footer from '../components/Footer';
+import Navbar from '../components/Navbar/Navbar';
+import { Player } from "@lottiefiles/react-lottie-player";
 
 function Startup() {
     const ref = useRef()
@@ -93,6 +95,21 @@ function Content() {
                         }
                     </Html>
                 </Block>
+                <Block factor={1.0}>
+                    <Html style={{
+                        position: "absolute",
+                        top: "220px",
+                        right: `${mobile ? "-55px" : "-50px"}`,
+                    }}>
+                        <Player
+                            autoplay
+                            loop
+                            src="https://assets10.lottiefiles.com/packages/lf20_ADqq0Z.json"
+                            speed={0.8}
+                            style={{ height: "150px", width: "100px" }}
+                        />
+                    </Html>
+                </Block>
             </Block>
             <Block factor={1.2} offset={5.7}>
                 <MultilineText top left size={w * 0.1} lineHeight={w / 5.5} position={[-w / 3, 0, -1]} color="#FFEE00" text={"ideate\ninnovate\ncreate"} />
@@ -138,6 +155,7 @@ function HomePage() {
 
     return (
         <div style={{ width: "100vw", height: "100vh"}}>
+            <Navbar />
             <Canvas linear dpr={[1, 2]} orthographic camera={{ zoom: 75, position: [0, 0, 500] }}>
                 <Suspense fallback={<Html center className="loading" children="Loading..." />}>
                     {/*<Suspense fallback={<Html center className="loading" children={<Spinner />} />}>*/}

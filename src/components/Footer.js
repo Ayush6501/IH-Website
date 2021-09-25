@@ -91,6 +91,7 @@ const FooterParent = styled.div`
   justify-content: center;
   align-items: flex-start;
   font-size: 0.8em;
+  z-index: 9999999;
 
   @media only screen and (max-width: 1268px) {
     height: fit-content;

@@ -7,6 +7,7 @@ import { Text, TrackballControls, Html } from "@react-three/drei";
 /* import Bg from "../../assets/images/Logo-white.png";
 import { Suspense } from "react"; */
 import './IdeasModel.css';
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const ideaWords = [
   "innovate",
@@ -148,19 +149,23 @@ export default function IdeasModel(props) {
         <meshStandardMaterial attach='material' />
       </mesh> */}
        <Html >
-         <div style={{
-           position: "absolute",
-           /* bottom: 0,
-           left: 0, */
-           width: "100%",
-           top: "300px",
-           right: "30px",
-           cursor: 'pointer',
-           display: 'flex'
-         }}>
-           <h3 onClick={props.scroll} style={{color: 'white'}}>Scroll</h3>
+         <div className='scrollClicker'>
+           <h3 onClick={props.scroll} style={{color: 'white'}}>Click Here To Scroll</h3>
          </div>
        </Html>
+        <Html style={{
+          position: "absolute",
+          top: "-100px",
+          right: "-800px",
+        }}>
+          <Player
+              autoplay
+              loop
+              src="https://assets10.lottiefiles.com/packages/lf20_jfchliut.json"
+              speed={0.8}
+              style={{ height: "600px", width: "350px" }}
+          />
+        </Html>
       </Canvas>
     </div>
   );

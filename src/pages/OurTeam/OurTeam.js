@@ -21,7 +21,7 @@ class Ourteam extends React.Component{
 
       if(ct>=this.maxImages)
         ct=0;
-      
+
       ct++;
 
       this.setState({curr_img:"url(/assets/images/"+ct+".jpg)",count:ct});
@@ -43,16 +43,17 @@ class Ourteam extends React.Component{
       backgroundSize: "cover",
       marginTop: "60px",
       height:"50vh",
-      width:"auto",
-      maxWidth:"100vw",
+      width:"100%",
+      maxWidth:"100%",
       transition: "all 0.3s ease",
       backgroundImage:this.state.curr_img
     }
 
-    return (<div>
+    return (
+        <div>
       <SiteNavbar/>
 
-      <div style={sliderStyle}></div>
+      <div style={sliderStyle} />
 
       <h1 className={styles.TitleContainer}>
         <span className={styles.Title}>
