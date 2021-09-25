@@ -42,7 +42,7 @@ class Ourteam extends React.Component{
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
       marginTop: "60px",
-      height:"400px",
+      height:"50vh",
       width:"auto",
       maxWidth:"100vw",
       transition: "all 0.3s ease",
