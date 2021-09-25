@@ -6,10 +6,54 @@ import {TeamCollage} from './TeamCollage.js';
 import SiteNavbar from '../../components/Navbar/Navbar';
 
 class Ourteam extends React.Component{
+  constructor(props)
+  {
+    super(props);
+    this.maxImages=4;
+    this.state={curr_img:"url(/assets/images/1.jpg)",count:1};
+
+    this.slider=this.slider.bind(this);
+  }
+
+  slider()
+  {
+      let ct=this.state.count;
+
+      if(ct>=this.maxImages)
+        ct=0;
+      
+      ct++;
+
+      this.setState({curr_img:"url(/assets/images/"+ct+".jpg)",count:ct});
+  }
+
+  componentDidMount(){
+      setInterval(this.slider,2000);
+  }
+
+
   render() {
+
+    const sliderStyle={
+      overflow: "hidden",
+      display: "flex",
+      flexDirection:"column",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      marginTop: "60px",
+      height:"400px",
+      width:"auto",
+      maxWidth:"100vw",
+      transition: "all 0.3s ease",
+      backgroundImage:this.state.curr_img
+    }
 
     return (<div>
       <SiteNavbar/>
+
+      <div style={sliderStyle}></div>
+
       <h1 className={styles.TitleContainer}>
         <span className={styles.Title}>
           MEET OUR TEAM
@@ -21,8 +65,6 @@ class Ourteam extends React.Component{
 
       {OurteamData.map((i) => <TeamCollage data={i.data} title={i.department} />)}
 
-
-      {/*<SiteFooter />*/}
     </div>);
   }
 };
