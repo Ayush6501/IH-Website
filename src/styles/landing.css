@@ -17,6 +17,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: #8b8b8b;
   font-size: 0.9rem;
+  scroll-behavior: smooth;
 }
 
 a {

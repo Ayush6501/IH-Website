@@ -44,7 +44,6 @@ class Ourteam extends React.Component{
       marginTop: "60px",
       height:"50vh",
       width:"100%",
-      maxWidth:"100%",
       transition: "all 0.3s ease",
       backgroundImage:this.state.curr_img
     }
@@ -53,7 +52,7 @@ class Ourteam extends React.Component{
         <div>
       <SiteNavbar/>
 
-      <div style={sliderStyle} />
+      {/*<div style={sliderStyle} />*/}
 
       <h1 className={styles.TitleContainer}>
         <span className={styles.Title}>

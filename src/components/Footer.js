@@ -91,6 +91,7 @@ const FooterParent = styled.div`
   justify-content: center;
   align-items: flex-start;
   font-size: 0.8em;
+  overflow-x: hidden;
   z-index: 9999999;
 
   @media only screen and (max-width: 1268px) {
@@ -159,6 +160,7 @@ const LeftBox = styled.div`
 
   @media only screen and (max-width: 968px) {
     width: 100%;
+    margin: 0;
   }
 `;
 
@@ -222,6 +224,8 @@ const RightBox = styled.div`
 
   @media only screen and (max-width: 968px) {
     width: 100%;
+    margin: 0;
+    justify-content: center;
   }
 `;
 
@@ -245,6 +249,7 @@ const ContactBox = styled.div`
 
   @media only screen and (max-width: 968px) {
     flex-direction: column;
+    margin-right: 0;
   }
 `;
 
