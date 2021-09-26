@@ -8,7 +8,6 @@ class TeamMember extends React.Component {
 }
 
   render() {
-
     return (
       <div className={styles.TeamCard}>
         <img src={this.imgsrc} alt="Error" className={styles.MemberImage} />
