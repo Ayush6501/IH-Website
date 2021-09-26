@@ -4,6 +4,7 @@ import Ideas from "./pages/Ideas/Ideas";
 import AboutPage from "./pages/About";
 import OurTeam from './pages/OurTeam/OurTeam';
 import Footer from './components/Footer';
+import Events from './pages/Events/Events'
 import RecruitmentPage from "./pages/Recruitment/Recruitment";
 import Gallery from './pages/Gallery/Gallery';
 
@@ -32,6 +33,10 @@ function App() {
               </Route>
               <Route path='/gallery' exact>
                   <Gallery />
+                  <Footer/>
+              </Route>
+              <Route path='/events' exact>
+                  <Events />
                   <Footer/>
               </Route>
           </Switch>
