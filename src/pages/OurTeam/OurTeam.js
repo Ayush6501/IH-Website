@@ -52,7 +52,7 @@ class Ourteam extends React.Component{
         <div>
       <SiteNavbar/>
 
-      {/*<div style={sliderStyle} />*/}
+      <div style={sliderStyle} />
 
       <h1 className={styles.TitleContainer}>
         <span className={styles.Title}>
