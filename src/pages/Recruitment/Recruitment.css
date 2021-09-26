@@ -1,0 +1,42 @@
+.recruitment__page {
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+    background: white;
+}
+
+.recruitment__info__div {
+    display: flex;
+    flex-direction: column;
+    flex: 0.25 1;
+    margin: 60px 10px 0px 10px;
+}
+
+.recruitment__info__header {
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.recruitment__info {
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-size: x-large;
+    font-weight: 400;
+}
+
+.recruitment__form__div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0.75;
+}
+
+@media (max-width: 720px) {
+    .recruitment__form__div > iframe {
+        min-width: 85%;
+    }
+}

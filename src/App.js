@@ -4,6 +4,7 @@ import Ideas from "./pages/Ideas/Ideas";
 import AboutPage from "./pages/About";
 import OurTeam from './pages/OurTeam/OurTeam';
 import Footer from './components/Footer';
+import RecruitmentPage from "./pages/Recruitment/Recruitment";
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
               <Route path='/ourteam' exact>
                   <OurTeam />
                   <Footer />
+              </Route>
+              <Route path='/recruitment' exact>
+                  <RecruitmentPage />
+                  <Footer/>
               </Route>
           </Switch>
       </Router>
