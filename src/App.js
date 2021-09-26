@@ -5,6 +5,7 @@ import AboutPage from "./pages/About";
 import OurTeam from './pages/OurTeam/OurTeam';
 import Footer from './components/Footer';
 import RecruitmentPage from "./pages/Recruitment/Recruitment";
+import Gallery from './pages/Gallery/Gallery';
 
 function App() {
   return (
@@ -27,6 +28,10 @@ function App() {
               </Route>
               <Route path='/recruitment' exact>
                   <RecruitmentPage />
+                  <Footer/>
+              </Route>
+              <Route path='/gallery' exact>
+                  <Gallery />
                   <Footer/>
               </Route>
           </Switch>
