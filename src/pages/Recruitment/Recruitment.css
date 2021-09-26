@@ -37,6 +37,12 @@
 
 @media (max-width: 720px) {
     .recruitment__form__div > iframe {
-        min-width: 85%;
+        min-width: 90%;
+    }
+}
+@media (max-width: 720px) {
+    .recruitment__info {
+        font-weight: 300;
+        font-size: medium;
     }
 }
