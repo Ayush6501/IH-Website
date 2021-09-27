@@ -1,58 +1,18 @@
 import React from 'react';
 import styles from './Ourteam.module.css';
-import SiteFooter from '../../components/Footer/footer.js';
 import {OurteamData} from '../../store/OurteamData.js';
 import {TeamCollage} from './TeamCollage.js';
+import {Slider} from './Slider.js';
 import SiteNavbar from '../../components/Navbar/Navbar';
 
+
 class Ourteam extends React.Component{
-  constructor(props)
-  {
-    super(props);
-    this.maxImages=4;
-    this.state={curr_img:"url(/assets/images/1.jpg)",count:1};
-
-    this.slider=this.slider.bind(this);
-  }
-
-  slider()
-  {
-      let ct=this.state.count;
-
-      if(ct>=this.maxImages)
-        ct=0;
-
-      ct++;
-
-      this.setState({curr_img:"url(/assets/images/"+ct+".jpg)",count:ct});
-  }
-
-  componentDidMount(){
-      setInterval(this.slider,2000);
-  }
-
-
   render() {
 
-    const sliderStyle={
-      overflow: "hidden",
-      display: "flex",
-      flexDirection:"column",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-      marginTop: "60px",
-      height:"50vh",
-      width:"100%",
-      transition: "all 0.3s ease",
-      backgroundImage:this.state.curr_img
-    }
-
     return (
-        <div>
+    <div>
       <SiteNavbar/>
-
-      <div style={sliderStyle} />
+      <Slider/>
 
       <h1 className={styles.TitleContainer}>
         <span className={styles.Title}>
@@ -68,5 +28,6 @@ class Ourteam extends React.Component{
     </div>);
   }
 };
+
 
 export default Ourteam;
