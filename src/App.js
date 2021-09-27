@@ -8,7 +8,10 @@ import RecruitmentPage from "./pages/Recruitment/Recruitment";
 import Navbar from "./components/Navbar/Navbar";
 import Events from "./pages/Events/Events";
 import SideDrawer from "./components/Navbar/SideDrawer/SideDrawer";
+<<<<<<< HEAD
 import Gallery from "./pages/Gallery/Gallery";
+=======
+>>>>>>> origin/master
 import { useState } from "react";
 
 function App() {
@@ -50,10 +53,13 @@ function App() {
             <Events />
             <Footer />
           </Route>
+<<<<<<< HEAD
           <Route path="/gallery" exact>
             <Gallery/>
             <Footer />
           </Route>
+=======
+>>>>>>> origin/master
         </Switch>
       </Router>
     </div>
