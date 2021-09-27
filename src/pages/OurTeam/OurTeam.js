@@ -3,7 +3,6 @@ import styles from './Ourteam.module.css';
 import {OurteamData} from '../../store/OurteamData.js';
 import {TeamCollage} from './TeamCollage.js';
 import {Slider} from './Slider.js';
-import SiteNavbar from '../../components/Navbar/Navbar';
 
 
 class Ourteam extends React.Component{
@@ -11,7 +10,6 @@ class Ourteam extends React.Component{
 
     return (
     <div>
-      <SiteNavbar/>
       <Slider/>
 
       <h1 className={styles.TitleContainer}>

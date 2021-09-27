@@ -1,7 +1,10 @@
 .heading_containers {
+    margin-top:10px;
     display: flex;
+    justify-content: center;
     padding: 1.5vw;
-    padding-right: 13.1vw;
+    /*padding-right: 13.1vw;*/
+    width:100%;
 }
 
 #Events_first_container {
@@ -92,10 +95,13 @@
     font-style: normal;
     font-weight: normal;
     font-size: 4vw;
+    text-align:center;
+
 }
 
 #Heading_para {
     font-size: 1.8vw;
+    margin: 5px 5%;
 }
 
 @media only screen and (max-width: 1024px) {

@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Gallery.module.css';
-import SiteNavbar from '../../components/Navbar/Navbar';
 import {GalleryStore} from '../../store/GalleryStore.js';
 
 
@@ -8,7 +7,6 @@ class Gallery extends React.Component{
   render()
   {
     return (<div className={styles.Main}>
-      <SiteNavbar/>
 
       <p className={styles.TitleContainer}>
         <span className={styles.Title}>

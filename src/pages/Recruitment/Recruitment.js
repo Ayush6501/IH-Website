@@ -19,7 +19,7 @@ const RecruitmentPage = (props) => {
       {/*<SideDrawer open={showSideDrawer} closed={sideDrawerClosedHandler} />*/}
       <div className="recruitment__page">
         <div className="recruitment__info__div">
-            <p className="recruitment__info__header">Welcome to innovational paradise!</p>
+            <p className="recruitment__info__header">WELCOME TO INNOVATIONAL PARADISE!</p>
             <p className="recruitment__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat ligula nec massa dignissim pretium. Integer diam nisi, ultricies at ex quis, commodo dictum sapien. Donec volutpat auctor erat, at ullamcorper enim consectetur ac. Quisque lacus nunc, sagittis ut rhoncus sed, ultricies et nulla. Donec tincidunt est quam, quis laoreet odio porta ac. Nam eleifend viverra euismod. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque eget semper enim.</p>
         </div>
         <div className="recruitment__form__div">
