@@ -9,13 +9,8 @@ class Ourteam extends React.Component{
   render() {
 
     return (
-<<<<<<< HEAD
-    <div>
+      <div>
       <Slider/>
-=======
-        <div>
-      <div style={sliderStyle} />
->>>>>>> origin/master
 
       <h1 className={styles.TitleContainer}>
         <span className={styles.Title}>

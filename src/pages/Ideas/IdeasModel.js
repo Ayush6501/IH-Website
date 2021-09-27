@@ -154,13 +154,13 @@ export default function IdeasModel(props) {
             right: "-800px",
           }}
         >
-          <Player
+          {/*<Player
             autoplay
             loop
             src="https://assets10.lottiefiles.com/packages/lf20_jfchliut.json"
             speed={0.8}
             style={{ height: "600px", width: "350px" }}
-          />
+          />*/}
         </Html>
       </Canvas>
     </div>
