@@ -13,6 +13,7 @@
 }
 
 .recruitment__info__header {
+    text-transform: capitalize;
     color: black;
     text-align: center;
     font-weight: bold;
@@ -26,6 +27,7 @@
     font-family: "Poppins", sans-serif;
     font-size: x-large;
     font-weight: 400;
+    margin:0px 50px;
 }
 
 .recruitment__form__div {
