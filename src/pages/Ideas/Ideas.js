@@ -21,9 +21,9 @@ const Ideas = () => {
   const [inputEmailTouched, setInputEmailTouched] = useState(false);
   const [inputIdeaTouched, setInputIdeaTouched] = useState(false);
   const [inputPhoneTouched, setInputPhoneTouched] = useState(false);
-  
+
   const formRef = useRef();
-  
+
 
   /* useEffect(() => {
     console.log("Current State is, " + radioValue);
@@ -34,9 +34,9 @@ const Ideas = () => {
     setShowSideDrawer(false);
   };
 
-  const sideDrawerToggleHandler = () => {
-    setShowSideDrawer(!showSideDrawer);
-  };
+  // const sideDrawerToggleHandler = () => {
+  //   setShowSideDrawer(!showSideDrawer);
+  // };
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
@@ -69,7 +69,7 @@ const Ideas = () => {
       return;
     }
     setInputPhoneIsValid(true);
-    
+
     console.log("Name is: ",inputName);
     console.log("Email is: ",inputEmail);
     console.log("Idea is: ",inputIdea);
@@ -79,7 +79,7 @@ const Ideas = () => {
     setInputEmail('');
     setInputIdea('');
     setInputPhone('');
-    
+
   }
   const nameChangedHandler = (event) => {
     setInputName(event.target.value)
@@ -112,7 +112,6 @@ const Ideas = () => {
 
   return (
     <>
-      <Navbar hamburgerClicked={sideDrawerToggleHandler} />
       <SideDrawer open={showSideDrawer} closed={sideDrawerClosedHandler} />
       <div className="ideas_full_page">
         <div className="ideas__model">
@@ -128,7 +127,7 @@ const Ideas = () => {
                     autoplay
                     loop
                     src="https://assets6.lottiefiles.com/packages/lf20_jJ7Djd.json"
-                    speed={0.3}
+                    speed={0.1}
                     style={{ height: "600px", width: "600px" }}
                   />
                 </div>
@@ -147,7 +146,7 @@ const Ideas = () => {
                       <input type="text" placeholder="Type your Name" onChange={nameChangedHandler} value={inputName}/>
                       {inputNameIsInvalid && <h4 style={{fontWeight: 'bolder', color: 'red'}}>Please provide a valid Name.</h4>}
                       <br />
-                      
+
                       <label
                         for="email"
                         style={{ color: "#474444", fontWeight: 800 }}
@@ -225,7 +224,7 @@ const Ideas = () => {
                           <div class="rad-design"></div>
                           <div class="rad-text">5</div>
                         </label>
-                        
+
                       </div>
                       <br />
                       <button type="submit" className="form__submit__button">Submit</button>

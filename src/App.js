@@ -5,11 +5,13 @@ import AboutPage from "./pages/About";
 import OurTeam from './pages/OurTeam/OurTeam';
 import Footer from './components/Footer';
 import RecruitmentPage from "./pages/Recruitment/Recruitment";
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <div>
       <Router>
+          <Navbar />
           <Switch>
               <Route path='/' exact>
                   <HomePage />

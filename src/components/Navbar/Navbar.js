@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-
 import Hamburger from "./Hamburger/Hamburger";
 
 const Navbar = (props) => {

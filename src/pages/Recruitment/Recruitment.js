@@ -4,20 +4,19 @@ import SideDrawer from "../../components/Navbar/SideDrawer/SideDrawer";
 import './Recruitment.css'
 
 const RecruitmentPage = (props) => {
-  const [showSideDrawer, setShowSideDrawer] = useState(false);
-
-  const sideDrawerClosedHandler = () => {
-    setShowSideDrawer(false);
-  };
-
-  const sideDrawerToggleHandler = () => {
-    setShowSideDrawer(!showSideDrawer);
-  };
+  // const [showSideDrawer, setShowSideDrawer] = useState(false);
+  //
+  // const sideDrawerClosedHandler = () => {
+  //   setShowSideDrawer(false);
+  // };
+  //
+  // const sideDrawerToggleHandler = () => {
+  //   setShowSideDrawer(!showSideDrawer);
+  // };
 
   return (
     <>
-      <Navbar hamburgerClicked={sideDrawerToggleHandler} />
-      <SideDrawer open={showSideDrawer} closed={sideDrawerClosedHandler} />
+      {/*<SideDrawer open={showSideDrawer} closed={sideDrawerClosedHandler} />*/}
       <div className="recruitment__page">
         <div className="recruitment__info__div">
             <p className="recruitment__info__header">Welcome to innovational paradise!</p>
