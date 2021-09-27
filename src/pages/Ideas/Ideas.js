@@ -7,12 +7,11 @@ import IdeasModel from "./IdeasModel";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 const Ideas = () => {
-  const [showSideDrawer, setShowSideDrawer] = useState(false);
-  const [radioValue, setRadioValue] = useState('');
-  const [inputName, setInputName] = useState('');
-  const [inputEmail, setInputEmail] = useState('');
-  const [inputIdea, setInputIdea] = useState('');
-  const [inputPhone, setInputPhone] = useState('');
+  const [radioValue, setRadioValue] = useState("");
+  const [inputName, setInputName] = useState("");
+  const [inputEmail, setInputEmail] = useState("");
+  const [inputIdea, setInputIdea] = useState("");
+  const [inputPhone, setInputPhone] = useState("");
   const [inputNameIsValid, setInputNameIsValid] = useState(false);
   const [inputEmailIsValid, setInputEmailIsValid] = useState(false);
   const [inputIdeaIsValid, setInputIdeaIsValid] = useState(false);
@@ -21,22 +20,13 @@ const Ideas = () => {
   const [inputEmailTouched, setInputEmailTouched] = useState(false);
   const [inputIdeaTouched, setInputIdeaTouched] = useState(false);
   const [inputPhoneTouched, setInputPhoneTouched] = useState(false);
-  
+
   const formRef = useRef();
-  
 
   /* useEffect(() => {
     console.log("Current State is, " + radioValue);
     console.log("Current Name is, " + inputName);
   }, [radioValue, inputName]) */
-
-  const sideDrawerClosedHandler = () => {
-    setShowSideDrawer(false);
-  };
-
-  const sideDrawerToggleHandler = () => {
-    setShowSideDrawer(!showSideDrawer);
-  };
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
@@ -46,19 +36,19 @@ const Ideas = () => {
     setInputIdeaTouched(true);
     setInputPhoneTouched(true);
 
-    if (inputName.trim() === '') {
+    if (inputName.trim() === "") {
       setInputNameIsValid(false);
       return;
     }
     setInputNameIsValid(true);
 
-    if (!inputEmail.trim().includes('@')) {
+    if (!inputEmail.trim().includes("@")) {
       setInputEmailIsValid(false);
       return;
     }
     setInputEmailIsValid(true);
 
-    if (inputIdea.trim() === '') {
+    if (inputIdea.trim() === "") {
       setInputIdeaIsValid(false);
       return;
     }
@@ -69,33 +59,32 @@ const Ideas = () => {
       return;
     }
     setInputPhoneIsValid(true);
-    
-    console.log("Name is: ",inputName);
-    console.log("Email is: ",inputEmail);
-    console.log("Idea is: ",inputIdea);
-    console.log("Phone is: ",inputPhone);
-    console.log("Level of expertise is: ",radioValue);
-    setInputName('');
-    setInputEmail('');
-    setInputIdea('');
-    setInputPhone('');
-    
-  }
+
+    console.log("Name is: ", inputName);
+    console.log("Email is: ", inputEmail);
+    console.log("Idea is: ", inputIdea);
+    console.log("Phone is: ", inputPhone);
+    console.log("Level of expertise is: ", radioValue);
+    setInputName("");
+    setInputEmail("");
+    setInputIdea("");
+    setInputPhone("");
+  };
   const nameChangedHandler = (event) => {
-    setInputName(event.target.value)
-  }
+    setInputName(event.target.value);
+  };
 
   const emailChangedHandler = (event) => {
-    setInputEmail(event.target.value)
-  }
+    setInputEmail(event.target.value);
+  };
 
   const ideaChangedHandler = (event) => {
-    setInputIdea(event.target.value)
-  }
+    setInputIdea(event.target.value);
+  };
 
   const phoneChangedHandler = (event) => {
-    setInputPhone(event.target.value)
-  }
+    setInputPhone(event.target.value);
+  };
 
   const radioChangedHandler = (event) => {
     setRadioValue(event.target.value);
@@ -112,8 +101,6 @@ const Ideas = () => {
 
   return (
     <>
-      <Navbar hamburgerClicked={sideDrawerToggleHandler} />
-      <SideDrawer open={showSideDrawer} closed={sideDrawerClosedHandler} />
       <div className="ideas_full_page">
         <div className="ideas__model">
           <IdeasModel scroll={scrollClickHandler} />
@@ -128,7 +115,7 @@ const Ideas = () => {
                     autoplay
                     loop
                     src="https://assets6.lottiefiles.com/packages/lf20_jJ7Djd.json"
-                    speed={0.2}
+                    speed={0.3}
                     style={{ height: "600px", width: "600px" }}
                   />
                 </div>
@@ -136,7 +123,10 @@ const Ideas = () => {
                 <div className="ideas__division__form">
                   <h2>Fill in the form</h2>
                   <div className="ideas__division_formcontent">
-                    <form className="formcontent__LI" onSubmit={formSubmitHandler}>
+                    <form
+                      className="formcontent__LI"
+                      onSubmit={formSubmitHandler}
+                    >
                       <label
                         for="name"
                         style={{ color: "#474444", fontWeight: 800 }}
@@ -144,10 +134,19 @@ const Ideas = () => {
                         Your Name
                       </label>
                       <br />
-                      <input type="text" placeholder="Type your Name" onChange={nameChangedHandler} value={inputName}/>
-                      {inputNameIsInvalid && <h4 style={{fontWeight: 'bolder', color: 'red'}}>Please provide a valid Name.</h4>}
+                      <input
+                        type="text"
+                        placeholder="Type your Name"
+                        onChange={nameChangedHandler}
+                        value={inputName}
+                      />
+                      {inputNameIsInvalid && (
+                        <h4 style={{ fontWeight: "bolder", color: "red" }}>
+                          Please provide a valid Name.
+                        </h4>
+                      )}
                       <br />
-                      
+
                       <label
                         for="email"
                         style={{ color: "#474444", fontWeight: 800 }}
@@ -155,8 +154,17 @@ const Ideas = () => {
                         Your Email
                       </label>
                       <br />
-                      <input type="text" placeholder="Type your Email" onChange={emailChangedHandler} value={inputEmail}/>
-                      {inputEmailIsInvalid && <h4 style={{fontWeight: 'bolder', color: 'red'}}>Please provide a valid Email Id.</h4>}
+                      <input
+                        type="text"
+                        placeholder="Type your Email"
+                        onChange={emailChangedHandler}
+                        value={inputEmail}
+                      />
+                      {inputEmailIsInvalid && (
+                        <h4 style={{ fontWeight: "bolder", color: "red" }}>
+                          Please provide a valid Email Id.
+                        </h4>
+                      )}
                       <br />
                       <label
                         for="email"
@@ -171,64 +179,98 @@ const Ideas = () => {
                         onChange={ideaChangedHandler}
                         value={inputIdea}
                       />
-                      {inputIdeaIsInvalid && <h4 style={{fontWeight: 'bolder', color: 'red'}}>Please provide an Idea.</h4>}
+                      {inputIdeaIsInvalid && (
+                        <h4 style={{ fontWeight: "bolder", color: "red" }}>
+                          Please provide an Idea.
+                        </h4>
+                      )}
                       <br />
                       <label style={{ color: "#474444", fontWeight: 800 }}>
                         Your Phone Number
                       </label>
                       <br />
-                      <input type="text" placeholder="Phone Number" onChange={phoneChangedHandler} value={inputPhone}/>
-                      {inputPhoneIsInvalid && <h4 style={{fontWeight: 'bolder', color: 'red'}}>Please provide a valid Phone Number.</h4>}
+                      <input
+                        type="text"
+                        placeholder="Phone Number"
+                        onChange={phoneChangedHandler}
+                        value={inputPhone}
+                      />
+                      {inputPhoneIsInvalid && (
+                        <h4 style={{ fontWeight: "bolder", color: "red" }}>
+                          Please provide a valid Phone Number.
+                        </h4>
+                      )}
                       <br />
                       <label style={{ color: "#474444", fontWeight: 800 }}>
-                        Rate your expertise on a scale of 1 to 5 (1 Lowest, 5 Highest)
+                        Rate your expertise on a scale of 1 to 5 (1 Lowest, 5
+                        Highest)
                       </label>
                       <br />
-                      {/* <label className="radiolabel">
-                        <input type="radio" name="radio" defaultChecked className="radioinput"/>
-                        <span className="radiospan">HTML</span>
-                      </label>
-                      <label className="radiolabel">
-                        <input type="radio" name="radio" className="radioinput"/>
-                        <span className="radiospan">CSS</span>
-                      </label>
-                      <label className="radiolabel">
-                        <input type="radio" name="radio" className="radioinput"/>
-                        <span className="radiospan">Javascript</span>
-                      </label> */}
+
                       <div className="radioselection">
                         <label class="rad-label">
-                          <input type="radio" class="rad-input" name="rad" value="1" onChange={radioChangedHandler}/>
+                          <input
+                            type="radio"
+                            class="rad-input"
+                            name="rad"
+                            value="1"
+                            onChange={radioChangedHandler}
+                          />
                           <div class="rad-design"></div>
                           <div class="rad-text">1</div>
                         </label>
 
                         <label class="rad-label">
-                          <input type="radio" class="rad-input" name="rad" value="2" onChange={radioChangedHandler}/>
+                          <input
+                            type="radio"
+                            class="rad-input"
+                            name="rad"
+                            value="2"
+                            onChange={radioChangedHandler}
+                          />
                           <div class="rad-design"></div>
                           <div class="rad-text">2</div>
                         </label>
 
                         <label class="rad-label">
-                          <input type="radio" class="rad-input" name="rad" value="3" onChange={radioChangedHandler}/>
+                          <input
+                            type="radio"
+                            class="rad-input"
+                            name="rad"
+                            value="3"
+                            onChange={radioChangedHandler}
+                          />
                           <div class="rad-design"></div>
                           <div class="rad-text">3</div>
                         </label>
 
                         <label class="rad-label">
-                          <input type="radio" class="rad-input" name="rad" value="4" onChange={radioChangedHandler}/>
+                          <input
+                            type="radio"
+                            class="rad-input"
+                            name="rad"
+                            value="4"
+                            onChange={radioChangedHandler}
+                          />
                           <div class="rad-design"></div>
                           <div class="rad-text">4</div>
                         </label>
                         <label class="rad-label">
-                          <input type="radio" class="rad-input" name="rad" value="5" onChange={radioChangedHandler}/>
+                          <input
+                            type="radio"
+                            class="rad-input"
+                            name="rad"
+                            value="5"
+                            onChange={radioChangedHandler}
+                          />
                           <div class="rad-design"></div>
                           <div class="rad-text">5</div>
                         </label>
-                        
                       </div>
                       <br />
-                      <button type="submit" className="form__submit__button">Submit</button>
+                      <button type="submit" className="form__submit__button">
+                        Submit
+                      </button>
                       <br />
                     </form>
                   </div>

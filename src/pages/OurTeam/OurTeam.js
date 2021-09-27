@@ -50,8 +50,6 @@ class Ourteam extends React.Component{
 
     return (
         <div>
-      <SiteNavbar/>
-
       <div style={sliderStyle} />
 
       <h1 className={styles.TitleContainer}>

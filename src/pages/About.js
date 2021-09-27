@@ -65,6 +65,7 @@ const Parent = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  margin-top: 70px;
   
   @media only screen and (max-width: 968px) {
     height: fit-content;
