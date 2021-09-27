@@ -128,7 +128,7 @@ const Ideas = () => {
                     autoplay
                     loop
                     src="https://assets6.lottiefiles.com/packages/lf20_jJ7Djd.json"
-                    speed={0.3}
+                    speed={0.2}
                     style={{ height: "600px", width: "600px" }}
                   />
                 </div>
