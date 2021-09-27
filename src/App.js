@@ -6,6 +6,7 @@ import OurTeam from './pages/OurTeam/OurTeam';
 import Footer from './components/Footer';
 import RecruitmentPage from "./pages/Recruitment/Recruitment";
 import Navbar from './components/Navbar/Navbar';
+import Events from './pages/Events/Events';
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
               </Route>
               <Route path='/recruitment' exact>
                   <RecruitmentPage />
+                  <Footer/>
+              </Route>
+              <Route path='/events' exact>
+                  <Events />
                   <Footer/>
               </Route>
           </Switch>
