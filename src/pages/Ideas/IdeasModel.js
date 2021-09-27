@@ -1,12 +1,12 @@
 import * as THREE from "three";
 import { useRef, useState, useMemo, useEffect } from "react";
-import { Canvas, useFrame} from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { Text, TrackballControls, Html } from "@react-three/drei";
 /* import randomWord from "random-words"; */
 /* import Poppins from "../../fonts/Poppins Medium_Regular.json"; */
 /* import Bg from "../../assets/images/Logo-white.png";
 import { Suspense } from "react"; */
-import './IdeasModel.css';
+import "./IdeasModel.css";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 const ideaWords = [
@@ -77,8 +77,8 @@ function Word({ children, ...props }) {
   const ref = useRef();
   const [hovered, setHovered] = useState(false);
   const over = (e) => {
-    e.stopPropagation()
-    setHovered(true)
+    e.stopPropagation();
+    setHovered(true);
   };
   const out = () => setHovered(false);
   // Change the mouse cursor on hover
@@ -136,34 +136,30 @@ export default function IdeasModel(props) {
   return (
     <div className="model">
       <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
-        {/* <mesh>
-          <planeBufferGeometry attach="geometry" args={[3, 3]} />
-          <meshBasicMaterial attach="material" map={texture} />
-        </mesh> */}
-
         <fog attach="fog" args={["white", 0, 80]} />
         <Cloud count={8} radius={20} />
         <TrackballControls />
-        {/* <mesh position={[-30, 10, 17]}>
-        <textGeometry attach='geometry' args={['SCROLL IN TO ZOOM!', textOptions]} />
-        <meshStandardMaterial attach='material' />
-      </mesh> */}
-       <Html >
-         <div className='scrollClicker'>
-           <h3 onClick={props.scroll} style={{color: 'white'}}>Click Here To Scroll</h3>
-         </div>
-       </Html>
-        <Html style={{
-          position: "absolute",
-          top: "-100px",
-          right: "-800px",
-        }}>
+        
+        <Html zIndexRange={[150, 0]}>
+          <div className="scrollClicker">
+            <h3 onClick={props.scroll} style={{ color: "white" }}>
+              Click Here To Scroll
+            </h3>
+          </div>
+        </Html>
+        <Html
+          style={{
+            position: "absolute",
+            top: "-100px",
+            right: "-800px",
+          }}
+        >
           <Player
-              autoplay
-              loop
-              src="https://assets10.lottiefiles.com/packages/lf20_jfchliut.json"
-              speed={0.8}
-              style={{ height: "600px", width: "350px" }}
+            autoplay
+            loop
+            src="https://assets10.lottiefiles.com/packages/lf20_jfchliut.json"
+            speed={0.8}
+            style={{ height: "600px", width: "350px" }}
           />
         </Html>
       </Canvas>

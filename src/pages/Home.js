@@ -13,7 +13,6 @@ import Bulb from "../components/three/Bulb";
 import styled from "styled-components";
 import HeaderItems from "../components/HeaderItems";
 import Footer from '../components/Footer';
-import Navbar from '../components/Navbar/Navbar';
 import { Player } from "@lottiefiles/react-lottie-player";
 
 function Startup() {
@@ -155,7 +154,6 @@ function HomePage() {
 
     return (
         <div style={{ width: "100vw", height: "100vh"}}>
-            <Navbar />
             <Canvas linear dpr={[1, 2]} orthographic camera={{ zoom: 75, position: [0, 0, 500] }}>
                 <Suspense fallback={<Html center className="loading" children="Loading..." />}>
                     {/*<Suspense fallback={<Html center className="loading" children={<Spinner />} />}>*/}
