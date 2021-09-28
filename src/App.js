@@ -54,6 +54,10 @@ function App() {
             <Gallery/>
             <Footer />
           </Route>
+          <Route path="/*" exact>
+            <HomePage />
+            <Footer />
+          </Route>
         </Switch>
       </Router>
     </div>

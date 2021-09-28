@@ -28,7 +28,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 70px;
+  margin-top: 9vh;
   height:50vh;
   width: 100%;
   transition: all 0.3s ease;
@@ -210,7 +210,7 @@
 {
   height: 250px;
   width: 250px;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 .TeamCard .MemberOverlay {
