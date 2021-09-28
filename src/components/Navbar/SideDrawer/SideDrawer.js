@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./SideDrawer.css";
 import Backdrop from "../../../UI/Backdrop/Backdrop";
+import { Link } from "react-router-dom";
 
 const SideDrawer = (props) => {
   let attachedClasses = ["sidedrawer", "close"];
@@ -18,19 +19,41 @@ const SideDrawer = (props) => {
         </div>
         
         <div className="sidedrawer__name">
-          <h1 style={{ color: "#282727" }}>Innovator's Hub</h1>
+          <h1>Innovator's Hub</h1>
         </div>
 
-        <div className="sidedrawer__links">HomePage
-        </div>
-        <div className="sidedrawer__links">HomePage
-        </div>
-        <div className="sidedrawer__links">HomePage
-        </div>
+        <Link to="/" className="sidedrawer__links">
+        HomePage
+        </Link>
+        
+        <Link to="/about" className="sidedrawer__links">
+        About
+        </Link>
 
+        <Link to="/ideas" className="sidedrawer__links">
+        Ideas
+        </Link>
 
+        <Link to="/" className="sidedrawer__links">
+        Projects
+        </Link>
+
+        <Link to="/events" className="sidedrawer__links">
+        Events
+        </Link>
+
+        <Link to="/ourteam" className="sidedrawer__links">
+        Our Team
+        </Link>
+
+        <Link to="/gallery" className="sidedrawer__links">
+        Gallery
+        </Link>
+
+        <Link to="/recruitment" className="sidedrawer__links">
+        Recruitment
+        </Link>
       </div>
-
 
       <Backdrop show={props.open} clicked={props.closed} />
     </>
