@@ -11,7 +11,9 @@ const Footer = () => {
                       <h1>Innovators<br />Hub</h1>
                   </LogoBox>
                   <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium amet corporis dolorem dolorum expedita
+                      Welcome to possible… At IH, we aim to bring together and
+                      incubate thinkers from all spheres. Become a part of the biggest
+                      up-and-coming community of pioneers from all domains.
                   </p>
                   <FollowBox>
                       <h2>Follow Us</h2>
@@ -29,8 +31,15 @@ const Footer = () => {
                               <img src="/assets/images/insta.svg" alt=""/>
                               <Text>
                                   <h3>Pune, India</h3>
-                                  <p>5353 Road Avenue</p>
-                                  <p>5353 Road Avenue</p>
+                                  <p>Kothrud, MITWPU</p>
+                              </Text>
+                          </ContactInfo>
+                          <ContactInfo>
+                              <img src="/assets/images/insta.svg" alt=""/>
+                              <Text>
+                                  <h3>Ionosphere</h3>
+                                  <p>Join Our Server</p>
+                                  <p> </p>
                               </Text>
                           </ContactInfo>
                           <ContactInfo>
@@ -41,33 +50,25 @@ const Footer = () => {
                                   <p> </p>
                               </Text>
                           </ContactInfo>
-                          <ContactInfo>
-                              <img src="/assets/images/insta.svg" alt=""/>
-                              <Text>
-                                  <h3>9724579245</h3>
-                                  <p>Contact Us Here</p>
-                                  <p> </p>
-                              </Text>
-                          </ContactInfo>
                       </ContactBox>
                       <LinkContainer>
                           <h1>Useful Links</h1>
                           <LinksContainer>
                               <Links>
-                                  <p>Let's discuss your ideas!</p>
+                                  <p>Wondering what we do?</p>
+                                  <HeaderItems title="About Us"/>
+                              </Links>
+                              <Links>
+                                  <p>Have a project proposal?</p>
                                   <HeaderItems title="Ideas"/>
                               </Links>
                               <Links>
-                                  <p>Let's discuss your ideas!</p>
-                                  <HeaderItems title="Ideas"/>
+                                  <p>Meet the innovators! </p>
+                                  <HeaderItems title="Our Team"/>
                               </Links>
                               <Links>
-                                  <p>Let's discuss your ideas!</p>
-                                  <HeaderItems title="Ideas"/>
-                              </Links>
-                              <Links>
-                                  <p>Let's discuss your ideas!</p>
-                                  <HeaderItems title="Ideas"/>
+                                  <p>Down the memory lane… </p>
+                                  <HeaderItems title="Archive"/>
                               </Links>
                           </LinksContainer>
                       </LinkContainer>
@@ -122,7 +123,7 @@ const LeftBox = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 360px;
-  min-height: 310px;
+  min-height: 370px;
   border-radius: 0 0 30px 30px;
 
   h1 {
