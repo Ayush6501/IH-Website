@@ -1,0 +1,149 @@
+.Project_container {
+  width: 400% !important;
+  left: 0px !important;
+  padding: 0px !important;
+  max-width: 400% !important;
+  display: flex;
+  max-height: 100% !important;
+  height: 100% !important;
+}
+
+.pin-spacer {
+  margin: 0px !important;
+  width: 100% !important;
+  padding: 0px !important;
+  z-index: -1 !important;
+  position: absolute !important;
+  height: 5610px !important;
+  background-color: white;
+
+}
+
+.panel_projects {
+  width: 100%;
+  position: relative;
+  top: 0;
+  right: 0;
+  height: 101%;
+  will-change: transform;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.panel_projects::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-image: url('https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg');
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  margin: 0.4vw;
+  font-family: Carrois Gothic SC;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.projects_main_card_container:hover .projects_card_detail_container {
+  opacity: 1;
+}
+
+#Projects_Main_Item_Container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projects_main_card_container {
+  width: 32vw;
+  margin: 0.9vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.projects_image_card_container {
+  width: 100%;
+}
+
+.projects_reponsive_image {
+  width: 100%;
+}
+
+.projects_card_detail_container {
+  position: absolute;
+  overflow: scroll;
+  overflow: hidden;
+  height: 18vw;
+  width: inherit;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  /* display: none; */
+  opacity: 0;
+  transition: opacity .2s, display .2s
+  /* bottom: 23vw; */
+}
+
+.projects_card_detail_para {
+  overflow: hidden;
+}
+
+.Projects_description_para {
+  overflow: scroll;
+  height: inherit;
+}
+
+.Projects_description_para::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width:1024px) {
+  .projects_main_card_container {
+    width: 40vw;
+  }
+  #Main_page_heading{
+    font-size: 3vw !important;
+  }
+  .projects_card_detail_container{
+    height: 23vw;
+  }
+}
+@media only screen and (max-width:750px) {
+  .projects_main_card_container {
+    width: 45vw;
+  }
+  #Main_page_heading{
+    font-size: 5vw !important;
+  }
+}
+@media only screen and (max-width:500px) {
+  .projects_main_card_container {
+    width: 50vw;
+  }
+  #Main_page_heading{
+    font-size: 7vw !important;
+  }
+}
+@media only screen and (max-width:390px) {
+  .projects_main_card_container {
+    width: 59vw;
+  }
+  #Main_page_heading{
+    font-size: 7.5vw !important;
+  }
+}

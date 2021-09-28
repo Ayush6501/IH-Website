@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Events from "./pages/Events/Events";
 import SideDrawer from "./components/Navbar/SideDrawer/SideDrawer";
 import Gallery from "./pages/Gallery/Gallery";
+import OurProjects from "./pages/OurProjects/Projects"
 import { useState } from "react";
 
 function App() {
@@ -53,6 +54,10 @@ function App() {
           <Route path="/gallery" exact>
             <Gallery/>
             <Footer />
+          </Route>
+          <Route path="/OurProjects" exact>
+            <OurProjects/>
+            {/* <Footer /> */}
           </Route>
           <Route path="/*" exact>
             <HomePage />
