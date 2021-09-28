@@ -65,6 +65,7 @@
 .ideas__form__container {
   height: 100%;
   width: 100%;
+  margin-top: 65px;
 }
 .ideas__division {
   display: flex;
@@ -136,6 +137,13 @@ input:focus {
 .ideas__form__container > h1 {
   text-align: center;
   color: black;
+}
+.ideas__form__container > p {
+  text-align: center;
+  color: black;
+  font-weight: 500;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 /* .container ul{

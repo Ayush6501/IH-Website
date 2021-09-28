@@ -109,6 +109,7 @@ const Ideas = () => {
           <div className="ideas__form">
             <div className="ideas__form__container">
               <h1>Pitch us your idea!</h1>
+              <p>Got an industrial proposal that could potentially revolutionize people’s everyday lives? Need the aid to make your dream a reality? If yes, then you are at the right place. Hit us up with your propositions now to unlock the ins and outs of the industrial potential and feasibility of your ideas!</p>
               <div className="ideas__division">
                 <div className="ideas__division__image">
                   <Player
