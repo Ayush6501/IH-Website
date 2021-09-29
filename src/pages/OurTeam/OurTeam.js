@@ -9,7 +9,7 @@ class Ourteam extends React.Component{
   render() {
 
     return (
-      <div>
+      <div className={styles.Main}>
       <Slider/>
 
       <h1 className={styles.TitleContainer}>

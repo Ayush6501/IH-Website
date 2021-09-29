@@ -85,6 +85,7 @@ const Footer = () => {
 export default Footer;
 
 const FooterParent = styled.div`
+  overflow:hidden;
   position: relative;
   height: 350px;
   width: 100%;
