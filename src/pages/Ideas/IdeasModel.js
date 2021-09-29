@@ -52,6 +52,11 @@ const ideaWords = [
   "useful",
   "complex",
   "sophisticated",
+  "avant-garde",
+  "newfangled",
+  "leading-edge",
+  "state-of-the-art",
+  "ingenious"
 ];
 
 /* const font = new THREE.FontLoader().parse(Poppins); */
