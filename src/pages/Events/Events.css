@@ -18,11 +18,12 @@
 #Main_Item_Container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .main_card_container {
-    max-height: 70vh;
+    width: 30vw;
+    height: 25vw;
     overflow: hidden;
     border-radius: 1vw;
     box-shadow: 0px 0px 3.2px;
@@ -32,9 +33,12 @@
     margin: 2vw;
 }
 
-.main_card_container:hover .card_detail_container div {
-    /* box-shadow: 0px 0px 7.5px; */
+.main_card_container:hover .card_detail_container_2 {
+    background-color: rgba(255, 255, 255, 0.514);
     opacity: 1;
+}
+.main_card_container:hover .reponsive_image {
+    opacity: 0;
 }
 .image_card_container{
     width: 100%;
@@ -45,19 +49,20 @@
     width: 100%;
     height: auto;
     border-radius: 2vw;
+    transition: opacity .2s
 }
 
 .card_detail_container {
     padding: 2vw;
     display: flex;
-    width: 30vw;
+    width: inherit;
     flex-direction: column;
     align-items: center;
 }
 
 .card_detail_para {
     overflow: hidden;
-    /* color: #000000 !important; */
+    padding: 2.2vw;
     font-size: 1.6vw;
     font-family: Montserrat;
     font-style: normal;
@@ -71,15 +76,16 @@
     font-weight: normal;
 }
 
-.card_detail_container div {
+.card_detail_container_2 {
     position: relative;
-    bottom: 25vw;
+    bottom: 26vw;
     max-height: 20vw;
     overflow: scroll;
     opacity: 0;
+    transition: opacity .2s, display .2s
 }
 
-.card_detail_container div::-webkit-scrollbar {
+.card_detail_container_2::-webkit-scrollbar {
     display: none;
 }
 
@@ -98,36 +104,40 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    #Heading{
+     #Heading{
         font-size: 6.4vw !important;
     }
     #Heading_para{
         font-size: 2.8vw;
     }
     .main_card_container{
-        width: 46vw;
+        width: 35vw;
+        height: 28vw;
     }
-}
-@media only screen and (max-width: 1024px) {
+    .heading_containers{
+        margin-top: 5vh;
+    }
     .card_heading{
-        font-size: 3vw;
+        font-size: 2.8vw;
     }
-    #Heading{
-        font-size: 7vw !important;
+    .card_detail_container_2{
+        bottom: 30vw;
     }
-    #Heading_para{
-        font-size: 3vw;
+    .card_detail_para{
+        font-size: 2vw;
     }
+    
 }
 @media only screen and (max-width: 550px) {
-    .main_card_container{
-        width: 50vw;
-    }
-    .card_heading{
-        font-size: 3.2vw;
-    }
     #Heading{
         font-size: 7.7vw !important;
+    }
+    #Heading_para{
+        font-size: 2.5vw;
+    }
+    .main_card_container{
+        width: 40vw;
+        height: 35vw;
     }
 }
 @media only screen and (max-width: 430px) {
@@ -136,8 +146,15 @@
     }
     .main_card_container{
         width: 57vw;
+        height: 44vw;
     }
     .card_heading{
         font-size: 3.7vw;
+    }
+    .card_detail_container_2{
+        bottom: 37vw;
+    }
+    .card_detail_para{
+        font-size: 2.7vw;
     }
 }
