@@ -14,7 +14,7 @@
   padding: 0px !important;
   z-index: -1 !important;
   position: absolute !important;
-  height: 5610px !important;
+  height: 5626px !important;
   background-color: white;
 
 }
@@ -42,10 +42,10 @@
   left: 0;
   bottom: 0;
   background-repeat: no-repeat;
-  background-image: url('https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg');
+  background-image: url('./option4.jpeg');
   background-size: cover;
   z-index: -1;
-  opacity: 0.6;
+  /* opacity: 0.6; */
 }
 
 .nav-link {
@@ -98,14 +98,18 @@
   transition: opacity .2s, display .2s
   /* bottom: 23vw; */
 }
-
-.projects_card_detail_para {
-  overflow: hidden;
+.projects_card_detail_para{
+  padding: 2vw;
 }
 
+
+
 .Projects_description_para {
-  overflow: scroll;
-  height: inherit;
+  display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    height: inherit;
+    align-items: center;
 }
 
 .Projects_description_para::-webkit-scrollbar {
@@ -123,9 +127,17 @@
     height: 23vw;
   }
 }
+@media only screen and (max-width:1826px) {
+  .pin-spacer{
+    height: 5667px !important;
+  }
+}
 @media only screen and (max-width:750px) {
   .projects_main_card_container {
     width: 45vw;
+  }
+  .pin-spacer{
+    height: 5667px !important;
   }
   #Main_page_heading{
     font-size: 5vw !important;
