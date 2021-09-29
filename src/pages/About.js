@@ -9,44 +9,37 @@ const AboutPage = () => {
                 <HeaderCard>
                     <h1>ABOUT US</h1>
                     <TextBox>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Ab aut culpa dicta, dolore ea explicabo hic id illum labore
-                            quo rem unde ut vitae! Enim exercitationem mollitia non
-                            Ab aut culpa dicta, dolore ea explicabo hic id illum labore
-                            quo rem unde ut vitae! Enim exercitationem mollitia non
-                            tempora tempore!Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Ab aut culpa dicta, dolore ea explicabo hic id illum labore
-                            quo rem unde ut vitae! Enim exercitationem mollitia non
-                            Ab aut culpa dicta, dolore ea explicabo hic id illum labore
-                            quo rem unde ut vitae! Enim exercitationem mollitia non
-                            tempora tempore!</p>
+                        <p>Innovators Hub was founded in 2018, with the goal of using technology, research and innovation to address people's everyday concerns. The goal also was to help the students of MIT-WPU develop their projects and ideas and help them become well rounded individuals. The club assists the students with their ideas from the ground up, whether they be software, hardware-based projects, or research. We train our recruits in their spheres of interests by equipping them with guidance and skills to unlock innovation. In addition to this, we also organize a plethora of events and seminars for not just the members of the club, but for everyone as we want the students of our college to improve their skills and stay ahead of the curve.We have both a technical and non-technical wing. CSE, Mechanical and Electrical domains operate under the technical department whereas the non-tech department majorly focuses on organising and hosting events alongside content creation through various digital mediums. </p>
                     </TextBox>
                 </HeaderCard>
                 <InfoBox>
                     <div className="row1-container">
+                        <div className="box box-down blue">
+                            <h2>Approach</h2>
+                            <p>Building a dedicated community of spontaneous problem-solvers and thinkers through knowledge</p>
+                            <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="" />
+                        </div>
+                        
+                        <div className="box orange">
+                            <h2>Aim</h2>
+                            <p>To train and polish individuals in their areas of interest to equip them with industry relevant problem solving skills</p>
+                            <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="" />
+                        </div>
+                        
                         <div className="box box-down cyan">
-                            <h2>Founded</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <h2>Vision</h2>
+                            <p>To use technology, research, and innovation to address people’s everyday concerns</p>
                             <img src="https://assets.codepen.io/2301174/icon-supervisor.svg"alt="" />
                         </div>
 
-                        <div className="box red">
-                            <h2>Location</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="" />
-                        </div>
-
-                        <div className="box box-down blue">
-                            <h2>Projects</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="" />
-                        </div>
+                        
                     </div>
                     <div className="row2-container">
-                        <div className="box orange">
-                            <h2>Hackathons</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="" />
+                        
+                        <div className="box red">
+                            <h2>Mission</h2>
+                            <p>Encouraging and developing students’ ideas & projects in order to commercialise them</p>
+                            <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="" />
                         </div>
                     </div>
                 </InfoBox>

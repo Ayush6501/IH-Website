@@ -10,13 +10,26 @@ class Gallery extends React.Component{
 
       <p className={styles.TitleContainer}>
         <span className={styles.Title}>
-          OUR  GALLERY
+          MEMORY LANE
         </span>
       </p>
 
-      <p className={styles.subheading}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p className={styles.subheading}>Over the short span of 3 years, our club has excelled in many fields and achieved tremendous feats, and is still continuing to reach heights. Some of our many major achievements are listed below :</p>
       <br />
 
+      <div className={styles.TeamWrapper}>
+      {GalleryStore.arr.map((i) => <TeamMember imgsrc={i} text={GalleryStore.txt}/>)}
+      </div>
+
+      <p className={styles.TitleContainer}>
+        <span className={styles.Title}>
+          GALLERY
+        </span>
+      </p>
+
+      <p className={styles.subheading}>This is but a gist of the exponential growth we have been striving towards in this short span of being. We have stuck by our motto of tackling each bit with perfection to unlock the impossible and here we are with some highlights of our 3-year journey…</p>
+      <br />
+      
       <div className={styles.TeamWrapper}>
       {GalleryStore.arr.map((i) => <TeamMember imgsrc={i} text={GalleryStore.txt}/>)}
       </div>

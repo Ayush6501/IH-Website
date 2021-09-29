@@ -39,6 +39,7 @@ class TeamCollage extends React.Component {
     super(props);
     this.data = props.data;
     this.title = props.title;
+    this.description=props.description;
     this.state = { clicked: false }
   }
 
@@ -47,9 +48,13 @@ class TeamCollage extends React.Component {
     let collage = null;
 
     if (this.state.clicked)
-      collage = <div className={styles.TeamWrapper}>
+      collage = 
+      <>
+      <div className={styles.TeamSubHeading}>{this.description}</div>
+      <div className={styles.TeamWrapper}>
         {this.data.map((i) => <TeamMember key={i} imgsrc={i[0]} name={i[1]} desig={i[2]} linkedin={i[3]} github={i[4]} />)}
-      </div>;
+      </div>
+      </>;
 
     return (<div>
 
@@ -62,6 +67,7 @@ class TeamCollage extends React.Component {
         <span className={styles.DepartmentButtonStyle4}></span>
         </span>
 
+        
 
       </div>
       {collage}
