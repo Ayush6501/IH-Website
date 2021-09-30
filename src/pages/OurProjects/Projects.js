@@ -144,7 +144,7 @@ const Projects = () => {
         <div id="Main_container" className="Project_container">
           <div id="Home_projects" className="panel_projects">
             <img id="projects_heading_page_image" style={{width:'18vw'}} src={URL="assets/images/project-management.png"}></img>
-            <h1 id="Main_page_heading" style={{color:"BLACK",fontFamily: "Carrois Gothic SC",fontStyle : 'normal',fontweight: 'normal',fontSize:'4vw'}}>OUR PROJECTS</h1>
+            <h1 id="Main_page_heading" style={{color:"BLACK",fontFamily: "Poppins, sans-serif",fontStyle : 'normal',fontweight: 'normal',fontSize:'4vw'}}>OUR PROJECTS</h1>
           </div>
           <div id="CSE" className="panel_projects">
             <Projects_panels panel_name={data.CSE.slice(0, 3)} />
