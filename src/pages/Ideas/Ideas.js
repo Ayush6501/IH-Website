@@ -130,7 +130,7 @@ const Ideas = () => {
                     >
                       <label
                         for="name"
-                        style={{ color: "#474444", fontWeight: 800 }}
+                        
                       >
                         Your Name
                       </label>
@@ -142,7 +142,7 @@ const Ideas = () => {
                         value={inputName}
                       />
                       {inputNameIsInvalid && (
-                        <h4 style={{ fontWeight: "bolder", color: "red" }}>
+                        <h4 className="invalid">
                           Please provide a valid Name.
                         </h4>
                       )}
@@ -150,7 +150,7 @@ const Ideas = () => {
 
                       <label
                         for="email"
-                        style={{ color: "#474444", fontWeight: 800 }}
+                        
                       >
                         Your Email
                       </label>
@@ -162,14 +162,14 @@ const Ideas = () => {
                         value={inputEmail}
                       />
                       {inputEmailIsInvalid && (
-                        <h4 style={{ fontWeight: "bolder", color: "red" }}>
+                        <h4 className="invalid">
                           Please provide a valid Email Id.
                         </h4>
                       )}
                       <br />
                       <label
-                        for="email"
-                        style={{ color: "#474444", fontWeight: 800 }}
+                        for="idea"
+                        
                       >
                         Your Project Idea
                       </label>
@@ -181,12 +181,12 @@ const Ideas = () => {
                         value={inputIdea}
                       />
                       {inputIdeaIsInvalid && (
-                        <h4 style={{ fontWeight: "bolder", color: "red" }}>
+                        <h4 className="invalid">
                           Please provide an Idea.
                         </h4>
                       )}
                       <br />
-                      <label style={{ color: "#474444", fontWeight: 800 }}>
+                      <label for ="phone" >
                         Your Phone Number
                       </label>
                       <br />
@@ -197,12 +197,12 @@ const Ideas = () => {
                         value={inputPhone}
                       />
                       {inputPhoneIsInvalid && (
-                        <h4 style={{ fontWeight: "bolder", color: "red" }}>
+                        <h4 className="invalid">
                           Please provide a valid Phone Number.
                         </h4>
                       )}
                       <br />
-                      <label style={{ color: "#474444", fontWeight: 800 }}>
+                      <label for="level" >
                         Rate your expertise on a scale of 1 to 5 (1 Lowest, 5
                         Highest)
                       </label>

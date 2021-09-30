@@ -88,7 +88,7 @@
 }
 .ideas__division__form > h2 {
   text-align: center;
-  color: #474444;
+  color: black;
 }
 .ideas__division_formcontent {
   display: flex;
@@ -103,6 +103,11 @@
   height: 100%;
   width: 100%;
 }
+
+.formcontent__LI > label {
+  color: black;
+  font-weight: 800;
+}
 input[type="text"] {
   background: transparent;
   border: none;
@@ -113,6 +118,7 @@ input[type="text"] {
 }
 ::-webkit-input-placeholder {
   text-align: left;
+  font-family: 'Poppins', sans-serif;
 }
 input:focus {
   border-bottom: 1px solid #eee513;
@@ -124,26 +130,34 @@ input:focus {
   height: 100vh;
   width: 100%;
   font-family: "Poppins", sans-serif;
-  /* background-image: url('https://wallpaperaccess.com/full/1140482.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    opacity: 1; */
+  
 }
-/* .ideas__model {
-    image-rendering: pixelated;
-} */
+
 
 .ideas__form__container > h1 {
   text-align: center;
   color: black;
+  font-size: 4em;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+@media(max-width: 720px) {
+  .ideas__form__container > h1 {
+    font-size: 2.3em;
+    letter-spacing: 2px;
+  }
 }
 .ideas__form__container > p {
   text-align: center;
-  color: black;
+  color: #8b8b8b;
   font-weight: 500;
   margin-left: 15px;
   margin-right: 15px;
+  font-size: 1.1em;
+}
+.invalid {
+  font-weight: "bolder"; 
+  color: "red" 
 }
 
 /* .container ul{
