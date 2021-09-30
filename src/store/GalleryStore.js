@@ -1,17 +1,49 @@
-const GalleryStore={
-    txt:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    arr:["/assets/images/gallery1.jpg",
-    "/assets/images/gallery2.jpg",
-    "/assets/images/gallery3.jpg",
-    "/assets/images/gallery4.jpg",
-    "/assets/images/gallery5.jpg",
-    "/assets/images/pep.jpg",
-    "/assets/images/us.jpg",
-    "/assets/images/team.jpg",
-    "/assets/images/project.jpg"]
-}
-
-
+const GalleryStore=[{
+  img:"/assets/images/gallery/1.png",
+  txt:"Taking steps towards implementing and changing ideas by involving the correct game-changers."},
+  {
+  img:"/assets/images/gallery/2.png",
+  txt:"A shining moment with the team during the World Robotics Championship."},
+  {
+  img:"/assets/images/gallery/3.png",
+  txt:"Bringing ideas to life together in large-scale events like hackathons."},
+  {
+  img:"/assets/images/gallery/4.png",
+  txt:"Building newer ideas and challenging existing norms on every step."},
+  {
+  img:"/assets/images/gallery/5.png",
+  txt:"Newer projects with a zest of innovation, critical thinking and hard work."},
+  {
+  img:"/assets/images/gallery/6.png",
+  txt:"Today we stand tall and proud with the team that got us here. Our team is our identity and we stand proudly alongside them on each step."},
+  {
+  img:"/assets/images/gallery/7.png",
+  txt:"Team Innovators etching their marks of success at Technoxian."},
+  {
+  img:"/assets/images/gallery/8.png",
+  txt:"We are not just building ideas but memories. Our team is not just a group of workers but our family."},
+  {
+  img:"/assets/images/gallery/9.png",
+  txt:"The grind never ends, Team Innovators back at it with bigger and better ideas."},
+  {
+  img:"/assets/images/gallery/10.png",
+  txt:"Bringing together the best events with the best team. Team Innovators back at it."},
+  {
+  img:"/assets/images/gallery/11.png",
+  txt:"We just don’t say welcome to possible, we believe in it. There are no limits when it comes to innovation."},
+  {
+  img:"/assets/images/gallery/12.png",
+  txt:"Our annual event Inception Talks being graced with the best speakers."},
+  {
+  img:"/assets/images/gallery/13.png",
+  txt:"Smiling through the steps of product innovation."},
+  {
+  img:"/assets/images/gallery/14.png",
+  txt:"Round tables, coffee, hardwork and dedication are our four essentials."},
+  {
+  img:"/assets/images/gallery/15.png",
+  txt:"Not even a global pandemic could stop our ever-innovating spirit!"}
+]
 
 
 

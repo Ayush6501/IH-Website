@@ -32,7 +32,7 @@ class Gallery extends React.Component{
       <br />
       
       <div className={styles.TeamWrapper}>
-      {GalleryStore.arr.map((i) => <TeamMember imgsrc={i} text={GalleryStore.txt}/>)}
+      {GalleryStore.map((i) => <TeamMember imgsrc={i.img} text={i.txt}/>)}
       </div>
       
       </div>);
