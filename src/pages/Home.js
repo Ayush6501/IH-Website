@@ -98,7 +98,7 @@ function Content() {
                     <Html style={{
                         position: "absolute",
                         top: "220px",
-                        right: `${mobile ? "-55px" : "-50px"}`,
+                        right: `${mobile ? "-55px" : "-80px"}`,
                     }}>
                         <Player
                             autoplay

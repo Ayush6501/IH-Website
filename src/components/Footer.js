@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import HeaderItems from "./HeaderItems";
+import {Link} from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -18,9 +19,9 @@ const Footer = () => {
                   <FollowBox>
                       <h2>Follow Us</h2>
                       <IconContainer>
-                          <img src="/assets/images/insta.svg" alt="" />
-                          <img src="/assets/images/insta.svg" alt=""/>
-                          <img src="/assets/images/insta.svg" alt=""/>
+                          <img src="/assets/logos/logo-linkedin.svg" alt="" />
+                          <img src="/assets/logos/logo-instagram.svg" alt="" />
+                          <img src="/assets/logos/logo-twitter.svg" alt="" />
                       </IconContainer>
                   </FollowBox>
               </LeftBox>
@@ -28,14 +29,14 @@ const Footer = () => {
                   <RightContainer>
                       <ContactBox>
                           <ContactInfo>
-                              <img src="/assets/images/insta.svg" alt=""/>
+                              <img src="/assets/logos/pin-outline.svg" alt=""/>
                               <Text>
                                   <h3>Pune, India</h3>
                                   <p>Kothrud, MITWPU</p>
                               </Text>
                           </ContactInfo>
                           <ContactInfo>
-                              <img src="/assets/images/insta.svg" alt=""/>
+                              <img src="/assets/logos/logo-discord.svg" alt=""/>
                               <Text>
                                   <h3>Ionosphere</h3>
                                   <p>Join Our Server</p>
@@ -43,7 +44,7 @@ const Footer = () => {
                               </Text>
                           </ContactInfo>
                           <ContactInfo>
-                              <img src="/assets/images/insta.svg" alt=""/>
+                              <img src="/assets/logos/mail-outline.svg" alt=""/>
                               <Text>
                                   <h3>IH@email.com</h3>
                                   <p>Contact Us Here</p>
@@ -56,19 +57,19 @@ const Footer = () => {
                           <LinksContainer>
                               <Links>
                                   <p>Wondering what we do?</p>
-                                  <HeaderItems title="About Us"/>
+                                  <Link to='/about'><HeaderItems title="About Us"/></Link>
                               </Links>
                               <Links>
                                   <p>Have a project proposal?</p>
-                                  <HeaderItems title="Ideas"/>
+                                  <Link to='/ideas'><HeaderItems title="Ideas"/></Link>
                               </Links>
                               <Links>
                                   <p>Meet the innovators! </p>
-                                  <HeaderItems title="Our Team"/>
+                                  <Link to='/ourteam'><HeaderItems title="Our Team"/></Link>
                               </Links>
                               <Links>
                                   <p>Down the memory lane… </p>
-                                  <HeaderItems title="Archive"/>
+                                  <Link to='/gallery'><HeaderItems title="Archive"/></Link>
                               </Links>
                           </LinksContainer>
                       </LinkContainer>
@@ -89,7 +90,7 @@ const FooterParent = styled.div`
   position: relative;
   height: 350px;
   width: 100%;
-  background: #1d1d1d;
+  background: #171717;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -124,7 +125,7 @@ const LeftBox = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 360px;
-  min-height: 370px;
+  min-height: 330px;
   border-radius: 0 0 30px 30px;
 
   h1 {

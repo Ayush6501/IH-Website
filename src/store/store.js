@@ -52,7 +52,7 @@ const state = {
       factor: 1.05,
       header: "Meet Our Team",
       image: "/assets/images/us.jpg",
-      aspect: 2.4,
+      aspect: 1.55,
       text: "We are constantly tinkered by a team which questions, challenges and unlocks creativity on every turn. The brightest minds from backgrounds of Computer Science, Electronics, Mechanics, Design, and many other exciting non-technical avenues build our identity as a collective."
     },
     {

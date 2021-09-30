@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap");
 
+html { height: auto; overflow:auto; }
+
 :root {
   font-size: 20px;
 }
@@ -13,11 +15,12 @@ body {
   margin: 0;
   padding: 0;
   background: #0c0f13;
-  overflow: auto;
   font-family: "Poppins", sans-serif;
   color: #8b8b8b;
   font-size: 0.9rem;
   scroll-behavior: smooth;
+  overflow:auto;
+  height: auto;
 }
 
 a {

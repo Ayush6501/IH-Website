@@ -11,6 +11,8 @@ import SideDrawer from "./components/Navbar/SideDrawer/SideDrawer";
 import Gallery from "./pages/Gallery/Gallery";
 import OurProjects from "./pages/OurProjects/Projects"
 import { useState } from "react";
+import ScrollToTop from './components/ScrollToTop';
+import './styles/landing.css';
 
 function App() {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
@@ -25,45 +27,46 @@ function App() {
 
   return (
     <div>
-      <Router>
+      <Router onUpdate={() => window.scrollTo(0, 0)}>
+        <ScrollToTop />
         <Navbar hamburgerClicked={sideDrawerToggleHandler}/>
         <SideDrawer open={showSideDrawer} closed={sideDrawerClosedHandler} />
-        <Switch>
-          <Route path="/" exact>
-            <HomePage />
-          </Route>
-          <Route path="/ideas" exact>
-            <Ideas />
-            <Footer />
-          </Route>
-          <Route path="/about" exact>
-            <AboutPage />
-          </Route>
-          <Route path="/ourteam" exact>
-            <OurTeam />
-            <Footer />
-          </Route>
-          <Route path="/recruitment" exact>
-            <RecruitmentPage />
-            <Footer />
-          </Route>
-          <Route path="/events" exact>
-            <Events />
-            <Footer />
-          </Route>
-          <Route path="/gallery" exact>
-            <Gallery/>
-            <Footer />
-          </Route>
-          <Route path="/OurProjects" exact>
-            <OurProjects/>
-            {/* <Footer /> */}
-          </Route>
-          <Route path="/*" exact>
-            <HomePage />
-            <Footer />
-          </Route>
-        </Switch>
+          <Switch>
+            <Route path="/" exact>
+              <HomePage />
+            </Route>
+            <Route path="/ideas" exact>
+              <Ideas />
+              <Footer />
+            </Route>
+            <Route path="/about" exact>
+              <AboutPage />
+            </Route>
+            <Route path="/ourteam" exact>
+              <OurTeam />
+              <Footer />
+            </Route>
+            <Route path="/recruitment" exact>
+              <RecruitmentPage />
+              <Footer />
+            </Route>
+            <Route path="/events" exact>
+              <Events />
+              <Footer />
+            </Route>
+            <Route path="/gallery" exact>
+              <Gallery/>
+              <Footer />
+            </Route>
+            <Route path="/OurProjects" exact>
+              <OurProjects/>
+              {/* <Footer /> */}
+            </Route>
+            <Route path="/*" exact>
+              <HomePage />
+              <Footer />
+            </Route>
+          </Switch>
       </Router>
     </div>
   );

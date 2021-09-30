@@ -14,9 +14,13 @@ const Navbar = (props) => {
       <div className="navigation__items">
         <div className="navigation__item">
           <Link to="/ourteam">Our Team</Link>
-          <Link to="/gallery">Achievements</Link>
+          <Link to="/gallery">Gallery</Link>
           <Link to="/about">About Us</Link>
+          <Link to="/ideas">Pitch Us</Link>
         </div>
+      </div>
+      <div className='recruit_cta'>
+          <Link to='recruitment'><button className='cta_button'>Join Us</button></Link>
       </div>
       <Hamburger clicked = {props.hamburgerClicked} />
     </header>

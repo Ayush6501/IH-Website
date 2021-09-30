@@ -1,11 +1,20 @@
 import styled from 'styled-components';
 import '../styles/About.css';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
+import {useRef, useEffect} from 'react';
+import { useLocation } from "react-router-dom";
 
 const AboutPage = () => {
+    const ref = useRef();
+    const routePath = useLocation();
+
+    useEffect(() => {
+        ref.current.scrollIntoView({ behavior: "smooth" });
+    }, [routePath])
+
     return(
         <>
-            <Parent>
+            <Parent ref={ref}>
                 <HeaderCard>
                     <h1>ABOUT US</h1>
                     <TextBox>
@@ -19,23 +28,23 @@ const AboutPage = () => {
                             <p>Building a dedicated community of spontaneous problem-solvers and thinkers through knowledge</p>
                             <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="" />
                         </div>
-                        
+
                         <div className="box orange">
                             <h2>Aim</h2>
                             <p>To train and polish individuals in their areas of interest to equip them with industry relevant problem solving skills</p>
                             <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="" />
                         </div>
-                        
+
                         <div className="box box-down cyan">
                             <h2>Vision</h2>
                             <p>To use technology, research, and innovation to address people’s everyday concerns</p>
                             <img src="https://assets.codepen.io/2301174/icon-supervisor.svg"alt="" />
                         </div>
 
-                        
+
                     </div>
                     <div className="row2-container">
-                        
+
                         <div className="box red">
                             <h2>Mission</h2>
                             <p>Encouraging and developing students’ ideas & projects in order to commercialise them</p>
@@ -58,7 +67,9 @@ const Parent = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 9vh;
+  padding-top: 9vh;
+  height: auto;
+  overflow:auto;
   
   @media only screen and (max-width: 968px) {
     height: fit-content;
