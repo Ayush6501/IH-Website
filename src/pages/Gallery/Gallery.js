@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Gallery.module.css';
-import {GalleryStore} from '../../store/GalleryStore.js';
+import {GalleryStore,AchievementStore} from '../../store/GalleryStore.js';
+import Card from './Cards.js';
 
 
 class Gallery extends React.Component{
@@ -18,7 +19,7 @@ class Gallery extends React.Component{
       <br />
 
       <div className={styles.TeamWrapper}>
-      {GalleryStore.arr.map((i) => <TeamMember imgsrc={i} text={GalleryStore.txt}/>)}
+      {AchievementStore.map((i) => <Card img={i.img} txt={i.txt} title={i.title}/>)}
       </div>
 
       <p className={styles.TitleContainer}>
@@ -56,6 +57,5 @@ class TeamMember extends React.Component {
       </div>);
   }
 };
-
 
 export default Gallery;
