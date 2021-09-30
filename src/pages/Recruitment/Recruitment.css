@@ -17,17 +17,18 @@
     color: black;
     text-align: center;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: 3em;
     font-family: 'Poppins', sans-serif;
     
 }
 
 .recruitment__info {
-    color: black;
+    color: #8b8b8b;
     font-family: "Poppins", sans-serif;
-    font-size: x-large;
+    font-size: 1.2em;
     font-weight: 400;
     margin:0px 50px;
+    text-align: center;
 }
 
 .recruitment__form__div {
@@ -47,6 +48,11 @@
     .recruitment__info {
         font-weight: 300;
         font-size: medium;
+    }
+}
+@media (max-width: 720px) {
+    .recruitment__info__header{
+        font-size: 2.3em;
     }
 }
 

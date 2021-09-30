@@ -147,7 +147,7 @@ export default function IdeasModel(props) {
         
         <Html zIndexRange={[150, 0]}>
           <div className="scrollClicker">
-            <h3 onClick={props.scroll} style={{ color: "white" }}>
+            <h3 onClick={props.scroll} style={{ color: "white", cursor: "pointer" }}>
               Click Here To Scroll
             </h3>
           </div>

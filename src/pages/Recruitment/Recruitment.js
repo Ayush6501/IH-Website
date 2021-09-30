@@ -20,7 +20,7 @@ const RecruitmentPage = (props) => {
       
       <div className="recruitment__page" style={{height: `${vhvalue ? '200vh' : '100vh'}`}}>
         <div className="recruitment__info__div">
-            <p className="recruitment__info__header">WELCOME TO INNOVATIONAL PARADISE!</p>
+            <p className="recruitment__info__header">WELCOME TO INNOVATION PARADISE!</p>
             <p className="recruitment__info">Wanna join the hustlers to unlock your true potential as an innovator, engineer, coder, developer, designer, content writer, manager or literally anything you could imagine? Apply to become a part of the most exclusive pioneers in engineering and its expanded sectors with IH!</p>
         </div>
         { (currentMonth === 9) && (currentDate >=1 && currentDate <= 31) ? <div className="recruitment__form__div">
