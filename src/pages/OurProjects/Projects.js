@@ -3,6 +3,7 @@ import "./Projects.css";
 import Projects_panels from "./projects_panels.js";
 import gsap from "gsap";
 import { ScrollTrigger, ScrollToPlugin } from "gsap/all";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 let data = {
   CSE: [
@@ -75,7 +76,7 @@ const Projects = () => {
           end: "+=5000",
         },
       });
-      
+
     tl.to(sections, {
       xPercent: -100 * (sections.length - 1),
       yPercent: 0,
@@ -143,8 +144,14 @@ const Projects = () => {
       <div id="panel_container">
         <div id="Main_container" className="Project_container">
           <div id="Home_projects" className="panel_projects">
-            <img id="projects_heading_page_image" style={{width:'18vw'}} src={URL="assets/images/project-management.png"}></img>
-            <h1 id="Main_page_heading" style={{color:"BLACK",fontFamily: "Poppins, sans-serif",fontStyle : 'normal',fontweight: 'normal',fontSize:'4vw'}}>OUR PROJECTS</h1>
+            <Player
+                autoplay
+                loop
+                src="https://assets10.lottiefiles.com/packages/lf20_bltsnbfe.json"
+                speed={0.5}
+                style={{ width: "700px" }}
+            />
+            <h1 id="Main_page_heading" style={{color:"BLACK",fontFamily: "Poppins, sans-serif",fontStyle : 'normal',fontWeight: 'bold',fontSize:'4em'}}>OUR PROJECTS</h1>
           </div>
           <div id="CSE" className="panel_projects">
             <Projects_panels panel_name={data.CSE.slice(0, 3)} />

@@ -58,7 +58,7 @@ function App() {
               <Gallery/>
               <Footer />
             </Route>
-            <Route path="/OurProjects" exact>
+            <Route path="/projects" exact>
               <OurProjects/>
               {/* <Footer /> */}
             </Route>

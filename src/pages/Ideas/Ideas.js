@@ -3,8 +3,9 @@ import Navbar from "../../components/Navbar/Navbar";
 import SideDrawer from "../../components/Navbar/SideDrawer/SideDrawer";
 import "./Ideas.css";
 import IdeasModel from "./IdeasModel";
-/* import { RadioGroup, RadioButton } from "react-radio-buttons"; */
 import { Player } from "@lottiefiles/react-lottie-player";
+import { useLocation } from "react-router-dom";
+
 
 const Ideas = () => {
   const [radioValue, setRadioValue] = useState("");
@@ -22,6 +23,13 @@ const Ideas = () => {
   const [inputPhoneTouched, setInputPhoneTouched] = useState(false);
 
   const formRef = useRef();
+  const ref = useRef();
+  const routePath = useLocation();
+
+  useEffect(() => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  }, [routePath])
+
 
   /* useEffect(() => {
     console.log("Current State is, " + radioValue);
@@ -101,7 +109,7 @@ const Ideas = () => {
 
   return (
     <>
-      <div className="ideas_full_page">
+      <div ref={ref} className="ideas_full_page">
         <div className="ideas__model">
           <IdeasModel scroll={scrollClickHandler} />
         </div>
@@ -130,7 +138,7 @@ const Ideas = () => {
                     >
                       <label
                         for="name"
-                        
+
                       >
                         Your Name
                       </label>
@@ -150,7 +158,7 @@ const Ideas = () => {
 
                       <label
                         for="email"
-                        
+
                       >
                         Your Email
                       </label>
@@ -169,7 +177,7 @@ const Ideas = () => {
                       <br />
                       <label
                         for="idea"
-                        
+
                       >
                         Your Project Idea
                       </label>
