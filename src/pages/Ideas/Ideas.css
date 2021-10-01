@@ -12,9 +12,10 @@
   align-items: center;
   /* margin-top: 60px; */
   /* overflow: scroll; */
+  scrollbar-width: none;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .ideas {
     display: flex;
     flex-direction: column-reverse;
@@ -27,7 +28,7 @@
     display: none;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .ideas__division {
     display: flex;
     flex-direction: column-reverse;
@@ -44,7 +45,7 @@
     flex: 0.5 !important;
   }
 } */
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .ideas__division__form {
     width: 80%;
   }
@@ -53,6 +54,7 @@
 .ideas::-webkit-scrollbar {
   display: none;
 }
+
 
 .ideas__form {
   flex: 1;
@@ -63,19 +65,19 @@
 }
 
 .ideas__form__container {
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   margin-top: 65px;
 }
 .ideas__division {
   display: flex;
   align-items: center;
-  height: 100%;
+  /* height: 100%; */
   justify-content: center;
 }
 .ideas__division__image {
   flex: 0.5;
-  height: 100%;
+  /* height: 100%; */
 }
 .ideas__division__image > h2 {
   text-align: center;
@@ -83,7 +85,7 @@
 }
 .ideas__division__form {
   flex: 0.5;
-  height: 100%;
+  /* height: 100%; */
   /* overflow: scroll; */
 }
 .ideas__division__form > h2 {
@@ -93,20 +95,23 @@
 .ideas__division_formcontent {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  align-items: center;
+  /* height: 100%; */
+  align-items: center; 
+  
 }
 .formcontent__LI {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   /* align-items: center; */
   height: 100%;
   width: 100%;
+  margin-bottom: 25px;
 }
 
 .formcontent__LI > label {
   color: black;
   font-weight: 800;
+  
 }
 input[type="text"] {
   background: transparent;
@@ -115,8 +120,9 @@ input[type="text"] {
   width: 90%;
   padding: 10px;
   outline: none;
+  margin: 15px 0px 20px 0px;
 }
-::-webkit-input-placeholder {
+input::placeholder {
   text-align: left;
   font-family: 'Poppins', sans-serif;
 }
@@ -141,7 +147,7 @@ input:focus {
   text-transform: uppercase;
   letter-spacing: 2.5px;
 }
-@media(max-width: 720px) {
+@media(max-width: 768px) {
   .ideas__form__container > h1 {
     font-size: 2.3em;
     letter-spacing: 2px;
@@ -154,10 +160,6 @@ input:focus {
   margin-left: 15px;
   margin-right: 15px;
   font-size: 1.1em;
-}
-.invalid {
-  font-weight: "bolder"; 
-  color: "red" 
 }
 
 /* .container ul{
@@ -319,9 +321,10 @@ input[type=radio]:checked ~ label{
   justify-content: space-between;
   width: 85%;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .radioselection {
     flex-direction: column;
     align-items: normal;

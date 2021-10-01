@@ -142,7 +142,7 @@ const Ideas = () => {
                         value={inputName}
                       />
                       {inputNameIsInvalid && (
-                        <h4 className="invalid">
+                        <h4 style={{fontWeight: 'bolder', color: 'red'}}>
                           Please provide a valid Name.
                         </h4>
                       )}
@@ -162,7 +162,7 @@ const Ideas = () => {
                         value={inputEmail}
                       />
                       {inputEmailIsInvalid && (
-                        <h4 className="invalid">
+                        <h4 style={{fontWeight: 'bolder', color: 'red'}}>
                           Please provide a valid Email Id.
                         </h4>
                       )}
@@ -181,7 +181,7 @@ const Ideas = () => {
                         value={inputIdea}
                       />
                       {inputIdeaIsInvalid && (
-                        <h4 className="invalid">
+                        <h4 style={{fontWeight: 'bolder', color: 'red'}}>
                           Please provide an Idea.
                         </h4>
                       )}
@@ -197,7 +197,7 @@ const Ideas = () => {
                         value={inputPhone}
                       />
                       {inputPhoneIsInvalid && (
-                        <h4 className="invalid">
+                        <h4 style={{fontWeight: 'bolder', color: 'red'}}>
                           Please provide a valid Phone Number.
                         </h4>
                       )}
