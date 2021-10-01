@@ -7,7 +7,7 @@ class Slider extends React.Component{
   {
     super(props);
     this.maxImages=3;
-    this.state={curr_img:"url(/assets/images/1.png)",count:1};
+    this.state={curr_img:"url(/assets/carousel/1.png)",count:1};
     this.interval_handler="";
 
     this.slider=this.slider.bind(this);
@@ -26,7 +26,7 @@ class Slider extends React.Component{
       
 
 
-      this.setState({curr_img:"url(/assets/images/"+ct+".png)",count:ct});
+      this.setState({curr_img:"url(/assets/carousel/"+ct+".png)",count:ct});
   }
 
   componentDidMount(){

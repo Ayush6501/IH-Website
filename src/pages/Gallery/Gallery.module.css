@@ -7,31 +7,45 @@
 }
 
 .TitleContainer{
-  color:#000;
   display: flex;
   flex-direction:column;
   position: relative;
   text-align: center;
+  justify-items: center;
   height:20%;
-  font-weight:lighter;
   font-size: 80px;
-  font-family: 'Brush Script MT', cursive;       
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
   margin-top:4rem;
   margin-bottom:2rem;
 }
 
 .Title {
+    color:#000;
     display: flex;
     flex-direction:column;
-    width: 100%;
+    width: 60%;
     align-self: center; 
+    border: 6px solid #000000;
+    padding: 10px 25px;
 }
+
+/*.Title {
+    color:#fff;
+    display: flex;
+    flex-direction:column;
+    border: 3px solid #eee513;
+    padding: 10px 25px;
+    width: 60%;
+    align-self: center; 
+}*/
 
 .subheading
 {
+  font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction:column;
-  color:hsl(231, 3%, 47%);
+  color:#8b8b8b;
   text-align: center;
   vertical-align: top;
   padding-left: 20%;
@@ -93,4 +107,17 @@
 
 .TeamCard:hover .MemberOverlay{
   opacity: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .TitleContainer{
+    font-size:40px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .TitleContainer{
+    font-size:30px;
+  }
 }

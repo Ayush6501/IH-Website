@@ -49,15 +49,16 @@
     margin:0;
     padding: 1vw;
     font-size: 1.4vw;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: normal;
 }
 
 .card_heading {
+    color:#000;
     padding: 1.5vw;
     font-size: 2vw;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: bold;
 }
 

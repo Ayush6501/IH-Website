@@ -11,7 +11,7 @@ class Gallery extends React.Component{
 
       <p className={styles.TitleContainer}>
         <span className={styles.Title}>
-          MEMORY LANE
+          ACHIEVEMENTS
         </span>
       </p>
 

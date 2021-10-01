@@ -15,7 +15,7 @@ const SideDrawer = (props) => {
       <div className={attachedClasses.join(" ")} onClick={props.closed}>
 
         <div className="sidedrawer__back">
-        <img src="/assets/images/back.svg"/>
+        <img src="/assets/logos/logo-back.svg"/>
         </div>
         
         <div className="sidedrawer__name">

@@ -21,9 +21,9 @@ class TeamMember extends React.Component {
           <hr className={styles.MemberBreak} />
 
           <div className={styles.MemberIconContainer}>
-            <img className={styles.MemberIcon} alt="Error" src="/assets/images/linkedin.svg" onClick={() => { window.open(this.linkedin) }} />
+            <img className={styles.MemberIcon} alt="Error" src="/assets/logos/logo-linkedin.svg" onClick={() => { window.open(this.linkedin) }} />
 
-            <img className={styles.MemberIcon} alt="Error" src="/assets/images/github.svg" onClick={() => { window.open(this.github) }} />
+            <img className={styles.MemberIcon} alt="Error" src="/assets/logos/logo-github.svg" onClick={() => { window.open(this.github) }} />
           </div>
         </div>
 
