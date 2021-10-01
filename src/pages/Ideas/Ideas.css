@@ -409,12 +409,18 @@ input[type=radio]:checked ~ label{
   border-radius: 10px;
   /* box-shadow: none; */
   cursor: pointer;
-  color: #474444;
-  background-color: #eee513;
+  color: black;
+  background-color: #ffee00;
   text-align: center;
   font-size: larger;
   font-family: "Poppins", sans-serif;
   min-width: 100px;
   outline: none;
   border: none;
+}
+
+.form__submit__button:hover {
+  transition: all 0.25s ease-in;
+  color: #ffee00;
+  background-color: #171717;
 }

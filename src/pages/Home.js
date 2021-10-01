@@ -190,6 +190,7 @@ const CTAButton = styled.button`
   font-size: 0.8em;
   font-weight: 550;
   margin-top: 5px;
+  font-family: Poppins, sans-serif
   
   &:hover {
     cursor: pointer;
