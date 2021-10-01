@@ -31,7 +31,9 @@ function Paragraph({ image, index, offset, factor, header, aspect, text }) {
     return (
         <Block factor={factor} offset={offset}>
             <group position={[left ? -alignRight : alignRight, 0, 0]}>
-                <Plane map={image} args={[1, 1, 32, 32]} shift={75} size={size} aspect={aspect/2} scale={[w * size, (w * size) / aspect, 1]} frustumCulled={false} />
+                <Suspense fallback={null}>
+                    <Plane map={image} args={[1, 1, 32, 32]} shift={75} size={size} aspect={aspect/2} scale={[w * size, (w * size) / aspect, 1]} frustumCulled={false} />
+                </Suspense>
                 <Html
                     style={{ width: pixelWidth / (mobile ? 1 : 2), textAlign: left ? "left" : "right" }}
                     position={[left || mobile ? (-w * size) / 2 : 0, (-w * size) / 2 / aspect - 0.4, 1]}>
