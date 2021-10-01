@@ -2,12 +2,19 @@ import React from 'react';
 import styles from './Gallery.module.css';
 import {GalleryStore,AchievementStore} from '../../store/GalleryStore.js';
 import Card from './Cards.js';
+import {useRef, useEffect} from 'react';
+import { useLocation } from "react-router-dom";
 
 
-class Gallery extends React.Component{
-  render()
-  {
-    return (<div className={styles.Main}>
+function Gallery(){
+    const ref = useRef();
+    const routePath = useLocation();
+
+    useEffect(() => {
+        ref.current.scrollIntoView({ behavior: "smooth" });
+    }, [routePath])
+
+    return (<div className={styles.Main} ref={ref}>
 
       <p className={styles.TitleContainer}>
         <span className={styles.Title}>
@@ -36,7 +43,6 @@ class Gallery extends React.Component{
       </div>
       
       </div>);
-  }
 }
 
 
@@ -57,5 +63,6 @@ class TeamMember extends React.Component {
       </div>);
   }
 };
+
 
 export default Gallery;

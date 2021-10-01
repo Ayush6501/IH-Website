@@ -3,13 +3,20 @@ import styles from './Ourteam.module.css';
 import {OurteamData} from '../../store/OurteamData.js';
 import {TeamCollage} from './TeamCollage.js';
 import {Slider} from './Slider.js';
+import {useRef, useEffect} from 'react';
+import { useLocation } from "react-router-dom";
 
 
-class Ourteam extends React.Component{
-  render() {
+function Ourteam(){
+    const ref = useRef();
+    const routePath = useLocation();
+
+    useEffect(() => {
+        ref.current.scrollIntoView({ behavior: "smooth" });
+    }, [routePath]);
 
     return (
-      <div className={styles.Main}>
+      <div className={styles.Main} ref={ref}>
       <Slider/>
 
       <h1 className={styles.TitleContainer}>
@@ -24,8 +31,7 @@ class Ourteam extends React.Component{
       {OurteamData.map((i) => <TeamCollage data={i.data} title={i.department} description={i.description}/>)}
 
     </div>);
-  }
-};
+}
 
 
 export default Ourteam;
