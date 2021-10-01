@@ -64,9 +64,11 @@
 .main_card_container .card_detail_container_2 {
     position:absolute;
     top:3vh;
-    overflow: scroll;
     opacity: 0;
-    transition: opacity .2s, display .2s
+    transition: opacity .2s, display .2s;
+    overflow: auto;
+    -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
 }
 
 .card_detail_container_2::-webkit-scrollbar {

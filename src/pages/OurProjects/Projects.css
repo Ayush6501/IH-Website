@@ -45,7 +45,6 @@
   background-image: url('./option4.jpeg');
   background-size: cover;
   z-index: -1;
-  /* opacity: 0.6; */
 }
 
 .nav-link {
@@ -87,16 +86,13 @@
 
 .projects_card_detail_container {
   position: absolute;
-  overflow: scroll;
   overflow: hidden;
   height: 18vw;
   width: inherit;
   background: rgba(255, 255, 255, 0.8);
   color: #000;
-  /* display: none; */
   opacity: 0;
   transition: opacity .2s, display .2s
-  /* bottom: 23vw; */
 }
 .projects_card_detail_para{
   padding: 2vw;
@@ -107,9 +103,11 @@
 .Projects_description_para {
   display: flex;
     flex-direction: column;
-    overflow: scroll;
     height: inherit;
     align-items: center;
+    overflow: scroll;
+    -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
 }
 
 .Projects_description_para::-webkit-scrollbar {
@@ -129,7 +127,7 @@
 }
 @media only screen and (max-width:1826px) {
   .pin-spacer{
-    height: 5667px !important;
+    height: 5610px !important;
   }
 }
 @media only screen and (max-width:750px) {
