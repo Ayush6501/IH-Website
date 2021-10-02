@@ -13,10 +13,10 @@ const Navbar = (props) => {
       </div>
       <div className="navigation__items">
         <div className="navigation__item">
-          <Link to="/ourteam">Our Team</Link>
+          <Link to="/ourteam">Team</Link>
           <Link to="/gallery">Gallery</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/ideas">Pitch Us</Link>
+          <Link to="/about">About</Link>
+          <Link to="/ideas">Ideas</Link>
           <Link to="/events">Events</Link>
           <Link to="/projects">Projects</Link>
         </div>

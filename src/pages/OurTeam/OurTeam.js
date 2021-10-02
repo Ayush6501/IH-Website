@@ -12,7 +12,9 @@ function Ourteam(){
     const routePath = useLocation();
 
     useEffect(() => {
-        ref.current.scrollIntoView({ behavior: "smooth" });
+        if (routePath.pathname === "/ourteam") {
+            ref.current.scrollIntoView({ behavior: "smooth" });
+        }
     }, [routePath]);
 
     return (

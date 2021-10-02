@@ -1,6 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import Navbar from "../../components/Navbar/Navbar";
-import SideDrawer from "../../components/Navbar/SideDrawer/SideDrawer";
 import "./Ideas.css";
 import IdeasModel from "./IdeasModel";
 import { Player } from "@lottiefiles/react-lottie-player";
@@ -27,7 +25,9 @@ const Ideas = () => {
   const routePath = useLocation();
 
   useEffect(() => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
+    if (routePath.pathname === "/ideas") {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
   }, [routePath])
 
 
@@ -117,7 +117,7 @@ const Ideas = () => {
           <div className="ideas__form">
             <div className="ideas__form__container">
               <h1>Pitch us your idea!</h1>
-              <p>Got an industrial proposal that could potentially revolutionize people’s everyday lives? Need the aid to make your dream a reality? If yes, then you are at the right place. Hit us up with your propositions now to unlock the ins and outs of the industrial potential and feasibility of your ideas!</p>
+              <p className='subheading'>Got an industrial proposal that could potentially revolutionize people’s everyday lives? Need the aid to make your dream a reality? If yes, then you are at the right place. Hit us up with your propositions now to unlock the ins and outs of the industrial potential and feasibility of your ideas!</p>
               <div className="ideas__division">
                 <div className="ideas__division__image">
                   <Player
@@ -150,7 +150,7 @@ const Ideas = () => {
                         value={inputName}
                       />
                       {inputNameIsInvalid && (
-                        <h4 style={{fontWeight: 'bolder', color: 'red'}}>
+                        <h4 style={{fontWeight: 'bolder', color: 'red', margin: 0}}>
                           Please provide a valid Name.
                         </h4>
                       )}
@@ -170,7 +170,7 @@ const Ideas = () => {
                         value={inputEmail}
                       />
                       {inputEmailIsInvalid && (
-                        <h4 style={{fontWeight: 'bolder', color: 'red'}}>
+                        <h4 style={{fontWeight: 'bolder', color: 'red', margin: 0}}>
                           Please provide a valid Email Id.
                         </h4>
                       )}
@@ -189,7 +189,7 @@ const Ideas = () => {
                         value={inputIdea}
                       />
                       {inputIdeaIsInvalid && (
-                        <h4 style={{fontWeight: 'bolder', color: 'red'}}>
+                        <h4 style={{fontWeight: 'bolder', color: 'red', margin: 0}}>
                           Please provide an Idea.
                         </h4>
                       )}
@@ -205,7 +205,7 @@ const Ideas = () => {
                         value={inputPhone}
                       />
                       {inputPhoneIsInvalid && (
-                        <h4 style={{fontWeight: 'bolder', color: 'red'}}>
+                        <h4 style={{fontWeight: 'bolder', color: 'red', margin: 0}}>
                           Please provide a valid Phone Number.
                         </h4>
                       )}

@@ -18,7 +18,7 @@ const state = {
       offset: 2,
       factor: 2.0,
       header: "Pitch us your idea!",
-      image: "/assets/landing/LANDING PAGE _ Pitch us your idea .png",
+      image: "/assets/images/lidea.jpg",
       aspect: 1.5,
       text: "Got an industrial proposal that could potentially revolutionize people’s everyday lives? Need the aid to make your dream a reality? If yes, then you are at the right place. Hit us up with your propositions now to unlock the ins and outs of the industrial potential and feasibility of your ideas."
 

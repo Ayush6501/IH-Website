@@ -28,7 +28,7 @@ function App() {
   return (
     <div>
       <Router onUpdate={() => window.scrollTo(0, 0)}>
-        <ScrollToTop />
+        {/*<ScrollToTop />*/}
         <Navbar hamburgerClicked={sideDrawerToggleHandler}/>
         <SideDrawer open={showSideDrawer} closed={sideDrawerClosedHandler} />
           <Switch>
