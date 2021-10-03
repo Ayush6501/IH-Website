@@ -36,7 +36,7 @@ const Footer = () => {
                               </Text>
                           </ContactInfo>
                           <ContactInfo>
-                              <img src="/assets/logos/logo-discord.svg" alt=""/>
+                              <img src="/assets/logos/logo-discord.svg" alt="" onClick={()=>window.open("https://discord.gg/bHZRrnZ992")}/>
                               <Text>
                                   <h3>Ionosphere</h3>
                                   <p>Join Our Server</p>

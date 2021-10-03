@@ -7,7 +7,7 @@ export default function Item_maker(props) {
         <div className="projects_image_card_container">
           <img
             className="projects_reponsive_image"
-            src={require(""+props.arg.img).default}
+            src={props.arg.img}
             alt=""
           ></img>
         </div>
