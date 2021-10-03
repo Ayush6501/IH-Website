@@ -4,7 +4,6 @@ import IdeasModel from "./IdeasModel";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { useLocation } from "react-router-dom";
 
-
 const Ideas = () => {
   const [radioValue, setRadioValue] = useState("");
   const [inputName, setInputName] = useState("");
@@ -29,13 +28,7 @@ const Ideas = () => {
     if (routePath.pathname === "/ideas") {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, [routePath])
-
-
-  /* useEffect(() => {
-    console.log("Current State is, " + radioValue);
-    console.log("Current Name is, " + inputName);
-  }, [radioValue, inputName]) */
+  }, [routePath]);
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
@@ -69,12 +62,25 @@ const Ideas = () => {
       return;
     }
     setInputPhoneIsValid(true);
-
-    console.log("Name is: ", inputName);
-    console.log("Email is: ", inputEmail);
-    console.log("Idea is: ", inputIdea);
-    console.log("Phone is: ", inputPhone);
-    console.log("Level of expertise is: ", radioValue);
+    const formData = {
+      Name: inputName,
+      Email: inputEmail,
+      Idea: inputIdea,
+      PhoneNo: inputPhone,
+      Expertise: radioValue,
+    };
+    fetch(
+      "https://ihwebsite-default-rtdb.firebaseio.com/FormSubmissions.json",
+      {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => console.log(res))
+      .catch((err) => alert(err.message));
     setInputName("");
     setInputEmail("");
     setInputIdea("");
@@ -120,7 +126,13 @@ const Ideas = () => {
           <div className="ideas__form">
             <div className="ideas__form__container">
               <h1>Pitch us your idea!</h1>
-              <p className='subheading'>Got an industrial proposal that could potentially revolutionize people’s everyday lives? Need the aid to make your dream a reality? If yes, then you are at the right place. Hit us up with your propositions now to unlock the ins and outs of the industrial potential and feasibility of your ideas!</p>
+              <p className="subheading">
+                Got an industrial proposal that could potentially revolutionize
+                people’s everyday lives? Need the aid to make your dream a
+                reality? If yes, then you are at the right place. Hit us up with
+                your propositions now to unlock the ins and outs of the
+                industrial potential and feasibility of your ideas!
+              </p>
               <div className="ideas__division">
                 <div className="ideas__division__image">
                   <Player
@@ -141,12 +153,7 @@ const Ideas = () => {
                       onSubmit={formSubmitHandler}
                       name="IdeaForm"
                     >
-                      <label
-                        for="name"
-
-                      >
-                        Your Name
-                      </label>
+                      <label for="name">Your Name</label>
                       <br />
                       <input
                         type="text"
@@ -156,18 +163,19 @@ const Ideas = () => {
                         name="name"
                       />
                       {inputNameIsInvalid && (
-                        <h4 style={{fontWeight: 'bolder', color: 'red', margin: 0}}>
+                        <h4
+                          style={{
+                            fontWeight: "bolder",
+                            color: "red",
+                            margin: 0,
+                          }}
+                        >
                           Please provide a valid Name.
                         </h4>
                       )}
                       <br />
 
-                      <label
-                        for="email"
-
-                      >
-                        Your Email
-                      </label>
+                      <label for="email">Your Email</label>
                       <br />
                       <input
                         type="text"
@@ -177,17 +185,18 @@ const Ideas = () => {
                         name="email"
                       />
                       {inputEmailIsInvalid && (
-                        <h4 style={{fontWeight: 'bolder', color: 'red', margin: 0}}>
+                        <h4
+                          style={{
+                            fontWeight: "bolder",
+                            color: "red",
+                            margin: 0,
+                          }}
+                        >
                           Please provide a valid Email Id.
                         </h4>
                       )}
                       <br />
-                      <label
-                        for="idea"
-
-                      >
-                        Your Project Idea
-                      </label>
+                      <label for="idea">Your Project Idea</label>
                       <br />
                       <input
                         type="text"
@@ -197,14 +206,18 @@ const Ideas = () => {
                         name="idea"
                       />
                       {inputIdeaIsInvalid && (
-                        <h4 style={{fontWeight: 'bolder', color: 'red', margin: 0}}>
+                        <h4
+                          style={{
+                            fontWeight: "bolder",
+                            color: "red",
+                            margin: 0,
+                          }}
+                        >
                           Please provide an Idea.
                         </h4>
                       )}
                       <br />
-                      <label for ="phone" >
-                        Your Phone Number
-                      </label>
+                      <label for="phone">Your Phone Number</label>
                       <br />
                       <input
                         type="text"
@@ -214,12 +227,18 @@ const Ideas = () => {
                         name="phone"
                       />
                       {inputPhoneIsInvalid && (
-                        <h4 style={{fontWeight: 'bolder', color: 'red', margin: 0}}>
+                        <h4
+                          style={{
+                            fontWeight: "bolder",
+                            color: "red",
+                            margin: 0,
+                          }}
+                        >
                           Please provide a valid Phone Number.
                         </h4>
                       )}
                       <br />
-                      <label for="expertise" >
+                      <label for="expertise">
                         Rate your expertise on a scale of 1 to 5 (1 Lowest, 5
                         Highest)
                       </label>
@@ -290,7 +309,7 @@ const Ideas = () => {
                         Submit
                       </button>
                       {formSubmitMessage && (
-                        <h4 style={{fontWeight: 'bolder', color: 'green'}}>
+                        <h4 style={{ fontWeight: "bolder", color: "green" }}>
                           Form successfully submitted!
                         </h4>
                       )}
