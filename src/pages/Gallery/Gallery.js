@@ -11,7 +11,9 @@ function Gallery(){
     const routePath = useLocation();
 
     useEffect(() => {
-        ref.current.scrollIntoView({ behavior: "smooth" });
+        if (routePath.pathname === "/gallery") {
+            ref.current.scrollIntoView({ behavior: "smooth" });
+        }
     }, [routePath])
 
     return (<div className={styles.Main} ref={ref}>
@@ -37,11 +39,11 @@ function Gallery(){
 
       <p className={styles.subheading}>This is but a gist of the exponential growth we have been striving towards in this short span of being. We have stuck by our motto of tackling each bit with perfection to unlock the impossible and here we are with some highlights of our 3-year journey…</p>
       <br />
-      
+
       <div className={styles.TeamWrapper}>
       {GalleryStore.map((i) => <TeamMember imgsrc={i.img} text={i.txt}/>)}
       </div>
-      
+
       </div>);
 }
 

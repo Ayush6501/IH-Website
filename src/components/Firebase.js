@@ -1,12 +1,14 @@
 import firebase from 'firebase';
+import REACT_APP_FIREBASE_API from '../../.env'
+import REACT_APP_FIREBASE_APP_ID from '../../.env'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCM35i-UZpMGhfmw52U9_GY2kngpw5sIU4",
+    apiKey: REACT_APP_FIREBASE_API,
     authDomain: "ihwebsite.firebaseapp.com",
     projectId: "ihwebsite",
     storageBucket: "ihwebsite.appspot.com",
     messagingSenderId: "363930520867",
-    appId: "1:363930520867:web:7829d16e0e0e9b99eb9096",
+    appId: REACT_APP_FIREBASE_APP_ID,
     measurementId: "G-13X5FPBZ0R"
 };
 

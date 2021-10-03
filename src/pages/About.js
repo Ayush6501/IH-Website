@@ -9,7 +9,9 @@ const AboutPage = () => {
     const routePath = useLocation();
 
     useEffect(() => {
-        ref.current.scrollIntoView({ behavior: "smooth" });
+        if (routePath.pathname === "/about") {
+            ref.current.scrollIntoView({ behavior: "smooth" });
+        }
     }, [routePath])
 
     return(

@@ -69,6 +69,11 @@
   width: 100%;
   margin-top: 65px;
 }
+
+.subheading {
+  padding: 0px 90px;
+}
+
 .ideas__division {
   display: flex;
   align-items: center;
@@ -96,8 +101,8 @@
   display: flex;
   flex-direction: column;
   /* height: 100%; */
-  align-items: center; 
-  
+  align-items: center;
+
 }
 .formcontent__LI {
   /* display: flex;
@@ -111,7 +116,7 @@
 .formcontent__LI > label {
   color: black;
   font-weight: 800;
-  
+
 }
 input[type="text"] {
   background: transparent;
@@ -136,7 +141,7 @@ input:focus {
   height: 100vh;
   width: 100%;
   font-family: "Poppins", sans-serif;
-  
+
 }
 
 
@@ -151,6 +156,10 @@ input:focus {
   .ideas__form__container > h1 {
     font-size: 2.3em;
     letter-spacing: 2px;
+  }
+
+  .subheading {
+    padding: 0px 20px;
   }
 }
 .ideas__form__container > p {
@@ -337,7 +346,7 @@ input[type=radio]:checked ~ label{
 
   border-radius: 100px;
   padding: 5px 10px;
-  
+
 
   cursor: pointer;
   transition: 0.3s;
