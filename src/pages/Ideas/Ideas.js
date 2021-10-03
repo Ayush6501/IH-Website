@@ -21,6 +21,7 @@ const Ideas = () => {
   const [inputEmailTouched, setInputEmailTouched] = useState(false);
   const [inputIdeaTouched, setInputIdeaTouched] = useState(false);
   const [inputPhoneTouched, setInputPhoneTouched] = useState(false);
+  const [formSubmitMessage, setFormSubmitMessage] = useState(false);
 
   const formRef = useRef();
   const ref = useRef();
@@ -39,6 +40,7 @@ const Ideas = () => {
   const formSubmitHandler = (event) => {
     event.preventDefault();
 
+    setFormSubmitMessage(false);
     setInputNameTouched(true);
     setInputEmailTouched(true);
     setInputIdeaTouched(true);
@@ -77,6 +79,7 @@ const Ideas = () => {
     setInputEmail("");
     setInputIdea("");
     setInputPhone("");
+    setFormSubmitMessage(true);
   };
   const nameChangedHandler = (event) => {
     setInputName(event.target.value);
@@ -133,8 +136,10 @@ const Ideas = () => {
                   <h2>Fill in the form</h2>
                   <div className="ideas__division_formcontent">
                     <form
+                      netlify
                       className="formcontent__LI"
                       onSubmit={formSubmitHandler}
+                      name="IdeaForm"
                     >
                       <label
                         for="name"
@@ -148,6 +153,7 @@ const Ideas = () => {
                         placeholder="Type your Name"
                         onChange={nameChangedHandler}
                         value={inputName}
+                        name="name"
                       />
                       {inputNameIsInvalid && (
                         <h4 style={{fontWeight: 'bolder', color: 'red'}}>
@@ -168,6 +174,7 @@ const Ideas = () => {
                         placeholder="Type your Email"
                         onChange={emailChangedHandler}
                         value={inputEmail}
+                        name="email"
                       />
                       {inputEmailIsInvalid && (
                         <h4 style={{fontWeight: 'bolder', color: 'red'}}>
@@ -187,6 +194,7 @@ const Ideas = () => {
                         placeholder="Tell us about your project"
                         onChange={ideaChangedHandler}
                         value={inputIdea}
+                        name="idea"
                       />
                       {inputIdeaIsInvalid && (
                         <h4 style={{fontWeight: 'bolder', color: 'red'}}>
@@ -203,6 +211,7 @@ const Ideas = () => {
                         placeholder="Phone Number"
                         onChange={phoneChangedHandler}
                         value={inputPhone}
+                        name="phone"
                       />
                       {inputPhoneIsInvalid && (
                         <h4 style={{fontWeight: 'bolder', color: 'red'}}>
@@ -210,7 +219,7 @@ const Ideas = () => {
                         </h4>
                       )}
                       <br />
-                      <label for="level" >
+                      <label for="expertise" >
                         Rate your expertise on a scale of 1 to 5 (1 Lowest, 5
                         Highest)
                       </label>
@@ -221,7 +230,7 @@ const Ideas = () => {
                           <input
                             type="radio"
                             class="rad-input"
-                            name="rad"
+                            name="expertise"
                             value="1"
                             onChange={radioChangedHandler}
                           />
@@ -233,7 +242,7 @@ const Ideas = () => {
                           <input
                             type="radio"
                             class="rad-input"
-                            name="rad"
+                            name="expertise"
                             value="2"
                             onChange={radioChangedHandler}
                           />
@@ -245,7 +254,7 @@ const Ideas = () => {
                           <input
                             type="radio"
                             class="rad-input"
-                            name="rad"
+                            name="expertise"
                             value="3"
                             onChange={radioChangedHandler}
                           />
@@ -257,7 +266,7 @@ const Ideas = () => {
                           <input
                             type="radio"
                             class="rad-input"
-                            name="rad"
+                            name="expertise"
                             value="4"
                             onChange={radioChangedHandler}
                           />
@@ -268,7 +277,7 @@ const Ideas = () => {
                           <input
                             type="radio"
                             class="rad-input"
-                            name="rad"
+                            name="expertise"
                             value="5"
                             onChange={radioChangedHandler}
                           />
@@ -280,6 +289,11 @@ const Ideas = () => {
                       <button type="submit" className="form__submit__button">
                         Submit
                       </button>
+                      {formSubmitMessage && (
+                        <h4 style={{fontWeight: 'bolder', color: 'green'}}>
+                          Form successfully submitted!
+                        </h4>
+                      )}
                       <br />
                     </form>
                   </div>
