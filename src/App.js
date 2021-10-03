@@ -60,7 +60,7 @@ function App() {
             </Route>
             <Route path="/projects" exact>
               <OurProjects/>
-              {/* <Footer /> */}
+              <Footer />
             </Route>
             <Route path="/*" exact>
               <HomePage />
