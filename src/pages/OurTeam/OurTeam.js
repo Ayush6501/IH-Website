@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Ourteam.module.css';
-import {OurteamData} from '../../store/OurteamData.js';
-import {TeamCollage} from './TeamCollage.js';
+import {TeamData} from './TeamData.js'
 import {Slider} from './Slider.js';
 import {useRef, useEffect} from 'react';
 import { useLocation } from "react-router-dom";
@@ -27,10 +26,21 @@ function Ourteam(){
         </span>
       </h1>
 
+      
+
       <p className={styles.subheading}>We are constantly tinkered by a team which questions, challenges and unlocks creativity on every turn. The brightest minds from backgrounds of Computer Science, Electronics, Mechanics, Design, and many other exciting non-technical avenues build our identity as a collective. At the center we have a strong knit committee, heads and founders leading the team. Click on each department button to find out more!</p>
       <br />
 
-      {OurteamData.map((i) => <TeamCollage data={i.data} title={i.department} description={i.description}/>)}
+      <p className={styles.subheading}>Our <b>Computer Science (CSE)</b> department is composed of the best up-and-coming coders and developers across various technical domains like AI/ML, Data Science, Web development, App development, Cybersecurity and much more.</p>
+
+      <p className={styles.subheading}>Our <b>Electronics and Electrical</b> department nourishes and develops practical projects requiring intricate skills for which they train budding recruits to achieve their dreams of implementing their theoretical knowledge through the aid of a capable team.</p>
+
+      <p className={styles.subheading}>Our <b>Mechanical</b> team works on multiple inter-disciplinary projects which need developing, designing, building and testing through the basics of physics, mathematics and material knowledge to create solutions to a range of problem statements.</p>
+
+      <p className={styles.subheading}>Our <b>Non-tech</b> team has the most capable content writers, managers, designers and talented individuals who incubate and promote educational and enlightening events alongside handling promotions and finances for the club.</p>
+      <br/>
+
+      <TeamData/>
 
     </div>);
 }

@@ -251,7 +251,7 @@
   font-weight: 700;
   position:absolute;
   font-family:Arial, Helvetica, sans-serif;
-  top: 45%;
+  top: 30%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -264,7 +264,20 @@
   font-size: 15px;
   position:absolute;
   font-family:Arial, Helvetica, sans-serif;
-  top: 52%;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.TeamCard .MemberDept{
+  color:black;
+  font-size: 15px;
+  position:absolute;
+  font-family:Arial, Helvetica, sans-serif;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
