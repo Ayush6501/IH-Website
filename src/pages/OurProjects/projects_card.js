@@ -7,7 +7,7 @@ export default function Item_maker(props) {
         <div className="projects_image_card_container">
           <img
             className="projects_reponsive_image"
-            src="http://futureuniversity.com/wp-content/uploads/sites/9/2015/02/default-placeholder-1024x1024-570x321.png"
+            src={require(""+props.arg.img).default}
             alt=""
           ></img>
         </div>
