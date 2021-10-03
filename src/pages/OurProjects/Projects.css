@@ -1,22 +1,17 @@
 .Project_container {
-  width: 400% !important;
-  left: 0px !important;
-  padding: 0px !important;
-  max-width: 400% !important;
   display: flex;
-  max-height: 100% !important;
-  height: 100% !important;
+  flex-direction: column;
+  position: relative;
+  top: 4vw;
+
+  
 }
-
-.pin-spacer {
-  margin: 0px !important;
-  width: 100% !important;
-  padding: 0px !important;
-  z-index: -1 !important;
-  position: absolute !important;
-  height: 5626px !important;
+#panel_container{
   background-color: white;
-
+}
+#FIRST{
+  height: 95vw;
+  flex-wrap: wrap;
 }
 
 .panel_projects {
@@ -24,27 +19,12 @@
   position: relative;
   top: 0;
   right: 0;
-  height: 101%;
-  will-change: transform;
-  border: 2px solid black;
+  /* height: 50vw; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 1;
-}
-
-.panel_projects::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-repeat: no-repeat;
-  background-image: url('./option4.jpeg');
-  background-size: cover;
-  z-index: -1;
 }
 
 .nav-link {
@@ -68,12 +48,13 @@
 }
 
 .projects_main_card_container {
-  width: 32vw;
+  width: 31vw;
   margin: 0.9vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
+  justify-content: center;
+  /* border: 1px solid black; */
 }
 
 .projects_image_card_container {
@@ -96,6 +77,8 @@
 }
 .projects_card_detail_para{
   padding: 2vw;
+  font-size: 1vw;
+  font-family: Poppins;
 }
 
 
@@ -113,47 +96,142 @@
 .Projects_description_para::-webkit-scrollbar {
   display: none;
 }
+.projects_card_heading{
+  font-size: 1.4vw;
+  font-family: Poppins;
+}
 
-@media only screen and (max-width:1024px) {
-  .projects_main_card_container {
-    width: 40vw;
+@media screen and (max-width:800px) and (min-width:400px){
+  #lottie{
+    width: 103vw !important;
+  }
+  .Project_container{
+    top:14vw;
   }
   #Main_page_heading{
-    font-size: 3vw !important;
+    font-size: 6.5vw !important;
+  }
+  #FIRST{
+    height: 555vw !important;
+  }
+  .projects_main_card_container{
+    width: 74vw !important;
   }
   .projects_card_detail_container{
-    height: 23vw;
+    height: 42vw !important;
+  }
+  .projects_card_heading{
+    font-size: 4.1vw !important;
+  }
+  .projects_card_detail_para{
+    font-size: 3vw;
   }
 }
-@media only screen and (max-width:1826px) {
-  .pin-spacer{
-    height: 5610px !important;
+@media screen and (max-width:940px) and (min-width:800px){
+  #lottie{
+    width: 83vw !important;
+  }
+  .Project_container{
+    top:10vw;
+  }
+  #Main_page_heading{
+    font-size: 6vw !important;
+  }
+  #FIRST{
+    height: 201vw !important;
+  }
+  .projects_main_card_container{
+    width: 48vw !important;
+  }
+  .projects_card_detail_container{
+    height: 27vw !important;
+  }
+  .projects_card_heading{
+    font-size: 3.7vw !important;
+  }
+  .projects_card_detail_para{
+    font-size: 2.5vw;
   }
 }
-@media only screen and (max-width:750px) {
-  .projects_main_card_container {
-    width: 45vw;
+@media screen and (max-width:1070px) and (min-width:940px){
+  #lottie{
+    width: 83vw !important;
   }
-  .pin-spacer{
-    height: 5667px !important;
+  .Project_container{
+    top:2.4vw;
+  }
+  #Main_page_heading{
+    font-size: 6vw !important;
+  }
+  #FIRST{
+    height: 201vw !important;
+  }
+  .projects_main_card_container{
+    width: 48vw !important;
+  }
+  .projects_card_detail_container{
+    height: 27vw !important;
+  }
+  .projects_card_heading{
+    font-size: 3.7vw !important;
+  }
+  .projects_card_detail_para{
+    font-size: 2.5vw;
+  }
+}
+@media screen and (max-width:1302px) and (min-width:1070px){
+  #lottie{
+    width: 75vw !important;
+  }
+  .Project_container{
+    top:2vw;
   }
   #Main_page_heading{
     font-size: 5vw !important;
+    margin: 0px !important;
+  }
+  #FIRST{
+    height: 201vw !important;
+  }
+  .projects_main_card_container{
+    width: 48vw !important;
+  }
+  .projects_card_detail_container{
+    height: 27vw !important;
+  }
+  .projects_card_heading{
+    font-size: 3vw !important;
+  }
+  .projects_card_detail_para{
+    font-size: 2vw;
   }
 }
-@media only screen and (max-width:500px) {
-  .projects_main_card_container {
-    width: 50vw;
+@media screen and (max-width:1474px) and (min-width:1302px){
+  #lottie{
+    width: 70vw !important;
+  }
+  .Project_container{
+    top:0vw;
   }
   #Main_page_heading{
-    font-size: 7vw !important;
+    font-size: 4vw !important;
+    margin: 0px !important;
+  }
+  #FIRST{
+    height: 77vw !important;
+  }
+  .projects_main_card_container{
+    width: 30vw !important;
+  }
+  .projects_card_detail_container{
+    height: 17vw !important;
+  }
+  .projects_card_heading{
+    font-size: 2vw !important;
+  }
+  .projects_card_detail_para{
+    font-size: 1.5vw;
   }
 }
-@media only screen and (max-width:390px) {
-  .projects_main_card_container {
-    width: 59vw;
-  }
-  #Main_page_heading{
-    font-size: 7.5vw !important;
-  }
-}
+
+

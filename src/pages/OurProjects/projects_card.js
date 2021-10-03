@@ -15,14 +15,7 @@ export default function Item_maker(props) {
           <div className="Projects_description_para">
             <h2 className="projects_card_heading">{props.arg.Title}</h2>
             <p className="projects_card_detail_para">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-              enim mollitia, cumque reiciendis dolorum illum exercitationem
-              rerum quisquam sequi, et perspiciatis delectus doloremque eaque
-              voluptatem deserunt. Sed tenetur eveniet nulla? Lorem, ipsum dolor
-              sit amet consectetur adipisicing elit. Veritatis eos ad incidunt
-              repudiandae necessitatibus debitis fugit quibusdam quos voluptate
-              voluptatem quasi at magni temporibus vel a totam, optio officiis
-              facilis?
+              {props.arg.Desc}
             </p>
           </div>
         </div>
