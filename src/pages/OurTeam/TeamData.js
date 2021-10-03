@@ -11,7 +11,8 @@ class TeamData extends React.Component{
       First:[],
       Second:[],
       Third:[],
-      Fourth:[]
+      Fourth:[],
+      Core:[]
     };
     
     this.fetch_data=this.fetch_data.bind(this);
@@ -50,6 +51,9 @@ class TeamData extends React.Component{
 
       else if(data[ct]["Year Of Study"]==="First Year")
         this.FinalData["First"][this.FinalData["First"].length]=data[ct];
+
+      else if(data[ct]["Year Of Study"]==="Core")
+        this.FinalData["Core"][this.FinalData["Core"].length]=data[ct];
       
       
       ct++;
@@ -61,7 +65,8 @@ class TeamData extends React.Component{
   render()
   {
     return (<div>
-  
+
+    <TeamCollage datafetch={this.get_data} fetch_title={"Core"} title={"Core Team"}/>
     <TeamCollage datafetch={this.get_data} fetch_title={"Fourth"} title={"Fourth Year"}/>
     <TeamCollage datafetch={this.get_data} fetch_title={"Third"}  title={"Third Year"}/>
     <TeamCollage datafetch={this.get_data} fetch_title={"Second"} title={"Second Year"}/>

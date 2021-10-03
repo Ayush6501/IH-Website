@@ -34,7 +34,7 @@ const SideDrawer = (props) => {
         Ideas
         </Link>
 
-        <Link to="/OurProjects" className="sidedrawer__links">
+        <Link to="/projects" className="sidedrawer__links">
         Projects
         </Link>
 
