@@ -46,7 +46,7 @@ const Footer = () => {
                           <ContactInfo>
                               <img src="/assets/logos/mail-outline.svg" alt=""/>
                               <Text>
-                                  <h3>IH@email.com</h3>
+                                  <h3>innovatorshubmit@gmail.com</h3>
                                   <p>Contact Us Here</p>
                                   <p> </p>
                               </Text>
