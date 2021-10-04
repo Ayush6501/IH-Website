@@ -113,7 +113,7 @@
   margin-right: 40px;
 }
 
-@media (max-width: 810px) {
+@media (max-width: 720px) {
   .navigation__items {
     display: none;
   }
