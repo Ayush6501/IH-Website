@@ -1,5 +1,5 @@
 import React from "react";
-import Item_maker from "./projects_card";
+import ItemMaker from "./projectscard";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 let data = [
@@ -77,7 +77,7 @@ let data = [
   },
 ];
 
-export default function projects_panels(props) {
+export default function projectpanel() {
   return (
     <>
       <div id="Home_projects" className="panel_projects">
@@ -102,8 +102,8 @@ export default function projects_panels(props) {
         </h1>
       </div>
       <div id="FIRST" className="panel_projects">
-            {data.map((element)=>{
-              return <Item_maker arg={element}/>
+            {data.map((element,i)=>{
+              return <ItemMaker key= {i} arg={element}/>
             })}
           </div>
     </>

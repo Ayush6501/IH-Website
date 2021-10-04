@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Item_maker(props) {
+export default function ItemMaker(props) {
   return (
     <div>
       <div className="main_card_container">

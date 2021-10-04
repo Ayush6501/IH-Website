@@ -245,63 +245,63 @@ const Ideas = () => {
                       <br />
 
                       <div className="radioselection">
-                        <label class="rad-label">
+                        <label className="rad-label">
                           <input
                             type="radio"
-                            class="rad-input"
+                            className="rad-input"
                             name="expertise"
                             value="1"
                             onChange={radioChangedHandler}
                           />
-                          <div class="rad-design"></div>
-                          <div class="rad-text">1</div>
+                          <div className="rad-design"></div>
+                          <div className="rad-text">1</div>
                         </label>
 
-                        <label class="rad-label">
+                        <label className="rad-label">
                           <input
                             type="radio"
-                            class="rad-input"
+                            className="rad-input"
                             name="expertise"
                             value="2"
                             onChange={radioChangedHandler}
                           />
-                          <div class="rad-design"></div>
-                          <div class="rad-text">2</div>
+                          <div className="rad-design"></div>
+                          <div className="rad-text">2</div>
                         </label>
 
-                        <label class="rad-label">
+                        <label className="rad-label">
                           <input
                             type="radio"
-                            class="rad-input"
+                            className="rad-input"
                             name="expertise"
                             value="3"
                             onChange={radioChangedHandler}
                           />
-                          <div class="rad-design"></div>
-                          <div class="rad-text">3</div>
+                          <div className="rad-design"></div>
+                          <div className="rad-text">3</div>
                         </label>
 
-                        <label class="rad-label">
+                        <label className="rad-label">
                           <input
                             type="radio"
-                            class="rad-input"
+                            className="rad-input"
                             name="expertise"
                             value="4"
                             onChange={radioChangedHandler}
                           />
-                          <div class="rad-design"></div>
-                          <div class="rad-text">4</div>
+                          <div className="rad-design"></div>
+                          <div className="rad-text">4</div>
                         </label>
-                        <label class="rad-label">
+                        <label className="rad-label">
                           <input
                             type="radio"
-                            class="rad-input"
+                            className="rad-input"
                             name="expertise"
                             value="5"
                             onChange={radioChangedHandler}
                           />
-                          <div class="rad-design"></div>
-                          <div class="rad-text">5</div>
+                          <div className="rad-design"></div>
+                          <div className="rad-text">5</div>
                         </label>
                       </div>
                       <br />
