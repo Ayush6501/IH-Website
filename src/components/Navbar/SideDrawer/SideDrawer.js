@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SideDrawer.css";
 import Backdrop from "../../../UI/Backdrop/Backdrop";
 import { Link } from "react-router-dom";
@@ -15,7 +15,7 @@ const SideDrawer = (props) => {
       <div className={attachedClasses.join(" ")} onClick={props.closed}>
 
         <div className="sidedrawer__back">
-        <img src="/assets/logos/logo-back.svg"/>
+        <img src="/assets/logos/logo-back.svg" alt="logo"/>
         </div>
         
         <div className="sidedrawer__name">
