@@ -229,7 +229,7 @@
 {
   height: 250px;
   width: 250px;
-  object-fit: contain;
+  object-fit: fill;
 }
 
 .TeamCard .MemberOverlay {
