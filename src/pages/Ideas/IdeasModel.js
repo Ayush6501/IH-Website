@@ -3,11 +3,7 @@ import { useRef, useState, useMemo, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Text, TrackballControls, Html } from "@react-three/drei";
 import "./IdeasModel.css";
-/* import randomWord from "random-words"; */
-/* import Poppins from "../../fonts/Poppins Medium_Regular.json"; */
-/* import Bg from "../../assets/images/Logo-white.png";
-import { Suspense } from "react"; */
-
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const ideaWords = [
   "innovate",
@@ -56,19 +52,8 @@ const ideaWords = [
   "newfangled",
   "leading-edge",
   "state-of-the-art",
-  "ingenious"
+  "ingenious",
 ];
-
-/* const font = new THREE.FontLoader().parse(Poppins); */
-
-/* const textOptions = {
-  font,
-  size: 1,
-  height: 1,
-  letterSpacing: -0.05,
-  curveSegments: 20,
-  bevelEnabled: false,
-}; */
 
 function Word({ children, ...props }) {
   const color = new THREE.Color();
@@ -147,7 +132,10 @@ export default function IdeasModel(props) {
 
         <Html zIndexRange={[150, 0]}>
           <div className="scrollClicker">
-            <h3 onClick={props.scroll} style={{ color: "white", cursor: "pointer" }}>
+            <h3
+              onClick={props.scroll}
+              style={{ color: "white", cursor: "pointer" }}
+            >
               Click Here To Scroll
             </h3>
           </div>
@@ -158,15 +146,7 @@ export default function IdeasModel(props) {
             top: "-100px",
             right: "-800px",
           }}
-        >
-          {/*<Player
-            autoplay
-            loop
-            src="https://assets10.lottiefiles.com/packages/lf20_jfchliut.json"
-            speed={0.8}
-            style={{ height: "600px", width: "350px" }}
-          />*/}
-        </Html>
+        ></Html>
       </Canvas>
     </div>
   );
