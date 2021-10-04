@@ -1,7 +1,14 @@
 .heading_containers {
     display: flex;
     justify-content: center;
-    padding: 1.5vw;
+    /*padding: 1.5vw;*/
+    width:100%;
+}
+
+.heading_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 9vh;
     width:100%;
 }
 
@@ -71,7 +78,6 @@
 
 .card_heading {
     font-size: 2vw;
-    font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
 }
@@ -97,31 +103,33 @@
     margin: 0px;
     font-style: normal;
     font-weight: bold;
-    font-size: 4vw;
+    font-size: 4em;
     text-align:center;
-
+    margin-top: 1em;
 }
 
 #Heading_para {
     font-size: 1.5vw;
-    margin: 5px 5%;
+    margin: 5px 6em;
     color: #8b8b8b;
     font-family: "Poppins", sans-serif;
+    text-align: center;
 }
 
 @media only screen and (max-width: 1024px) {
      #Heading{
-        font-size: 6.4vw !important;
+        font-size: 2.5em;
     }
     #Heading_para{
         font-size: 2.8vw;
+        margin: 5px 3em;
     }
     .main_card_container{
         width: 35vw;
         height: 28vw;
     }
     .heading_containers{
-        margin-top: 5vh;
+        margin-top: 5px;
     }
     .card_heading{
         font-size: 2.8vw;
@@ -132,12 +140,12 @@
     .card_detail_para{
         font-size: 2vw;
     }
-    
+
 }
 @media only screen and (max-width: 550px) {
-    #Heading{
-        font-size: 7.7vw !important;
-    }
+    /*#Heading{*/
+    /*    font-size: 7.7vw !important;*/
+    /*}*/
     #Heading_para{
         font-size: 2.5vw;
     }
@@ -148,7 +156,7 @@
 }
 @media only screen and (max-width: 430px) {
     #Heading_para{
-        font-size: 3.7vw;
+        font-size: 0.9em;
     }
     .main_card_container{
         width: 57vw;

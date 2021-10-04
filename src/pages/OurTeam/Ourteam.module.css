@@ -24,8 +24,9 @@
     border: 3px solid #eee513;
     padding: 10px 25px;
     width: 60%;
-    align-self: center; 
+    align-self: center;
 }
+
 
 .Slider{
   overflow: hidden;
@@ -95,6 +96,16 @@
   padding-right: 20%;
 }
 
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #ffee00;
+    font-size: 1.6em;
+    margin-bottom: 0;
+}
 
 .DepartmentButtonContainer{
   display: flex;

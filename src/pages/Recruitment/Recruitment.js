@@ -19,6 +19,7 @@ const RecruitmentPage = (props) => {
         </div>
         <div className="recruitment__form__div">
           <iframe
+            title='RecruitmentForm'
             src="https://docs.google.com/forms/d/e/1FAIpQLSc3WV9k4VaMtSKDcmcaDqcRweYhK9sP5Aea0CarXqBwYtzB-w/viewform?embedded=true"
             width="50%"
             height="100%"

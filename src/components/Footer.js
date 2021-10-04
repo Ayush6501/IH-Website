@@ -19,9 +19,9 @@ const Footer = () => {
                   <FollowBox>
                       <h2>Follow Us</h2>
                       <IconContainer>
-                          <img src="/assets/logos/logo-linkedin.svg" alt="" />
-                          <img src="/assets/logos/logo-instagram.svg" alt="" />
-                          <img src="/assets/logos/logo-twitter.svg" alt="" />
+                          <img src="/assets/logos/logo-linkedin.svg" alt=""  onClick={() => window.open("https://www.linkedin.com/company/innovators-hub-mitwpu/mycompany/")}/>
+                          <img src="/assets/logos/logo-instagram.svg" alt=""  onClick={() => window.open("https://www.instagram.com/innovators_hub_/")}/>
+                          <img src="/assets/logos/logo-twitter.svg" alt=""  onClick={() => window.open("https://twitter.com/hub_innovators")}/>
                       </IconContainer>
                   </FollowBox>
               </LeftBox>
@@ -69,7 +69,7 @@ const Footer = () => {
                               </Links>
                               <Links>
                                   <p>Down the memory lane… </p>
-                                  <Link to='/gallery'><HeaderItems title="Archive"/></Link>
+                                  <Link to='/achievements'><HeaderItems title="Archive"/></Link>
                               </Links>
                           </LinksContainer>
                       </LinkContainer>

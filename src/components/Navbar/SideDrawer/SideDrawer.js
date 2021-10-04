@@ -17,15 +17,15 @@ const SideDrawer = (props) => {
         <div className="sidedrawer__back">
         <img src="/assets/logos/logo-back.svg"/>
         </div>
-        
+
         <div className="sidedrawer__name">
-          <h1>Innovator's Hub</h1>
+          <h1>Innovators Hub</h1>
         </div>
 
         <Link to="/" className="sidedrawer__links">
         HomePage
         </Link>
-        
+
         <Link to="/about" className="sidedrawer__links">
         About
         </Link>
@@ -46,7 +46,7 @@ const SideDrawer = (props) => {
         Our Team
         </Link>
 
-        <Link to="/gallery" className="sidedrawer__links">
+        <Link to="/achievements" className="sidedrawer__links">
         Gallery
         </Link>
 

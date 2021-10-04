@@ -2,12 +2,12 @@ import * as THREE from "three";
 import { useRef, useState, useMemo, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Text, TrackballControls, Html } from "@react-three/drei";
+import "./IdeasModel.css";
 /* import randomWord from "random-words"; */
 /* import Poppins from "../../fonts/Poppins Medium_Regular.json"; */
 /* import Bg from "../../assets/images/Logo-white.png";
 import { Suspense } from "react"; */
-import "./IdeasModel.css";
-import { Player } from "@lottiefiles/react-lottie-player";
+
 
 const ideaWords = [
   "innovate",
@@ -144,7 +144,7 @@ export default function IdeasModel(props) {
         <fog attach="fog" args={["white", 0, 80]} />
         <Cloud count={8} radius={20} />
         <TrackballControls />
-        
+
         <Html zIndexRange={[150, 0]}>
           <div className="scrollClicker">
             <h3 onClick={props.scroll} style={{ color: "white", cursor: "pointer" }}>

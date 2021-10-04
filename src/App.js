@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/Home";
 import Ideas from "./pages/Ideas/Ideas";
 import AboutPage from "./pages/About";
@@ -27,14 +27,12 @@ function App() {
 
   return (
     <div>
-      <Router onUpdate={() => window.scrollTo(0, 0)}>
+      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
         {/*<ScrollToTop />*/}
         <Navbar hamburgerClicked={sideDrawerToggleHandler}/>
         <SideDrawer open={showSideDrawer} closed={sideDrawerClosedHandler} />
           <Switch>
-            <Route path="/" exact>
-              <HomePage />
-            </Route>
+            <Route path="/" exact component={HomePage} />
             <Route path="/ideas" exact>
               <Ideas />
               <Footer />
@@ -54,7 +52,7 @@ function App() {
               <Events />
               <Footer />
             </Route>
-            <Route path="/gallery" exact>
+            <Route path="/achievements" exact>
               <Gallery/>
               <Footer />
             </Route>
@@ -67,7 +65,7 @@ function App() {
               <Footer />
             </Route>
           </Switch>
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }

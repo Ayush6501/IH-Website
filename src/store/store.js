@@ -5,6 +5,7 @@ const state = {
   sections: 9,
   pages: 9,
   zoom: 75,
+  links: [{path: "/about"}, {path: "/ideas"}, {path: "/projects"}, {path: "/events"}, {path: "/achievements"}, {path: "/about"}, {path: "/ourteam"}, {path: "/recruitment"}],
   paragraphs: [
     {
       offset: 1,

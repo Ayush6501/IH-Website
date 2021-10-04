@@ -1,5 +1,5 @@
 import React from "react";
-import ItemMaker from "./projectscard";
+import Itemmaker from "./projectscard";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 let data = [
@@ -103,7 +103,7 @@ export default function projectpanel() {
       </div>
       <div id="FIRST" className="panel_projects">
             {data.map((element,i)=>{
-              return <ItemMaker key= {i} arg={element}/>
+              return <Itemmaker key= {i} arg={element}/>
             })}
           </div>
     </>

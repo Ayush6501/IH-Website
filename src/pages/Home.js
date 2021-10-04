@@ -4,14 +4,12 @@ import { Html } from "@react-three/drei"
 import { TextureLoader, LinearFilter } from "three"
 import lerp from "lerp"
 import { Text, MultilineText } from "../components/three/Text"
-import Diamonds from "../components/diamonds/Diamonds"
 import Plane from "../components/three/Plane"
 import { Block, useBlock } from "../hooks/blocks"
 import state from "../store/store"
 import "../styles/landing.css"
 import Bulb from "../components/three/Bulb";
 import styled from "styled-components";
-import HeaderItems from "../components/HeaderItems";
 import Footer from '../components/Footer';
 import { Player } from "@lottiefiles/react-lottie-player";
 
@@ -21,13 +19,14 @@ function Startup() {
     return <Plane ref={ref} color="#0e0e0f" position={[0, 0, 200]} scale={[100, 100, 1]} />
 }
 
-function Paragraph({ image, index, offset, factor, header, aspect, text }) {
+function Paragraph({ image, index, offset, factor, header, aspect, text, links }) {
     const { contentMaxWidth: w, canvasWidth, margin, mobile } = useBlock()
     const size = aspect < 1 && !mobile ? 0.55 : 1
     const alignRight = (canvasWidth - w * size - margin) / 2
     const pixelWidth = w * state.zoom * size
     const left = !(index % 2)
     const color = "#FFEE00"
+
     return (
         <Block factor={factor} offset={offset}>
             <group position={[left ? -alignRight : alignRight, 0, 0]}>
@@ -35,12 +34,13 @@ function Paragraph({ image, index, offset, factor, header, aspect, text }) {
                     <Plane map={image} args={[1, 1, 32, 32]} shift={75} size={size} aspect={aspect/2} scale={[w * size, (w * size) / aspect, 1]} frustumCulled={false} />
                 </Suspense>
                 <Html
+                    as='div'
                     style={{ width: pixelWidth / (mobile ? 1 : 2), textAlign: left ? "left" : "right" }}
                     position={[left || mobile ? (-w * size) / 2 : 0, (-w * size) / 2 / aspect - 0.4, 1]}>
                     <div tabIndex={index}>
                         {text}
                         <br />
-                        <CTAButton>Know more</CTAButton>
+                        <CTAButton><a href={links}>Know More</a></CTAButton>
                     </div>
                 </Html>
                 <Text left={left} right={!left} size={w * 0.04} color={color} top position={[((left ? -w : w) * size) / 2, (w * size) / aspect / 2 + 0.5, -1]}>
@@ -56,7 +56,7 @@ function Paragraph({ image, index, offset, factor, header, aspect, text }) {
     )
 }
 
-function Content() {
+const Content = () => {
     const images = useLoader(
         TextureLoader,
         state.paragraphs.map(({ image }) => image)
@@ -99,7 +99,7 @@ function Content() {
                 <Block factor={1.0}>
                     <Html style={{
                         position: "absolute",
-                        top: "220px",
+                        top: "230px",
                         right: `${mobile ? "-55px" : "-80px"}`,
                     }}>
                         <Player
@@ -116,41 +116,19 @@ function Content() {
                 <MultilineText top left size={w * 0.1} lineHeight={w / 5.5} position={[-w / 3, 0, -1]} color="#FFEE00" text={"ideate\ninnovate\ncreate"} />
             </Block>
             {state.paragraphs.map((props, index) => (
-                <Paragraph key={index} index={index} {...props} image={images[index]} />
+                <Paragraph key={index} index={index} {...props} image={images[index]} links={state.links[index].path}/>
             ))}
             {state.stripes.map(({ offset, color, height }, index) => (
                 <Block key={index} factor={-1.5} offset={offset}>
                     <Plane args={[50, height, 32, 32]} shift={-4} color={color} rotation={[0, 0, Math.PI / 8]} position={[0, 0, -10]} />
                 </Block>
             ))}
-            {/*<Block factor={1.25} offset={8}>*/}
-            {/*    <Html*/}
-            {/*        style={{*/}
-            {/*            position: "absolute",*/}
-            {/*            bottom: 0,*/}
-            {/*            left: 0,*/}
-            {/*            width: "100%",*/}
-            {/*            top: 300,*/}
-            {/*            right: 200,*/}
-            {/*            cursor: 'pointer',*/}
-            {/*            display: 'flex'*/}
-            {/*        }}>*/}
-            {/*        <nav>*/}
-            {/*            <ul>*/}
-            {/*                <li><HeaderItems title="Home"/></li>*/}
-            {/*                <li><HeaderItems title="About Us"/></li>*/}
-            {/*                <li><HeaderItems title="Recruitment"/></li>*/}
-            {/*                <li><HeaderItems title="Gallery"/></li>*/}
-            {/*            </ul>*/}
-            {/*        </nav>*/}
-            {/*    </Html>*/}
-            {/*</Block>*/}
         </>
     )
 }
 
 function HomePage() {
-    const scrollArea = useRef()
+    const scrollArea = useRef();
     const onScroll = (e) => (state.top.current = e.target.scrollTop)
     useEffect(() => void onScroll({ target: scrollArea.current }), [])
 
@@ -160,7 +138,6 @@ function HomePage() {
                 <Suspense fallback={<Html center className="loading" children="Loading..." />}>
                     {/*<Suspense fallback={<Html center className="loading" children={<Spinner />} />}>*/}
                     <Content />
-                    <Diamonds />
                     <Startup />
                     <Bulb />
                 </Suspense>
@@ -183,7 +160,7 @@ function HomePage() {
 export default HomePage;
 
 const CTAButton = styled.button`
-  padding: 7px 18px;
+  padding: 8px 0;
   background: transparent;
   border: 2px solid #ffee00;
   border-radius: 5em;
@@ -192,7 +169,18 @@ const CTAButton = styled.button`
   font-size: 0.8em;
   font-weight: 550;
   margin-top: 5px;
+  letter-spacing: 0.1em;
   font-family: Poppins, sans-serif;
+  width: 150px;
+  
+  a {
+    color: #ffee00;
+    
+    &:hover {
+      color: black;
+      background-color: #ffee00;
+    }
+  }
   
   &:hover {
     cursor: pointer;

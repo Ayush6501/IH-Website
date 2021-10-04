@@ -5,13 +5,12 @@ import {useBlock} from "../../hooks/blocks";
 import state from "../../store/store";
 import lerp from "lerp";
 import {Object3D, WebGLRenderTarget} from "three";
-import BackfaceMaterial from "../diamonds/BackfaceMaterial";
-import RefractionMaterial from "../diamonds/RefractionMaterial";
+import BackfaceMaterial from "../bulb/BackfaceMaterial";
+import RefractionMaterial from "../bulb/RefractionMaterial";
 
 const dummy = new Object3D()
 export default function Bulb() {
-    const { nodes } = useLoader(GLTFLoader, "/assets/three/Lightbulb.glb")
-    console.log(nodes)
+    const { nodes } = useLoader(GLTFLoader, "/assets/three/Lightbulb.glb");
     useLayoutEffect(() => nodes.Lightbulb.geometry.center(), [])
 
     const { size, gl, scene, camera, clock } = useThree()
