@@ -1,6 +1,6 @@
 import React from "react";
 import "./Projects.css";
-import Projects_panels from "./projects_panels.js";
+import Projectpanel from "./projectpanel.js";
 
 
 
@@ -9,7 +9,7 @@ const Projects = () => {
     <>
       <div id="panel_container">
         <div id="Main_container" className="Project_container">
-          <Projects_panels />
+          <Projectpanel />
         </div>
       </div>
     </>

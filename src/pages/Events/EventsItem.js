@@ -1,5 +1,5 @@
 import React from "react";
-import Item_maker from "./Item_maker";
+import ItemMaker from "./ItemMaker";
 
 let arr = [
   {
@@ -64,11 +64,11 @@ let arr = [
   },
 ];
 
-export default function Events_item() {
+export default function EventsItem() {
   return (
     <div id="Main_Item_Container">
-      {arr.map((element) => {
-        return <Item_maker arg={element} />;
+      {arr.map((element,i) => {
+        return <ItemMaker key={i} arg={element} />;
       })}
     </div>
   );
