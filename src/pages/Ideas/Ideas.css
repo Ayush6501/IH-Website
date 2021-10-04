@@ -12,7 +12,7 @@
   scrollbar-width: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .ideas {
     display: flex;
     flex-direction: column-reverse;
@@ -24,7 +24,7 @@
     display: none;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .ideas__division {
     display: flex;
     flex-direction: column-reverse;
@@ -32,7 +32,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .ideas__division__form {
     width: 80%;
   }
@@ -125,7 +125,7 @@ input:focus {
   text-transform: uppercase;
   letter-spacing: 2.5px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .ideas__form__container > h1 {
     font-size: 2.3em;
     letter-spacing: 2px;
@@ -153,7 +153,7 @@ input:focus {
   margin-top: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .radioselection {
     flex-direction: column;
     align-items: normal;
