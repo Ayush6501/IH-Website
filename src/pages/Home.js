@@ -40,7 +40,7 @@ function Paragraph({ image, index, offset, factor, header, aspect, text }) {
                     <div tabIndex={index}>
                         {text}
                         <br />
-                        <CTAButton href="/ourteam">Know more</CTAButton>
+                        <CTAButton>Know more</CTAButton>
                     </div>
                 </Html>
                 <Text left={left} right={!left} size={w * 0.04} color={color} top position={[((left ? -w : w) * size) / 2, (w * size) / aspect / 2 + 0.5, -1]}>
@@ -182,7 +182,7 @@ function HomePage() {
 }
 export default HomePage;
 
-const CTAButton = styled.a`
+const CTAButton = styled.button`
   padding: 7px 18px;
   background: transparent;
   border: 2px solid #ffee00;
