@@ -11,7 +11,7 @@ function Gallery(){
     const routePath = useLocation();
 
     useEffect(() => {
-        if (routePath.pathname === "/gallery") {
+        if (routePath.pathname === "/achievements") {
             ref.current.scrollIntoView({ behavior: "smooth" });
         }
     }, [routePath])
