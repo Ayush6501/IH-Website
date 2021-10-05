@@ -47,7 +47,7 @@ const SideDrawer = (props) => {
         </Link>
 
         <Link to="/achievements" className="sidedrawer__links">
-        Gallery
+        Achievements
         </Link>
 
         <Link to="/recruitment" className="sidedrawer__links">
