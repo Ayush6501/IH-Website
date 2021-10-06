@@ -34,10 +34,11 @@ function Paragraph({ image, index, offset, factor, header, aspect, text, links }
                     <Plane map={image} args={[1, 1, 32, 32]} shift={75} size={size} aspect={aspect/2} scale={[w * size, (w * size) / aspect, 1]} frustumCulled={false} />
                 </Suspense>
                 <Html
+                    zIndexRange={[100, 0]}
                     as='div'
-                    style={{ width: pixelWidth / (mobile ? 1 : 2), textAlign: left ? "left" : "right" }}
+                    style={{ width: pixelWidth / (mobile ? 1.6 : 2), textAlign: left ? "left" : "right" }}
                     position={[left || mobile ? (-w * size) / 2 : 0, (-w * size) / 2 / aspect - 0.4, 1]}>
-                    <div tabIndex={index}>
+                    <div tabIndex={index} style={mobile ? {textAlign: 'left', fontSize: 0.8 + 'em'} : null}>
                         {text}
                         <br />
                         <CTAButton><a href={links}>Know More</a></CTAButton>
@@ -84,14 +85,16 @@ const Content = () => {
                                 fontSize: 105,
                                 lineHeight: 1,
                                 fontWeight: 900,
-                                color: "white"
+                                color: "white",
+                                margin: 0,
                             }}>Innovators{mobile ? <br/> : " "}Hub</h1>
                             :
                             <h1 style={{
                                 fontSize: 45,
                                 lineHeight: 1,
                                 fontWeight: 900,
-                                color: "white"
+                                color: "white",
+                                marginBottom: 35,
                             }}>Innovators{mobile ? <br/> : " "}Hub</h1>
                         }
                     </Html>
@@ -142,7 +145,7 @@ function HomePage() {
                     <Bulb />
                 </Suspense>
             </Canvas>
-            <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
+            <div className="scrollArea" ref={scrollArea} onScroll={onScroll} style={{pointerEvents: "auto"}}>
                 {new Array(state.sections).fill().map((_, index) => (
                     <div
                         key={index}

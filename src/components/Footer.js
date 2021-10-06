@@ -46,7 +46,7 @@ const Footer = () => {
                           <ContactInfo>
                               <img src="/assets/logos/mail-outline.svg" alt=""/>
                               <Text>
-                                  <h3>innovatorshubmit@gmail.com</h3>
+                                  <h3>innovatorshubmit<br />@gmail.com</h3>
                                   <p>Contact Us Here</p>
                                   <p> </p>
                               </Text>
@@ -159,6 +159,13 @@ const LeftBox = styled.div`
     @media only screen and (max-width: 968px) {
       margin-bottom: 0;
       margin-left: 40px;
+    }
+
+    @media only screen and (max-width: 468px) {
+      margin-bottom: 0;
+      margin-left: 40px;
+      margin-right: 65px;
+      font-size: 1em;
     }
   }
 
@@ -347,5 +354,6 @@ const Quote = styled.h1`
 
   @media only screen and (max-width: 968px) {
     font-size: 1.3em;
+    text-align: center;
   }
 `;
