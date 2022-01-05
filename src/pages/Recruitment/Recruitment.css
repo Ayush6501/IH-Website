@@ -7,8 +7,10 @@
 
 .recruitment__info__div {
   display: flex;
+  flex: 0.25;
   flex-direction: column;
   margin: 60px 10px 50px 10px;
+  align-items: center;
 }
 
 .recruitment__info__header {
@@ -33,7 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 0.75;
+  flex: 0.70;
   margin: 30px 0px;
 }
 
@@ -46,6 +48,7 @@
   .recruitment__info {
     font-weight: 300;
     font-size: medium;
+    width: 90%
   }
 }
 @media (max-width: 720px) {
