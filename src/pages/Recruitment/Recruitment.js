@@ -10,17 +10,15 @@ const RecruitmentPage = (props) => {
             WELCOME TO INNOVATION PARADISE!
           </p>
           <p className="recruitment__info">
-            Wanna join the hustlers to unlock your true potential as an
-            innovator, engineer, coder, developer, designer, content writer,
-            manager or literally anything you could imagine? Apply to become a
-            part of the most exclusive pioneers in engineering and its expanded
-            sectors with IH!
+            Innovators Hub is working on building an Admission Processes Automation System, an industrial project from MIT - WPU, and
+            is accepting applications for the same. Fill the form attested below before Jan 13th, 2022 to be considered eligible for
+            the same.
           </p>
         </div>
         <div className="recruitment__form__div">
           <iframe
             title='RecruitmentForm'
-            src="https://docs.google.com/forms/d/e/1FAIpQLSc3WV9k4VaMtSKDcmcaDqcRweYhK9sP5Aea0CarXqBwYtzB-w/viewform?embedded=true"
+            src="https://forms.gle/vUPRj1uAdecHgXez6"
             width="50%"
             height="100%"
             frameborder="0"

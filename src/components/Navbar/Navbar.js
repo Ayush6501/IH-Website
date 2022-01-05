@@ -22,7 +22,7 @@ const Navbar = (props) => {
         </div>
       </div>
       <div className='recruit_cta'>
-          <Link to='recruitment'><button className='cta_button'>Join Us</button></Link>
+          <Link to='recruitment'><button className='cta_button'>Recruitment</button></Link>
       </div>
       <Hamburger clicked = {props.hamburgerClicked} />
     </header>
