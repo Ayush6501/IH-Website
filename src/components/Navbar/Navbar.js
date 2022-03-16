@@ -13,18 +13,20 @@ const Navbar = (props) => {
       </div>
       <div className="navigation__items">
         <div className="navigation__item">
-          <Link to="/ourteam">Team</Link>
-          <Link to="/achievements">Achievements</Link>
           <Link to="/about">About</Link>
-          <Link to="/ideas">Ideas</Link>
+          <Link to="/achievements">Achievements</Link>
           <Link to="/events">Events</Link>
           <Link to="/projects">Projects</Link>
+          <Link to="/ideas">Ideas</Link>
+          <Link to="/ourteam">Team</Link>
         </div>
       </div>
-      <div className='recruit_cta'>
-          <Link to='recruitment'><button className='cta_button'>Recruitment</button></Link>
+      <div className="recruit_cta">
+        <Link to="recruitment">
+          <button className="cta_button">Recruitment</button>
+        </Link>
       </div>
-      <Hamburger clicked = {props.hamburgerClicked} />
+      <Hamburger clicked={props.hamburgerClicked} />
     </header>
   );
 };

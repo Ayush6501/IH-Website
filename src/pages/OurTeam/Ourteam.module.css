@@ -232,14 +232,20 @@
 }
 
 .TeamWrapper .TeamCard{
-  float:left;
+  float: left;
   position: relative;
+  height: 250px;
+  width: 250px;
+  overflow: hidden;
+  margin: 15px;
+  border-radius: 50%;
 }
 
 .TeamCard .MemberImage
 {
-  height: 250px;
+  height: 100%;
   width: 250px;
+  display: inline;
   object-fit: fill;
 }
 
@@ -322,7 +328,7 @@
   position: relative;
   height: 30px;
   width: 30px;
-  margin-right: 10px;
+  margin-right: 35px;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);

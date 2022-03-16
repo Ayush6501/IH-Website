@@ -1,6 +1,6 @@
 .main_card_container {
-    width: 25vw;
-    height: 30vw;
+    width: 20vw;
+    height: 25vw;
     overflow: hidden;
     border-radius: 1vw;
     box-shadow: 0px 3px 3.2px;
@@ -47,8 +47,8 @@
 .card_detail_para {
     overflow: hidden;
     margin:0;
-    padding: 1vw;
-    font-size: 1.4vw;
+    padding: 0.6vw;
+    font-size: 1vw;
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -56,8 +56,8 @@
 
 .card_heading {
     color:#000;
-    padding: 1.5vw;
-    font-size: 2vw;
+    padding: 1.2vw;
+    font-size: 1.4vw;
     font-family: "Poppins", sans-serif;
     font-weight: bold;
 }

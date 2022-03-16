@@ -36,7 +36,7 @@ const Footer = () => {
                               </Text>
                           </ContactInfo>
                           <ContactInfo>
-                              <img src="/assets/logos/logo-discord.svg" alt="" onClick={()=>window.open("https://discord.gg/bHZRrnZ992")}/>
+                              <img src="/assets/logos/logo-discord.svg" alt="" onClick={()=>window.open("https://discord.gg/bHZRrnZ992")} style={{cursor: 'pointer'}}/>
                               <Text>
                                   <h3>Ionosphere</h3>
                                   <p>Join Our Server</p>
@@ -44,7 +44,7 @@ const Footer = () => {
                               </Text>
                           </ContactInfo>
                           <ContactInfo>
-                              <img src="/assets/logos/mail-outline.svg" alt=""/>
+                              <a href="mailto:innovatorshubmit@gmail.com"><img src="/assets/logos/mail-outline.svg" alt=""/></a>
                               <Text>
                                   <h3>innovatorshubmit<br />@gmail.com</h3>
                                   <p>Contact Us Here</p>
@@ -347,7 +347,7 @@ const QuoteContainer = styled.div`
 `;
 
 const Quote = styled.h1`
-  font-family: 'Rock Salt', cursive;
+  font-family: 'Poppins', cursive;
   font-size: 2.5em;
   margin: 0;
   color: #ffee00;
