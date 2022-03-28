@@ -41,12 +41,6 @@ class Slider extends React.Component{
 
     return(
     <div className={styles.Slider} style={sliderStyle}>
-    <div className={styles.SliderButtonleft} onClick={()=>{clearInterval(this.intervalhandler);this.slider(-1)}}>
-    {"<"}
-    </div>
-    <div className={styles.SliderButtonright} onClick={()=>{clearInterval(this.intervalhandler);this.slider(1)}}>
-    {">"}
-    </div>
     </div>);
   }
 }

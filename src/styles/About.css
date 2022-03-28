@@ -2,6 +2,28 @@
     color: hsl(229, 6%, 66%);
 }
 
+
+.subheading
+{
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+  vertical-align: top;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: black;
+    font-size: 1.6em;
+    margin-bottom: 0;
+}
+
 .box {
     border-radius: 5px;
     box-shadow: 0px 30px 40px -20px hsl(229, 6%, 66%);

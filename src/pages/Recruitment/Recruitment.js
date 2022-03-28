@@ -10,12 +10,10 @@ const RecruitmentPage = (props) => {
             WELCOME TO INNOVATION PARADISE!
           </p>
           <p className="recruitment__info">
-            Innovators Hub is working on building an Admission Processes Automation System, an industrial project from MIT - WPU, and
-            is accepting applications for the same. Fill the form attested below before Jan 13th, 2022 to be considered eligible for
-            the same.
+            Innovators Hub keeps working on different projects throughtout the year and takes recruitment biyearly, all club and project recruitment application forms will be displayed on this page so do keep checking regularly!
           </p>
         </div>
-        <div className="recruitment__form__div">
+        {/* <div className="recruitment__form__div">
           <iframe
             title='RecruitmentForm'
             src="https://docs.google.com/forms/d/e/1FAIpQLScU_pwx4LA_MdIN5LfHMzEK3D_6OvZi1WqAuy-r6AyAQuMCmg/viewform?embedded=true"
@@ -27,7 +25,7 @@ const RecruitmentPage = (props) => {
           >
             Loading…
           </iframe>
-        </div>
+        </div> */}
       </div>
     </>
   );

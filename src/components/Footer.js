@@ -44,9 +44,9 @@ const Footer = () => {
                               </Text>
                           </ContactInfo>
                           <ContactInfo>
-                              <a href="mailto:innovatorshubmit@gmail.com"><img src="/assets/logos/mail-outline.svg" alt=""/></a>
+                              <a href="mailto:innovatorshub@mitwpu.edu.in"><img src="/assets/logos/mail-outline.svg" alt=""/></a>
                               <Text>
-                                  <h3>innovatorshubmit<br />@gmail.com</h3>
+                                  <h3>Email</h3>
                                   <p>Contact Us Here</p>
                                   <p> </p>
                               </Text>

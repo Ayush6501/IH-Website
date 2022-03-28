@@ -54,6 +54,22 @@ const AboutPage = () => {
                         </div>
                     </div>
                 </InfoBox>
+                <br/>
+                <h2 className="heading">Our CSE Team</h2>
+                <p className="subheading">Our Computer Science (CSE) department is composed of the best up-and-coming coders and developers across various technical domains like AI/ML, Data Science, Web development, App development, Cybersecurity and much more.</p>
+                
+                <h2 className="heading">Our EnTC Team</h2>
+                <p className="subheading">Our Electronics and Electrical department nourishes and develops practical projects requiring intricate skills for which they train budding recruits to achieve their dreams of implementing their theoretical knowledge through the aid of a capable team.</p>
+                
+                <h2 className="heading">Our Mech Team</h2>
+                <p className="subheading">Our Mechanical team works on multiple inter-disciplinary projects which need developing, designing, building and testing through the basics of physics, mathematics and material knowledge to create solutions to a range of problem statements.</p>
+                
+                <h2 className="heading">Our Non-Tech Team</h2>
+                <p className="subheading">Our Non-tech team has the most capable content writers, managers, designers and talented individuals who incubate and promote educational and enlightening events alongside handling promotions and finances for the club.</p>
+                
+                <h2 className="heading">Our Design Team</h2>
+                <p className="subheading">Our Non-tech team has the most capable content writers, managers, designers and talented individuals who incubate and promote educational and enlightening events alongside handling promotions and finances for the club.</p>
+                <br/>
                 <Footer />
             </Parent>
         </>

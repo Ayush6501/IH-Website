@@ -113,7 +113,7 @@ input:focus {
   display: grid;
   place-items: center;
   background-color: #474444;
-  height: 100vh;
+  height: 70vh;
   width: 100%;
   font-family: "Poppins", sans-serif;
 }

@@ -130,16 +130,7 @@ export default function IdeasModel(props) {
         <Cloud count={8} radius={20} />
         <TrackballControls />
 
-        <Html zIndexRange={[150, 0]}>
-          <div className="scrollClicker">
-            <h3
-              onClick={props.scroll}
-              style={{ color: "white", cursor: "pointer" }}
-            >
-              Click Here To Scroll
-            </h3>
-          </div>
-        </Html>
+        
         <Html
           style={{
             position: "absolute",
