@@ -24,6 +24,7 @@
 #Main_Item_Container {
   display: flex;
   flex-wrap: wrap;
+  overflow-x: hidden;
   justify-content: center;
 }
 
@@ -215,7 +216,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-right: 100px;
+    margin:auto;
   }
   .card_detail_description {
     font-size: 2vw;
@@ -224,6 +225,7 @@
     font-size: 5vh;
     padding: 1vh;
     margin-right: 30px;
+    display:none;
   }
 }
 @media only screen and (max-width: 430px) {
@@ -237,7 +239,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-right: 150px;
+    margin:auto;
   }
   .card_detail_title {
     font-size: 3.7vw;
@@ -252,5 +254,6 @@
     font-size: 4vh;
     padding: 1vh;
     margin-right: 30px;
+    display: none;
   }
 }
