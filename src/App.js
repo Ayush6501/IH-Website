@@ -11,6 +11,7 @@ import SideDrawer from "./components/Navbar/SideDrawer/SideDrawer";
 import Gallery from "./pages/Gallery/Gallery";
 import OurProjects from "./pages/OurProjects/Projects"
 import { useState } from "react";
+import Alumini from "./pages/Alumini/alumini";
 import ScrollToTop from './components/ScrollToTop';
 import './styles/landing.css';
 
@@ -60,6 +61,11 @@ function App() {
               <OurProjects/>
               <Footer />
             </Route>
+            <Route path="/alumini" exact>
+              <Alumini/>
+              <Footer />
+            </Route>
+            
             <Route path="/*" exact>
               <HomePage />
               <Footer />

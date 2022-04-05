@@ -29,8 +29,8 @@ function Projects(props) {
 
         <Box sx={{position:"relative",left:0,top:0,width:"100%",height:"3rem",color:"#000"}}></Box>
 
-        <Container sx={{display:"grid",marginTop:"2rem",gap:14,justifyItems:"center",gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',width:"70vw"}}>
-              {data.map((i)=><ItemMaker key={i} arg={i}/>)}
+        <Container sx={{display:"grid",marginTop:"2rem",gap:14,justifyItems:"center",gridTemplateColumns: 'repeat(3, minmax(200px, 1fr))',alignItems:"start",width:"70vw"}}>
+              {data.map((i)=><ItemMaker key={i['Number']} arg={i}/>)}
         </Container>
         <Box sx={{position:"relative",left:0,top:0,width:"100%",height:"5rem",color:"#000"}}></Box>
         </div>
@@ -44,7 +44,7 @@ export default Projects;
 let data = [
   {
     Number: 0,
-    Title: "Project CoBAND-19",
+    Title: "CoBAND-19",
     Desc: "This project aimed to tackle the issue of managing students after college reopening by tracking vitals of students with the help of this band that will actually regulate the students with tampered or unstable vitals.",
     img:"https://i.imgur.com/RjM5FGp.jpg",
   },
@@ -104,13 +104,13 @@ let data = [
   },
   {
     Number: 10,
-    Title: "Robotic Arm-E Yantra",
+    Title: "E Yantra",
     Desc: "Two Robotic arms were simulated in an automated warehouse setting with the help of ROS, Robotic Perception, Robotic Manipulation, IoT, Python and Google App Scripting. One was used to mobilise packages from the required shelf and placing them on the conveyor. The other was used to sort boxes according to their destination.",
     img:"https://i.imgur.com/gk522Gr.jpg",
   },
   {
     Number: 11,
-    Title: "Project Younion",
+    Title: "Younion",
     Desc: "Done by the First-Year students of our club, YOUnion was devised as a platform for professional connections catering to students and budding enthusiasts of various fields to register and scout people to do work on practical professional assignments and projects.",
     img:"https://i.imgur.com/c4hoBia.jpg",
   },
