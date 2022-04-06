@@ -65,7 +65,6 @@ function App() {
               <Alumini/>
               <Footer />
             </Route>
-            
             <Route path="/*" exact>
               <HomePage />
               <Footer />

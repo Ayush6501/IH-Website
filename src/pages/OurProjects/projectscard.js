@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 
 export default function ItemMaker(props) {
 
-  const [expanded,setexpanded]=useState(false);
+  const [expanded, setexpanded]=useState(false);
 
   function handleExpandClick()
   {
@@ -21,7 +21,7 @@ export default function ItemMaker(props) {
         sx={{marginBottom:"1rem"}}
         image={props.arg.img}
         />
-          
+
           <Typography variant="h5" align="center" marginBottom={"2rem"} fontWeight="bold" fontFamily={"poppins"}>{props.arg.Title}</Typography>
 
           <Button
@@ -33,7 +33,7 @@ export default function ItemMaker(props) {
             <p>
                 {props.arg.Desc}
             </p>
-          </Collapse>   
+          </Collapse>
     </Box>
   );
 }
