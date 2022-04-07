@@ -16,12 +16,11 @@ const TeamCollage = (props) => {
                     {props.datafetch.map((i) => (
                         <TeamMember
                             key={i.index}
-                            imgsrc={i["Image ( min : 600 x 600 pixels )"]}
-                            name={i["Full Name"]}
-                            desig={i["Position"]}
-                            dept={i["Department(s)"]}
-                            linkedin={i["LinkedIn"]}
-                            github={i["GitHub ( mandatory for CSE )"]} />))}
+                            imgsrc={i["Img"]}
+                            name={i["Name"]}
+                            desig={i["Year"]}
+                            dept={i["Dept"]}
+                            linkedin={i["Linkedin"]}/>))}
                 </div>
             </div>
         );
@@ -33,11 +32,27 @@ export {TeamCollage};
 function TeamMember(props) {
     const imgsrc = props.imgsrc;
     const name = props.name;
-    const desig = props.desig;
+    let desig = props.desig;
     const linkedin = props.linkedin;
     const dept=props.dept;
 
-    console.log(imgsrc, name, desig, dept);
+    switch(desig)
+    {
+        case 1:
+            desig="First Year";
+            break;
+        case 2:
+            desig="Second Year";
+            break;
+        case 3:
+            desig="Third Year";
+            break;
+        case 4:
+            desig="Fourth Year";
+            break;
+    }
+
+    //console.log(imgsrc, name, desig, dept);
 
     return (
         <div className={styles.TeamCard}>
