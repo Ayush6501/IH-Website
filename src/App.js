@@ -14,6 +14,7 @@ import { useState } from "react";
 import Alumini from "./pages/Alumini/alumini";
 import ScrollToTop from './components/ScrollToTop';
 import './styles/landing.css';
+import AlumniMember from "./pages/AlumniMembers";
 
 function App() {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
@@ -61,8 +62,12 @@ function App() {
               <OurProjects/>
               <Footer />
             </Route>
-            <Route path="/alumini" exact>
+            <Route path="/alumni" exact>
               <Alumini/>
+              <Footer />
+            </Route>
+            <Route path="/alumni/:name" exact>
+              <AlumniMember />
               <Footer />
             </Route>
             <Route path="/*" exact>

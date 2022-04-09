@@ -19,11 +19,11 @@ const Navbar = (props) => {
           <Link to="/projects">Projects</Link>
           <Link to="/ideas">Ideas</Link>
           <Link to="/ourteam">Team</Link>
-          <Link to="/alumini">Alumini</Link>
+          <Link to="/alumni">Alumini</Link>
         </div>
       </div>
       <div className="recruit_cta">
-        <Link to="recruitment">
+        <Link to="/recruitment">
           <button className="cta_button">Recruitment</button>
         </Link>
       </div>
