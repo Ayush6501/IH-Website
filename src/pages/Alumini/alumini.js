@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import styles from './alumini.module.css'
 import {useRef, useEffect} from 'react';
-import { useLocation } from "react-router-dom";
-import Divider from '@mui/material/Divider';
+import { useLocation} from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { Box,Typography } from '@mui/material';
 
 function Alumini(props){
     const ref = useRef();
@@ -16,11 +17,13 @@ function Alumini(props){
 
     return (<div className={styles.Main} ref={ref}>
 
-        <Parent>
-        <HeaderCard>
-            <h1>OUR ALUMINI</h1>
-        </HeaderCard>
-        </Parent>
+        <img src="alumni.jpg" 
+          style={{position:"relative",objectFit:"cover",top:0,left:0,height:"70vh",width:"100vw",marginBottom:"-14rem"}}
+        ></img>
+
+        <Box sx={{position:"relative"}}>
+          <Typography variant="h2" fontFamily={"Poppins"} fontWeight={"bold"} color="white" align="center" marginTop="8rem" marginBottom="12rem">OUR ALUMNI</Typography>
+        </Box>
 
         <div className={styles.DepartmentButtonContainer}>
             <span className={styles.DepartmentButton}>
@@ -87,9 +90,10 @@ function TeamMember(props) {
     let desig = props.desig;
     let linkedin = props.linkedin;
     let dept=props.dept;
+    let lnk="/alumini/"+name.replace(" ","").toLowerCase();
 
     return (
-      <div className={styles.TeamCard} onClick={()=>alert("clicked")}>
+      <div className={styles.TeamCard}>
         <img src={imgsrc} alt="Error" className={styles.MemberImage} />
         <div className={styles.MemberOverlay}>
           <p className={styles.MemberRank}>{desig}</p>
@@ -98,7 +102,8 @@ function TeamMember(props) {
         </div>
 
         <div className={styles.MemberName}>{name}</div>
-      </div>);
+      </div>
+      );
 }
 
 

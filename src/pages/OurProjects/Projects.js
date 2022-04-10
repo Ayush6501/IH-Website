@@ -18,13 +18,13 @@ function Projects(props) {
   return (
     <>
         <div id="Main_container" ref={ref} className="Project_container">
-        <img src="background.png"
-          style={{position:"relative",top:0,left:0,height:"70vh",width:"100vw",marginBottom:"-16rem"}}
+        <img src="background.png" 
+          style={{position:"relative",objectFit:"cover",top:0,left:0,height:"70vh",width:"100vw",marginBottom:"-16rem"}}
         ></img>
 
         <Box sx={{position:"relative",left:"10vw",maxWidth:"50%"}}>
-          <Typography variant="h3" color="black" marginBottom="1rem">OUR PROJECTS</Typography>
-          <Typography variant="h6" color="black">Following are some of our projects lorem ipsum ur projects lorem ipsum</Typography>
+          <Typography variant="h3" color="white" fontFamily={"Poppins"} fontWeight={"bold"} marginBottom="1rem">OUR PROJECTS</Typography>
+          <Typography variant="h6" color="white">Innovators hub has completed the following projects since it's conception.</Typography>
         </Box>
 
         <Box sx={{position:"relative",left:0,top:0,width:"100%",height:"3rem",color:"#000"}}></Box>

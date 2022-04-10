@@ -19,7 +19,7 @@ const Navbar = (props) => {
           <Link to="/projects">Projects</Link>
           <Link to="/ideas">Ideas</Link>
           <Link to="/ourteam">Team</Link>
-          <Link to="/alumni">Alumini</Link>
+          <Link to="/alumni">Alumni</Link>
         </div>
       </div>
       <div className="recruit_cta">

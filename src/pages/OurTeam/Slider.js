@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Ourteam.module.css';
-
+import { Box,Typography } from '@mui/material';
 
 class Slider extends React.Component{
   constructor(props)
@@ -41,6 +41,9 @@ class Slider extends React.Component{
 
     return(
     <div className={styles.Slider} style={sliderStyle}>
+      <Box sx={{position:"relative",backgroundColor:"rgba(0,0,0,0.5)"}}>
+          <Typography variant="h3" fontFamily={"Poppins"} fontWeight={"bold"} color="white" align="center" marginTop="8rem" marginBottom="12rem">MEET OUR TEAM</Typography>
+      </Box>
     </div>);
   }
 }
