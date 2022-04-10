@@ -4,6 +4,7 @@ import {GalleryStore,AchievementStore} from '../../store/GalleryStore.js';
 import Card from './Cards.js';
 import {useRef, useEffect} from 'react';
 import { useLocation } from "react-router-dom";
+import { Box,Typography } from '@mui/material';
 
 
 function Gallery(){
@@ -19,14 +20,15 @@ function Gallery(){
 
     return (<div className={styles.Main} ref={ref}>
 
-      <p className={styles.TitleContainer}>
-        <span className={styles.Title}>
-          ACHIEVEMENTS
-        </span>
-      </p>
+        <img src="https://i.imgur.com/Yyney65.jpg"
+          style={{position:"relative",objectFit:"cover",top:0,left:0,height:"70vh",width:"100vw",marginBottom:"-16rem"}}
+        ></img>
 
-      <p className={styles.subheading}>Over the short span of 3 years, our club has excelled in many fields and achieved tremendous feats, and is still continuing to reach heights. Some of our many major achievements are listed below :</p>
-      <br />
+        <Box sx={{position:"relative",left:"10vw",maxWidth:"50%"}}>
+          <Typography variant="h3" color="white" fontFamily={"Poppins"} fontWeight={"bold"} marginBottom="1rem">OUR ACHIEVEMENTS</Typography>
+          <Typography variant="subheading" color="white">Over the short span of 3 years, our club has excelled in many fields and achieved tremendous feats, and is still continuing to reach heights. Some of our many major achievements are listed below</Typography>
+        </Box>
+
 
       <div className={styles.TeamWrapper}>
       {AchievementStore.map((i) => <Card img={i.img} txt={i.txt} title={i.title}/>)}

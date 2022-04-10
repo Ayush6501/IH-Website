@@ -1,10 +1,23 @@
 .Main{
   background-color: #fff;
-  padding-top:9vh;
   left:0;
   display: flex;
   flex-direction:column;
 }
+
+.Slider{
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  flex-direction:column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:50vh;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
 
 .TitleContainer{
   display: flex;

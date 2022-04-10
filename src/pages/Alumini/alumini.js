@@ -18,7 +18,7 @@ function Alumini(props){
     return (<div className={styles.Main} ref={ref}>
 
         <img src="alumni.jpg" 
-          style={{position:"relative",objectFit:"cover",top:0,left:0,height:"70vh",width:"100vw",marginBottom:"-14rem"}}
+          style={{position:"relative",objectFit:"cover",top:0,left:0,height:"60vh",width:"100vw",marginBottom:"-14rem"}}
         ></img>
 
         <Box sx={{position:"relative"}}>
