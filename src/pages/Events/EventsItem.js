@@ -41,14 +41,14 @@ let arr = [
   {
     Number: 5,
     Title: "Youth Day",
-    Desc: "On the eve of International Youth Day, the club decided to collaborate with the Rotaract Club of Bombay Airport (RCBA) for a month-long drive that could garner funds for charities to support frontline COVID workers in this dreadful pandemic by supplementing these groups with the requisite funds all across the country. We started this with the organization of a free webinar with the best collection of speakers ranging from Mr. Harish Uthaya Kumar and Mr. Shreyas Sancheti ( Cofounders of Blue Learn and Huloq.inc ) as well as Ms Radhika Bajoria ( Next Gen Awardee, LinkedIn influencer, TedX Speaker ) as the correct representation of the power of youth all across the world and educated our 150+ attendees on how they can shape themselves as responsible leaders and change makers.",
+    Desc: "On the eve of International Youth Day, the club decided to collaborate with the Rotaract Club of Bombay Airport (RCBA) for a month-long drive that could garner funds for charities to support frontline COVID workers in this dreadful pandemic by supplementing these groups with the requisite funds all across the country.",
     img: "https://i.imgur.com/F2cxC8y.jpg",
     Participants: "1000",
   },
   {
     Number: 6,
     Title: "Programmers Day",
-    Desc: "On the penultimate day of the one-week long drive of events under programmers week which also saw a LinkedIn workshop and a domain-confusion bootcamp, the club had the privilege of having the very founder of ML India : Ms. Priyanka Kasture as the speaker. She advocated machine learning and its importance and debunked the myths from facts associating to a multitude of topics surrounding the field.The club successfully raised thousands of rupees during the events under Programmers Week while establishing a strong sense of community of like minded individuals.",
+    Desc: "On the penultimate day of the one-week long drive of events under programmers week which also saw a LinkedIn workshop and a domain-confusion bootcamp, the club had the privilege of having the very founder of ML India : Ms. Priyanka Kasture as the speaker.",
     img: "https://i.imgur.com/xvQ1HWr.jpg",
     Participants: "150",
   },
