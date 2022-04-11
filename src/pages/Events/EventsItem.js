@@ -6,7 +6,6 @@ let arr = [
   {
     Number: 0,
     Title: "Animatia - 2018",
-    // Desc: "Intricate technical topics which are related to engineering fields are introduced, taught and explored under a stipulated time by leading industry experts. Some of our technical workshops include :\n\na)CNN and Artificial Intelligence\nb)Stock market prediction using AI/ML\nc)Git and Github Webinar\nd)Animatia: Workshop on Animation and Designing",
     Desc: "Design Workshop",
     img: "https://i.imgur.com/7IcrQFP.jpg",
     Participants: "100",
@@ -14,19 +13,14 @@ let arr = [
   {
     Number: 1,
     Title: "Inception talks",
-    // Desc: "Workshops fostering creativity, lateral thinking and promoting social causes are also conducted by us. Some of our major ventures include :\n\na)Take a chance day: The event took up the challenge of encouraging people to take that first important step towards every task to bring about changes right from the roots.\n\nb)Colloquium: The event focused on how to make the most of one’s college experience by offering them a comprehensive overview of the four years of college alongside the much needed career do’s and don'ts.",
     Desc: "Our annual event witnesses founders of various firms and organizations to talk about their journey and experiences. Both Inception talks I and II have been acquiring immense interest and traction with new and exciting speakers tuning in to educate and enlighten interested students to pave a new way to success.",
-    // img: "https://i.imgur.com/hNgE2Yq.jpg",
     img: "https://i.imgur.com/F9OZE9N.jpg",
     Participants: "100",
   },
   {
     Number: 2,
-    // Title: "Competitions",
     Title: "Inception 2.0",
-    // Desc: "a)The “RIP” competition is organized for the first-year students participating in the 'Rural Immersion Program' of MIT. They are asked to list the main challenges faced by the people of the area and plausible solutions for the same. Winners are given prizes and an opportunity to develop a project with the club.\n\nb)We are planning more platforms like annual hackathons and coding contests for everyone to be able to showcase their skills. Stay tuned on our social media for more updates!",
     Desc: "Our annual event witnesses founders of various firms and organizations to talk about their journey and experiences. Both Inception talks I and II have been acquiring immense interest and traction with new and exciting speakers tuning in to educate and enlighten interested students to pave a new way to success.",
-    // img: "https://i.imgur.com/1NguEV2.jpg",
     img: "https://i.imgur.com/GQKYOan.jpg",
     Participants: "200",
   },
