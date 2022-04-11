@@ -18,6 +18,9 @@ export default function Card(props) {
             <p className={styles.card_detail_para}>
               {props.txt}
             </p>
+            {props.Participants ? <p className={styles.card_detail_para}>
+              Participants: {props.Participants}
+            </p> : null}
           </div>
         </div>
       </div>
