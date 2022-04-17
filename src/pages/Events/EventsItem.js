@@ -97,7 +97,7 @@ let arr = [
     Number: 13,
     Title: "Artificial Intelligence and Image processing",
     Desc: "Seminar on Artificial Intelligence and Image processing",
-    img: "https://i.imgur.com/rLyDOZj.jpg",
+    img: "https://i.imgur.com/4hPu1Aj.jpg",
     Participants: "150",
   },
 ];

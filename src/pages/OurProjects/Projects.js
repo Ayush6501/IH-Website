@@ -4,10 +4,17 @@ import { useLocation } from "react-router-dom";
 import {useRef, useEffect} from 'react';
 import ItemMaker from "./projectscard";
 import { Container,Box, Typography} from "@mui/material";
+import Cards from "../Gallery/Cards"
 
 function Projects(props) {
     const routePath = useLocation();
     const ref = useRef();
+
+    let bgimagestyle={position:"relative",objectFit:"cover",top:0,left:0,height:"70vh",width:"100vw",marginBottom:"-16rem"};
+
+    if(window.innerWidth<1024){
+      bgimagestyle={position:"relative",objectFit:"cover",top:0,left:0,height:"100vh",width:"100vw",marginBottom:"-30rem"};
+    }
 
     useEffect(() => {
         if (routePath.pathname === "/projects") {
@@ -17,9 +24,9 @@ function Projects(props) {
 
   return (
     <>
-        <div id="Main_container" ref={ref} className="Project_container">
+      <div id="Main_container" ref={ref} className="Project_container">
         <img src="background.png" 
-          style={{position:"relative",objectFit:"cover",top:0,left:0,height:"70vh",width:"100vw",marginBottom:"-16rem"}}
+          style={bgimagestyle}
         ></img>
 
         <Box sx={{position:"relative",left:"10vw",maxWidth:"50%"}}>
@@ -29,11 +36,21 @@ function Projects(props) {
 
         <Box sx={{position:"relative",left:0,top:0,width:"100%",height:"3rem",color:"#000"}}></Box>
 
-        <Container sx={{display:"grid",marginTop:"2rem",gap:14,justifyItems:"center",gridTemplateColumns: 'repeat(3, minmax(200px, 1fr))',alignItems:"start",width:"70vw"}}>
-              {data.map((i)=><ItemMaker key={i['Number']} arg={i}/>)}
-        </Container>
-        <Box sx={{position:"relative",left:0,top:0,width:"100%",height:"5rem",color:"#000"}}></Box>
+        <div id="Main_Item_Container">
+        {data.map((element, i) => {
+          return (
+            <>
+              <Cards
+                key={i}
+                img={element.img}
+                title={element.Title}
+                txt={element.Desc}
+              />
+            </>
+          );
+        })}
         </div>
+      </div>
     </>
   );
 };

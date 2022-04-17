@@ -80,7 +80,7 @@ const AchievementStore = [
   {
     img: "https://i.imgur.com/2Q2Znvg.jpg",
     title: "2nd Place in MSIT's New Normal Ideathon",
-    txt: "Project desc here",
+    txt: "",
   },
   {
     img: "https://i.imgur.com/ZERShbS.jpg",
@@ -115,37 +115,37 @@ const AchievementStore = [
   {
     img: "https://i.imgur.com/wVYJ8qY.jpg",
     title: "Final Round in IBM Reimagine Future Hackathon - Team Anthropology",
-    txt: "Project desc here",
+    txt: "",
   },
   {
     img: "https://i.imgur.com/wVYJ8qY.jpg",
     title: "Final Round in IBM Reimagine Future Hackathon - The pony place",
-    txt: "Project desc here",
+    txt: "",
   },
   {
     img: "https://i.imgur.com/ihQcL5I.jpg",
     title: "Top 26 teams in Smart Homes Hacakthon Resideo 21'",
-    txt: "Project desc here",
+    txt: "",
   },
   {
     img: "https://i.imgur.com/va9LGrS.jpg",
     title: "1st Place secured by Rushikesh Patade in Code Of Duty - GDSC 2021",
-    txt: "Project desc here",
+    txt: "",
   },
   {
     img: "https://i.imgur.com/va9LGrS.jpg",
     title: "3rd Place secured by Viswas Haridas in Code Of Duty - GDSC 2021",
-    txt: "Project desc here",
+    txt: "",
   },
   {
     img: "https://i.imgur.com/va9LGrS.jpg",
     title: "4th Place secured by Muskan Singh in Code Of Duty - GDSC 2021",
-    txt: "Project desc here",
+    txt: "",
   },
   {
     img: "https://i.imgur.com/ygDuCdm.jpg",
     title: "Top 20 teams in TDRA ICT Hackathon 2021",
-    txt: "Project desc here",
+    txt: "",
   },
   {
     img: "https://i.imgur.com/DYLtkvl.jpg",
@@ -161,17 +161,17 @@ const AchievementStore = [
   {
     img: "https://i.imgur.com/Ys9lbmV.jpg",
     title: "Special mention in E-Yantra Hackathon",
-    txt: "Project desc here",
+    txt: "",
   },
   {
     img: "https://i.imgur.com/i8dm1LX.jpg",
     title: "1st Place in Kotak Reign Hackathon",
-    txt: "Project desc here",
+    txt: "",
   },
   {
     img: "https://i.imgur.com/i8dm1LX.jpg",
     title: "2nd Place in Kotak Reign Hackathon",
-    txt: "Project desc here",
+    txt: "",
   },
   {
     img: "https://i.imgur.com/i8dm1LX.jpg",
@@ -181,17 +181,17 @@ const AchievementStore = [
   {
     img: "https://i.imgur.com/hfYJfr6.jpg",
     title: "Top 26 in Tibco IOT Hackathon",
-    txt: "Project desc here",
+    txt: "",
   },
   {
     img: "https://i.imgur.com/68zSPwC.jpg",
     title: "Reached 2nd Round in Y-Hills Hackathon",
-    txt: "Project desc here",
+    txt: "",
   },
   {
     img: "https://i.imgur.com/xFcsJle.jpg",
     title: "6th Place in AR Atelier Hackathon",
-    txt: "Project desc here",
+    txt: "",
   },
 ];
 

@@ -1,8 +1,41 @@
+@media only screen and (max-width: 1024px) {
+  .mainimage{
+    height: 100vh;
+    margin-bottom: -30rem;
+  }
+
+  .headerContainer{
+    max-width: 100%;
+    left:0;
+  }
+
+  .TitleContainer{
+    margin: 0;
+    text-align: center;
+    margin:auto;
+  }
+}
+
+.headerContainer{
+  position:"relative";left:"10vw";max-width:"50%";margin: bottom -10rem;
+}
+
+.mainimage{
+  position:"relative";
+  object-fit:"cover";
+  top:0;
+  left:0;
+  height:"70vh";
+  width:"100vw";
+  margin-bottom:"-16rem";
+}
+
 .Main{
   background-color: #fff;
   left:0;
   display: flex;
   flex-direction:column;
+  overflow: hidden;
 }
 
 .Slider{
@@ -20,16 +53,8 @@
 
 
 .TitleContainer{
-  display: flex;
-  flex-direction:column;
   position: relative;
-  text-align: center;
-  justify-items: center;
-  height:20%;
-  font-size: 80px;
-  font-weight: bold;
   font-family: "Poppins", sans-serif;
-  margin-top:4rem;
   margin-bottom:2rem;
 }
 

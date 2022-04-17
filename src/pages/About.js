@@ -68,7 +68,7 @@ const AboutPage = () => {
                 <p className="subheading">Our Non-tech team has the most capable content writers, managers, designers and talented individuals who incubate and promote educational and enlightening events alongside handling promotions and finances for the club.</p>
                 
                 <h2 className="heading">Our Design Team</h2>
-                <p className="subheading">Our Non-tech team has the most capable content writers, managers, designers and talented individuals who incubate and promote educational and enlightening events alongside handling promotions and finances for the club.</p>
+                <p className="subheading">Our design team consists of diversely artistic people who help us showcase our ideas in the best creative and strategic way possible and bring them to life through eye catching graphics, imagery and aesthetics.</p>
                 <br/>
                 <Footer />
             </Parent>

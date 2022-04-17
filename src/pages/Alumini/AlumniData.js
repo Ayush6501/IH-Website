@@ -27,7 +27,7 @@ const Alumni = [
         "Contact Number": 9850951013,
         "Email ID": "phadtare.mohit@gmail.com",
         "Linkedin": "https://www.linkedin.com/in/mohit-phadtare/",
-        "Image": "https://i.imgur.com/2M9jJh2.png"
+        "Image": "https://i.imgur.com/ps3EXLZ.png"
     },
     {
         "Sr No.": 3,
@@ -72,7 +72,7 @@ const Alumni = [
         "Contact Number": 9871005589,
         "Email ID": "swarad2000@gmail.com",
         "Linkedin": "https://www.linkedin.com/in/swarad-gat-79b507198/",
-        "Image": "https://i.imgur.com/zd17x9c.png"
+        "Image": "https://i.imgur.com/pvEN6jo.png"
     },
     {
         "Sr No.": 6,
@@ -87,7 +87,7 @@ const Alumni = [
         "Contact Number": 9168421264,
         "Email ID": "purirajat.rp@gmail.com",
         "Linkedin": "https://www.linkedin.com/in/rajat-puri-78196a1b2/",
-        "Image": "https://i.imgur.com/n3o6HSK.png"
+        "Image": "https://i.imgur.com/hxNCnwJ.png"
     },
     {
         "Sr No.": 7,
@@ -102,7 +102,7 @@ const Alumni = [
         "Contact Number": 9766624249,
         "Email ID": "varadc2000@gmail.com",
         "Linkedin": "https://www.linkedin.com/in/varad-choudhari-0a6803180/",
-        "Image": "https://i.imgur.com/ZN41Adi.png"
+        "Image": "https://i.imgur.com/wFBAhv9.png"
     },
     {
         "Sr No.": 8,
@@ -252,7 +252,7 @@ const Alumni = [
         "Contact Number": 7756853007,
         "Email ID": "mohit.patro2000@gmail.com",
         "Linkedin": "https://www.linkedin.com/in/mohit-patro2903/",
-        "Image": "https://i.imgur.com/gi5i5W6.png"
+        "Image": "https://i.imgur.com/2k7L0Oz.png"
     },
     {
         "Sr No.": 18,

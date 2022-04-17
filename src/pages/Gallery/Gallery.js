@@ -11,6 +11,17 @@ function Gallery(){
     const ref = useRef();
     const routePath = useLocation();
 
+    let imgstyle={position:"relative",objectFit:"cover",top:0,left:0,height:"70vh",width:"100vw",marginBottom:"-16rem"};
+
+    let headerstyle={position:"relative",left:"10vw",maxWidth:"50%"};
+
+    if(window.innerWidth<1024)
+    {
+      imgstyle={position:"relative",objectFit:"cover",top:0,left:0,height:"100vh",width:"100vw",marginBottom:"-30rem"};
+
+      headerstyle={position:"relative",margin:"auto",width:"90%",wordWrap:"break-word"};
+    }
+
     useEffect(() => {
       
         if (routePath.pathname === "/achievements") {
@@ -20,11 +31,13 @@ function Gallery(){
 
     return (<div className={styles.Main} ref={ref}>
 
-        <img src="https://i.imgur.com/Yyney65.jpg"
-          style={{position:"relative",objectFit:"cover",top:0,left:0,height:"70vh",width:"100vw",marginBottom:"-16rem"}}
+        <img src="assets/achieve.jpg"
+          style={imgstyle}
+
+          className={styles.mainimage}
         ></img>
 
-        <Box sx={{position:"relative",left:"10vw",maxWidth:"50%"}}>
+        <Box sx={headerstyle}>
           <Typography variant="h3" color="white" fontFamily={"Poppins"} fontWeight={"bold"} marginBottom="1rem">OUR ACHIEVEMENTS</Typography>
           <Typography variant="subheading" color="white">Over the short span of 3 years, our club has excelled in many fields and achieved tremendous feats, and is still continuing to reach heights. Some of our many major achievements are listed below</Typography>
         </Box>
